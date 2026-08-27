@@ -61,11 +61,11 @@ export function CourseCard({ title, category, image, slug }: Course) {
         <div className="space-y-1.5 mb-5 w-full">
           <div className="flex items-center justify-center gap-1.5 text-xs text-gray-600 font-medium">
             <Clock className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-            <span>3 Months Onwards</span>
+            <span>Duration: 3 Months Onwards</span>
           </div>
           <div className="flex items-center justify-center gap-1.5 text-xs text-gray-600 font-medium">
             <Users className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-            <span>Age 3+ Years</span>
+            <span>Age: 3+</span>
           </div>
         </div>
 

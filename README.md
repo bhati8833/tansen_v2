@@ -1,6 +1,6 @@
 # Tansen Sangeet Mahavidyalaya – Next.js Web Application
 
-A modern, high-performance web application recreation of **Tansen Sangeet Mahavidyalaya** (India's premier music and dance academy with 125+ centers and 50+ years of excellence).
+A modern, high-performance web application recreation of **Tansen Sangeet Mahavidyalaya** (India's largest music & dance school with 125+ centers in 18+ cities and 50+ years of legacy).
 
 Built using Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and Framer Motion.
 
@@ -26,6 +26,37 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ---
 
+## 📌 Primary Site Specifications
+
+- **Tagline**: `India's largest music & dance school`
+- **Navigation Menu**: `About` | `Courses` | `Affiliation` | `Our Achievement` | `Blog` | `Gallery` | `Contact`
+- **Legacy & Core Pillars**:
+  - `50+ Years of Legacy`
+  - `1,00,000+ Students Trained`
+  - `ISO 9001:2008 Certified Institute`
+  - `125+ Centers in 18+ Cities`
+  - `Online Courses Available`
+  - `Offline Campus Classes`
+- **Our Courses (9 Disciplines)**:
+  1. Western Dance
+  2. Classical Dance
+  3. Vocal Music
+  4. Keyboard
+  5. Drums
+  6. Guitar
+  7. Fine Arts
+  8. Harmonium
+  9. Tabla
+- **Course Specifications**:
+  - Duration: `3 Months Onwards (for all courses)`
+  - Age: `3+ (for all courses)`
+- **Contact Us Information**:
+  - **Address**: `NS-16, Block-C, Sushant Lok Phase-1, Sector-43, Gurugram, Haryana-122009`
+  - **Phone**: `98180 83588` (`+91 98180 83588`)
+  - **Email**: `Tansengurugram43@gmail.com`
+
+---
+
 ## 🛠️ Project Stack
 
 | Category | Technology |
@@ -35,7 +66,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 | **Language** | TypeScript 5 |
 | **Styling** | Tailwind CSS 4 & PostCSS |
 | **Icons** | Lucide React & React Icons |
-| **Animations** | Framer Motion |
 | **Fonts** | Next Google Fonts (Roboto, Roboto Slab, Poppins, Playfair Display) |
 
 ---
@@ -57,68 +87,34 @@ tansen_v1/
 │   │   ├── sections/           # Page sections (Hero, CoursesGrid, WhyChooseUs, etc.)
 │   │   └── ui/                 # Atomic UI components
 │   ├── data/                   # Static content & mock data schemas
-│   │   ├── courses.ts          # Music, Dance & Fine Arts courses data
+│   │   ├── courses.ts          # 9 Music, Dance & Fine Arts courses data
 │   │   ├── faq.ts              # Frequently Asked Questions data
-│   │   ├── site-content.ts     # General website content & info
+│   │   ├── site-content.ts     # Navigation, Taglines, Contact & General content
 │   │   └── testimonials.ts     # Student & parent testimonials data
 │   ├── hooks/                  # Custom React hooks
 │   ├── lib/                    # Utility functions & helpers
-│   ├── scripts/                # Utility & build scripts
 │   └── types/                  # TypeScript interface definitions
 ├── public/                     # Static media & image assets
 ├── prompt.md                   # Master Operating Manual & UI Specification
 ├── AGENTS.md                   # AI Agent guidance & Next.js conventions
 ├── CLAUDE.md                   # Claude / AI Assistant developer guide
+├── docs/                       # System design & deployment specifications
 └── package.json                # Project dependencies & scripts
 ```
-
----
-
-## ✨ Features & Component Breakdown
-
-- **TopBar & MainNav Header**: Announcement banner, contact hotline, center locator, franchise inquiry, and responsive multi-level navigation bar.
-- **Hero Section**: High-impact banner with call-to-actions, highlight badges, and promotional messaging.
-- **Courses Grid**: Categorized course showcase (Vocal, Classical Dance, Western Dance, Fine Arts, Tabla, Guitar, Keyboard, Harmonium, Drums) with floating category badges.
-- **Why Choose Us**: Feature highlights (50+ Years Legacy, UGC Recognized Diplomas, Certified Trainers, Performance Platforms).
-- **Testimonials**: Interactive feedback slider showcasing student and parent success stories.
-- **Gallery**: High-resolution image and video showcase of performances, events, and classroom sessions.
-- **Accreditation**: Board affiliations (Pracheen Kala Kendra, Prayag Sangeet Samiti, Trinity College London, etc.).
-- **Pan-India Presence**: Interactive center finder highlighting 125+ locations across India.
-- **Franchise Opportunities**: Business model highlights and franchise inquiry CTA.
-- **Book a Free Demo**: Lead generation form for scheduling trial classes.
-- **FAQ Section**: Accordion list covering admissions, examinations, course duration, and certification.
-- **Floating Action Controls**: Quick contact widgets for instant phone calls and WhatsApp messaging.
-
----
-
-## 🎨 Design System & Typography
-
-### Color Palette
-- **Primary Gold**: `#D4952B`
-- **Dark Primary / Backgrounds**: `#0A101C`
-- **Neutral Dark Text**: `#333333`
-- **Muted Gray**: `#666666`
-- **Border & Subtle Accents**: `#E5E7EB` / `#FFF8ED`
-
-### Typography (Google Fonts via `next/font`)
-- `var(--font-roboto-var)`: Default body copy
-- `var(--font-roboto-slab-var)`: Structural headings
-- `var(--font-poppins-var)`: UI labels, badges & card titles
-- `var(--font-playfair-var)`: Decorative display headers
 
 ---
 
 ## 📜 Available Scripts
 
 - `npm run dev` – Starts the Next.js Turbopack development server on `http://localhost:3000`.
-- `npm run build` – Builds the production application bundle.
-- `npm run start` – Runs the built production server locally.
-- `npm run lint` – Runs ESLint code quality checks.
+- `npm run build` – Builds the static production export bundle in `out/`.
+- `python3 deploy_v2.py` – Empties remote target `public_html/tansengurugram` and syncs static build files to `tansengurugram.com`.
 
 ---
 
 ## 📄 Documentation References
 
-- [`prompt.md`](file:///home/shiva/tansen_v1/prompt.md) – Comprehensive Master Operating Manual and design recreation specification.
+- [`prompt.md`](file:///home/shiva/tansen_v1/prompt.md) – Comprehensive Master Operating Manual.
 - [`AGENTS.md`](file:///home/shiva/tansen_v1/AGENTS.md) – Next.js agent execution rules and repository guidelines.
 - [`CLAUDE.md`](file:///home/shiva/tansen_v1/CLAUDE.md) – Quick reference guide for AI developer workflows.
+- [`docs/DEPLOYMENT_AND_ACCESS.md`](file:///home/shiva/tansen_v1/docs/DEPLOYMENT_AND_ACCESS.md) – Deployment & access details.

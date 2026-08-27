@@ -4,7 +4,7 @@
 export function BookDemo() {
   return (
     <section
-      id="book-demo"
+      id="contact"
       className="py-20 text-center"
       style={{
         background: 'linear-gradient(135deg, #E37216 0%, #c96213 100%)',

@@ -13,12 +13,43 @@ npm run dev
 # Run linter
 npm run lint
 
-# Build production bundle
+# Build static production export
 npm run build
 
-# Start production server
-npm run start
+# Deploy to tansengurugram.com (empties server & uploads build)
+python3 deploy_v2.py
 ```
+
+---
+
+## 📌 Active Site Content Specifications
+
+- **Tagline**: `India's largest music & dance school`
+- **Header Menu**: `About` | `Courses` | `Affiliation` | `Our Achievement` | `Blog` | `Gallery` | `Contact`
+- **Key Statistics**:
+  - `50+ Years of Legacy`
+  - `1,00,000+ Students Trained`
+  - `ISO 9001:2008 Certified Institute`
+  - `125+ Centers in 18+ Cities`
+  - `Online Courses Available`
+  - `Offline Campus Classes`
+- **Our Courses (9 Disciplines)**:
+  1. Western Dance
+  2. Classical Dance
+  3. Vocal Music
+  4. Keyboard
+  5. Drums
+  6. Guitar
+  7. Fine Arts
+  8. Harmonium
+  9. Tabla
+- **Course Specifications**:
+  - Duration: `3 Months Onwards (for all courses)`
+  - Age: `3+ (for all courses)`
+- **Contact Details**:
+  - **Address**: `NS-16, Block-C, Sushant Lok Phase-1, Sector-43, Gurugram, Haryana-122009`
+  - **Phone**: `98180 83588`
+  - **Email**: `Tansengurugram43@gmail.com`
 
 ---
 
@@ -33,33 +64,3 @@ npm run start
 - **Data Schemas & Mock Data**: [`src/data/`](file:///home/shiva/tansen_v1/src/data)
 - **Specification Document**: [`prompt.md`](file:///home/shiva/tansen_v1/prompt.md)
 - **Agent Rules**: [`AGENTS.md`](file:///home/shiva/tansen_v1/AGENTS.md)
-
----
-
-## 🎨 Code & Style Guidelines
-
-### 1. Component Rules
-- Use `'use client'` at the top of components that require client-side interactivity, state, or hooks (e.g. Framer Motion, event listeners).
-- Keep component signatures clean with TypeScript interfaces defined or imported.
-- Lucide React icon names: verify singular/plural icon names before importing (e.g., `Drum` not `Drums`).
-
-### 2. Design Tokens & Styling
-- Primary Brand Accent: Gold `#D4952B`
-- Dark Accent: `#0A101C`
-- Use custom font CSS variables defined in `layout.tsx`:
-  - `var(--font-roboto-var)` for standard body copy.
-  - `var(--font-poppins-var)` for section headings and cards.
-  - `var(--font-roboto-slab-var)` for hero/display titles.
-  - `var(--font-playfair-var)` for decorative accents.
-
-### 3. Data Flow
-- Place static content, FAQs, course lists, and testimonials in [`src/data/`](file:///home/shiva/tansen_v1/src/data).
-- Export type-safe interfaces alongside mock data arrays.
-
----
-
-## 📑 Detailed Documentation References
-
-- See [`README.md`](file:///home/shiva/tansen_v1/README.md) for full project architecture.
-- See [`prompt.md`](file:///home/shiva/tansen_v1/prompt.md) for master reverse-engineering requirements.
-- See [`AGENTS.md`](file:///home/shiva/tansen_v1/AGENTS.md) for Next.js agent execution rules.

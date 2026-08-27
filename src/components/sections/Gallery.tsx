@@ -15,7 +15,7 @@ export function Gallery() {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   return (
-    <section className="py-16" style={{ backgroundColor: '#FCF7F1' }}>
+    <section id="gallery" className="py-16" style={{ backgroundColor: '#FCF7F1' }}>
       <div className="container-site">
         {/* Header */}
         <div className="text-center mb-12">

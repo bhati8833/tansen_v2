@@ -52,7 +52,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6" style={{ color: '#9ca3af' }}>
-              Tansen Sangeet Mahavidyalaya is India&apos;s most trusted music and dance academy, nurturing talent since 1972 with over 125 centers across India.
+              Tansen Sangeet Mahavidyalaya is India&apos;s largest music & dance school with 50+ years of legacy, 1,00,000+ students, and 125+ centers across 18+ cities.
             </p>
             <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social) => {
@@ -131,31 +131,31 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#E37216' }} />
                 <span className="text-sm leading-relaxed" style={{ color: '#9ca3af' }}>
-                  Near Dev Hospital, Opposite Haryana Gramin Bank, plaza 106 vala Road, Sector 106, Gurgaon
+                  NS-16, Block-C, Sushant Lok Phase-1, Sector-43, Gurugram, Haryana-122009
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0" style={{ color: '#E37216' }} />
                 <a
-                  href="tel:+919560193882"
+                  href="tel:+919818083588"
                   className="text-sm transition-colors"
                   style={{ color: '#9ca3af' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E37216')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = '#9ca3af')}
                 >
-                  +91-9560193882 | 9773965448
+                  98180 83588
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0" style={{ color: '#E37216' }} />
                 <a
-                  href="mailto:info.tansensangeet2@gmail.com"
+                  href="mailto:Tansengurugram43@gmail.com"
                   className="text-sm transition-colors"
                   style={{ color: '#9ca3af' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#E37216')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = '#9ca3af')}
                 >
-                  info.tansensangeet2@gmail.com
+                  Tansengurugram43@gmail.com
                 </a>
               </li>
             </ul>

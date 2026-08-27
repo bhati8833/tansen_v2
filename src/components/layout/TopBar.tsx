@@ -28,19 +28,19 @@ export function TopBar() {
           <div className="flex items-center gap-5">
             <div className="flex items-center gap-4 text-gray-700">
               <a
-                href="mailto:info.tansensangeet2@gmail.com"
+                href="mailto:Tansengurugram43@gmail.com"
                 className="flex items-center gap-1.5 hover:text-[#D4952B] transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-                <span>info.tansensangeet2@gmail.com</span>
+                <span>Tansengurugram43@gmail.com</span>
               </a>
               <span className="text-gray-300">|</span>
               <a
-                href="tel:+919773965448"
+                href="tel:+919818083588"
                 className="flex items-center gap-1.5 hover:text-[#D4952B] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-                <span>+91-977-396-5448</span>
+                <span>+91 98180 83588</span>
               </a>
             </div>
 

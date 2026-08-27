@@ -8,35 +8,35 @@ const features = [
     subtitle: 'of Legacy',
   },
   {
+    icon: Users,
+    title: '1,00,000+',
+    subtitle: 'Happy Students',
+  },
+  {
     icon: BadgeCheck,
-    title: 'Certified',
-    subtitle: 'Courses',
+    title: 'ISO 9001:2008',
+    subtitle: 'Certified Institute',
   },
   {
     icon: Music,
-    title: 'Stage',
-    subtitle: 'Performances',
-  },
-  {
-    icon: Users,
-    title: 'Expert',
-    subtitle: 'Faculty',
+    title: '125+ Centers',
+    subtitle: 'in 18+ Cities',
   },
   {
     icon: MonitorSmartphone,
-    title: 'Online & Offline',
-    subtitle: 'Classes',
+    title: 'Online',
+    subtitle: 'Courses Available',
   },
   {
     icon: Baby,
-    title: 'For All Ages',
-    subtitle: 'Kids & Adults',
+    title: 'Offline',
+    subtitle: 'Campus Classes',
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="relative py-20 overflow-hidden" style={{ backgroundColor: '#FDF9F3' }}>
+    <section id="about" className="relative py-20 overflow-hidden" style={{ backgroundColor: '#FDF9F3' }}>
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:16px_16px]" />
 

@@ -11,7 +11,7 @@ const accreditations = [
 
 export function Accreditation() {
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section id="accreditation" className="py-16 bg-white border-t border-gray-100">
       <div className="container-site">
         {/* Header */}
         <div className="text-center mb-10">
