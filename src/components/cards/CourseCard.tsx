@@ -70,14 +70,14 @@ export function CourseCard({ title, category, image, slug }: Course) {
         </div>
 
         {/* Action Link */}
-        <Link
-          href={`/courses/${slug}`}
+        <a
+          href="#contact"
           className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider hover:gap-2.5 transition-all"
           style={{ color: '#D4952B' }}
         >
-          <span>LEARN MORE</span>
+          <span>ENQUIRE NOW</span>
           <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+        </a>
       </div>
     </div>
   );

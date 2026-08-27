@@ -168,14 +168,14 @@ export function Hero() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="#book-demo"
+                  href="#contact"
                   className="inline-flex items-center justify-center px-7 py-3 rounded-md text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:brightness-105"
                   style={{ backgroundColor: '#D4952B' }}
                 >
                   BOOK FREE DEMO
                 </a>
                 <a
-                  href="/our-courses"
+                  href="#courses"
                   className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-md font-bold text-xs md:text-sm tracking-wider border-2 border-gray-800 text-gray-800 transition-all hover:bg-gray-900 hover:text-white"
                 >
                   <span>EXPLORE COURSES</span>

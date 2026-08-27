@@ -15,13 +15,13 @@ export function TopBar() {
               <span>Admissions Open for 2026-2027</span>
             </div>
             <span className="text-gray-300">|</span>
-            <Link
-              href="#book-demo"
+            <a
+              href="#contact"
               className="flex items-center gap-1.5 text-gray-700 hover:text-[#D4952B] transition-colors"
             >
               <Calendar className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
               <span>Book a Free Demo Class Today!</span>
-            </Link>
+            </a>
           </div>
 
           {/* Right: Contact & Social */}
