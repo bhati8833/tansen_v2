@@ -34,7 +34,18 @@ This repository contains the Next.js 16 (App Router with Turbopack) implementati
    - Dark Theme Accent: `#0A101C`.
    - Apply Google Fonts via custom CSS variables (`var(--font-roboto-var)`, `var(--font-poppins-var)`, `var(--font-roboto-slab-var)`, `var(--font-playfair-var)`).
 
-5. **Reference Documentation**:
+5. **Frozen Home Page UI Design (STRICT)**:
+   - The Home Page layout, styling, structure, and component design are **fixed & frozen**.
+   - Do NOT modify the UI layout or structural CSS. Only update text content and images (`src/data/` and public assets).
+
+6. **Localhost Verification First**:
+   - Always run and test changes on `http://localhost:3000` first before declaring completion.
+
+7. **Live Deployment Approval Required**:
+   - Do NOT execute `python3 deploy_v2.py` or deploy to `tansengurugram.com` automatically.
+   - Live deployment is strictly triggered only when the user explicitly requests to deploy.
+
+8. **Reference Documentation**:
    - Master Specification: [`prompt.md`](file:///home/shiva/tansen_v1/prompt.md)
    - Project Readme: [`README.md`](file:///home/shiva/tansen_v1/README.md)
    - Claude Developer Guide: [`CLAUDE.md`](file:///home/shiva/tansen_v1/CLAUDE.md)
