@@ -8,55 +8,97 @@ import { ChevronLeft, ChevronRight, Shield, Users, MapPin, Key, Star, Building2,
 const slides = [
   {
     id: 1,
-    image: '/assets/hero/slider-1.jpg',
+    image: '/assets/hero/vocal-hero.jpeg',
     tagline: "India's largest music & dance school",
-    title: 'Music & Dance Academy',
+    title: 'Music & Vocal Academy',
     subtitle: '50+ Years of Legacy',
     description: 'Nurturing Talent. Building Confidence. Creating Futures.',
     stats: [
       { icon: Shield, value: '50+', label: 'Years of Legacy' },
       { icon: Users, value: '1,00,000+', label: 'Students Trained' },
-      { icon: MapPin, value: '125+', label: 'Centers in 18+ Cities' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
       { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
     ],
   },
   {
     id: 2,
-    image: '/assets/hero/slider-2.jpg',
+    image: '/assets/hero/western-dance-hero.png',
     tagline: "India's largest music & dance school",
-    title: 'Classical & Western Dance',
+    title: 'Western & Modern Dance',
     subtitle: '50+ Years of Legacy',
     description: 'Discover Passion. Master Skills. Achieve Excellence.',
     stats: [
       { icon: Shield, value: '50+', label: 'Years of Legacy' },
       { icon: Users, value: '1,00,000+', label: 'Students Trained' },
-      { icon: MapPin, value: '125+', label: 'Centers in 18+ Cities' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
       { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
     ],
   },
   {
     id: 3,
-    image: '/assets/hero/slider-3.jpg',
+    image: '/assets/hero/kathak-hero.png',
     tagline: "India's largest music & dance school",
-    title: 'Create. Imagine. Inspire.',
+    title: 'Classical Kathak Dance',
     subtitle: '50+ Years of Legacy',
-    description: 'Inspiring Creativity. Building Confidence. Shaping Futures.',
+    description: 'Graceful Rhythm. Authentic Heritage. Certified Degrees.',
     stats: [
       { icon: Shield, value: '50+', label: 'Years of Legacy' },
       { icon: Users, value: '1,00,000+', label: 'Students Trained' },
-      { icon: MapPin, value: '125+', label: 'Centers in 18+ Cities' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
+      { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
+    ],
+  },
+  {
+    id: 4,
+    image: '/assets/hero/keyboard-hero.png',
+    tagline: "India's largest music & dance school",
+    title: 'Keyboard & Piano Academy',
+    subtitle: '50+ Years of Legacy',
+    description: 'Learn Notation. Master Chords. Perform Songs.',
+    stats: [
+      { icon: Shield, value: '50+', label: 'Years of Legacy' },
+      { icon: Users, value: '1,00,000+', label: 'Students Trained' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
+      { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
+    ],
+  },
+  {
+    id: 5,
+    image: '/assets/hero/drums-hero.png',
+    tagline: "India's largest music & dance school",
+    title: 'Drums & Percussion',
+    subtitle: '50+ Years of Legacy',
+    description: 'Master Beats. Groove Rhythm. Professional Training.',
+    stats: [
+      { icon: Shield, value: '50+', label: 'Years of Legacy' },
+      { icon: Users, value: '1,00,000+', label: 'Students Trained' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
+      { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
+    ],
+  },
+  {
+    id: 6,
+    image: '/assets/hero/guitar-hero.png',
+    tagline: "India's largest music & dance school",
+    title: 'Guitar Masterclasses',
+    subtitle: '50+ Years of Legacy',
+    description: 'Acoustic & Electric. Leads & Fingerpicking.',
+    stats: [
+      { icon: Shield, value: '50+', label: 'Years of Legacy' },
+      { icon: Users, value: '1,00,000+', label: 'Students Trained' },
+      { icon: MapPin, value: 'Gurugram', label: 'Sector-43 Center' },
       { icon: Key, value: 'ISO 9001:2008', label: 'Certified' },
     ],
   },
 ];
 
 const floatingStats = [
-  { icon: Star, value: '50+', label1: 'Years of Legacy', label2: '' },
-  { icon: Users, value: '1,00,000+', label1: 'Happy Students', label2: '' },
-  { icon: Shield, value: 'ISO 9001:2008', label1: 'Certified Institute', label2: '' },
-  { icon: Building2, value: '125+', label1: 'Centers in 18+ Cities', label2: '' },
-  { icon: Globe, value: 'Online', label1: 'Courses Available', label2: '' },
-  { icon: GraduationCap, value: 'Offline', label1: 'Campus Classes', label2: '' },
+  { icon: Star, value: '50+ Years', label: 'Legacy of Excellence' },
+  { icon: Users, value: '1 Lakh+', label: 'Trained Students' },
+  { icon: Shield, value: 'ISO Certified', label: '9001:2008 Academy' },
+  { icon: MapPin, value: 'Sector-43', label: 'Gurugram Center' },
+  { icon: Globe, value: 'Online & Offline', label: 'Flexible Batches' },
+  { icon: GraduationCap, value: 'Govt. Certified', label: 'Diplomas & Degrees' },
 ];
 
 export function Hero() {
@@ -147,39 +189,21 @@ export function Hero() {
                 {slide.description}
               </p>
 
-              {/* Inline Stats Row */}
-              <div className="flex flex-wrap items-center gap-5 md:gap-7 mb-8">
-                {slide.stats.map((stat, i) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div key={i} className="flex items-center gap-2">
-                      <Icon className="w-4 h-4 flex-shrink-0" style={{ color: '#D4952B' }} />
-                      <div>
-                        <span className="font-bold text-sm md:text-base mr-1" style={{ color: '#0A101C' }}>
-                          {stat.value}
-                        </span>
-                        <span className="text-xs text-gray-600 font-medium">{stat.label}</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
               {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4 mt-8">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-7 py-3 rounded-md text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:brightness-105"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:bg-[#b8842b] hover:shadow-lg"
                   style={{ backgroundColor: '#D4952B' }}
                 >
                   BOOK FREE DEMO
                 </a>
                 <a
                   href="#courses"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-md font-bold text-xs md:text-sm tracking-wider border-2 border-gray-800 text-gray-800 transition-all hover:bg-gray-900 hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-xs md:text-sm tracking-wider border-2 border-gray-900 text-gray-900 transition-all hover:bg-gray-900 hover:text-white"
                 >
                   <span>EXPLORE COURSES</span>
-                  <span className="w-5 h-5 rounded-full bg-gray-800 text-white flex items-center justify-center text-xs">
+                  <span className="w-5 h-5 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">
                     <ArrowRight className="w-3 h-3" />
                   </span>
                 </a>
@@ -191,16 +215,14 @@ export function Hero() {
         {/* Prev/Next Arrows */}
         <button
           onClick={() => { prev(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 shadow-md"
-          style={{ backgroundColor: '#D4952B' }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-md transition-all duration-200 focus:outline-none"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={() => { next(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 shadow-md"
-          style={{ backgroundColor: '#D4952B' }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-md transition-all duration-200 focus:outline-none"
           aria-label="Next slide"
         >
           <ChevronRight className="w-5 h-5" />
@@ -224,28 +246,24 @@ export function Hero() {
         </div>
       </section>
 
-      {/* FLOATING WHITE OVERLAPPING STAT CARD — matches live site centerpiece */}
-      <div className="container-site relative z-30 -mt-14 md:-mt-16">
-        <div
-          className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-100"
-        >
+      {/* FLOATING ELEGANT OVERLAPPING BADGES BAR */}
+      <div className="container-site relative z-30 -mt-12 md:-mt-14">
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 md:p-6 shadow-xl border border-gray-100/90 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 divide-y sm:divide-y-0 divide-gray-100">
           {floatingStats.map((stat, i) => {
             const Icon = stat.icon;
             return (
               <div
                 key={i}
-                className={`flex flex-col items-center text-center ${i > 0 ? 'pt-4 sm:pt-0' : ''}`}
+                className={`flex flex-col items-center text-center group ${i > 0 ? 'pt-3 sm:pt-0' : ''}`}
               >
-                <Icon className="w-7 h-7 mb-2" style={{ color: '#D4952B' }} />
-                <div
-                  className="text-2xl md:text-3xl font-extrabold mb-1"
-                  style={{ color: '#0A101C', fontFamily: 'var(--font-poppins-var)' }}
-                >
+                <div className="w-10 h-10 rounded-xl bg-amber-50/80 border border-amber-200/50 flex items-center justify-center text-[#D4952B] mb-2 group-hover:scale-105 group-hover:bg-[#D4952B] group-hover:text-white transition-all duration-300 shadow-2xs">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <div className="text-sm md:text-base font-bold text-gray-900 font-poppins tracking-tight">
                   {stat.value}
                 </div>
-                <p className="text-xs text-gray-500 font-medium leading-tight">
-                  {stat.label1}
-                  {stat.label2 && <><br />{stat.label2}</>}
+                <p className="text-[11px] text-gray-500 font-medium leading-tight mt-0.5">
+                  {stat.label}
                 </p>
               </div>
             );

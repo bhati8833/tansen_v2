@@ -1,36 +1,29 @@
 'use client';
 
-// src/components/cards/CourseCard.tsx — matches live site card design with floating category icon
+// src/components/cards/CourseCard.tsx — sleek fully clickable course card
 import Image from 'next/image';
 import Link from 'next/link';
-import { Clock, Users, ArrowRight, Music, Sparkles, Palette, Drum } from 'lucide-react';
+import { Music, Sparkles, Palette, Drum, ArrowRight } from 'lucide-react';
 import type { Course } from '@/data/courses';
 
-const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Vocal Music': Music,
-  'Classical Dance': Sparkles,
+const categoryIcons: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+  'Classical Vocal Singing': Music,
+  'Kathak': Sparkles,
   'Western Dance': Sparkles,
-  'Fine Arts': Palette,
-  'Tabla': Drum,
   'Guitar': Music,
-  'Keyboard': Music,
-  'Harmonium': Music,
-  'Drum': Drum,
+  'Keyboard / Piano': Music,
+  'Drums': Drum,
+  'Tabla': Drum,
+  'Fine Arts': Palette,
 };
 
-export function CourseCard({ title, category, image, slug }: Course) {
+export function CourseCard({ title, category, image, fullSlug }: Course) {
   const Icon = categoryIcons[title] || categoryIcons[category] || Music;
 
   return (
-    <div
-      className="bg-white rounded-2xl overflow-hidden group transition-all duration-300 border border-gray-100 flex flex-col justify-between"
-      style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}
-      onMouseEnter={(e) =>
-        ((e.currentTarget as HTMLDivElement).style.boxShadow = '0 12px 35px rgba(0,0,0,0.12)')
-      }
-      onMouseLeave={(e) =>
-        ((e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 15px rgba(0,0,0,0.05)')
-      }
+    <Link
+      href={fullSlug}
+      className="block group bg-white rounded-2xl overflow-hidden transition-all duration-300 border border-gray-100 hover:border-orange-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between h-full cursor-pointer"
     >
       {/* Image Container */}
       <div className="relative overflow-hidden w-full" style={{ aspectRatio: '3/4' }}>
@@ -43,42 +36,21 @@ export function CourseCard({ title, category, image, slug }: Course) {
         />
 
         {/* Floating Category Icon Badge at bottom center */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-md border-2 border-orange-100 flex items-center justify-center">
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-md border-2 border-orange-100 flex items-center justify-center group-hover:border-[#D4952B] transition-colors">
           <Icon className="w-5 h-5" style={{ color: '#D4952B' }} />
         </div>
       </div>
 
       {/* Content */}
-      <div className="pt-8 pb-6 px-5 text-center flex flex-col items-center flex-grow justify-between">
+      <div className="pt-8 pb-6 px-5 text-center flex flex-col items-center flex-grow justify-center">
         <h3
-          className="text-lg font-bold mb-3 transition-colors group-hover:text-[#D4952B]"
+          className="text-lg font-bold transition-colors group-hover:text-[#D4952B] inline-flex items-center gap-1.5 justify-center"
           style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
         >
-          {title}
+          <span>{title}</span>
+          <ArrowRight className="w-4 h-4 text-[#D4952B] opacity-0 group-hover:opacity-100 transition-all transform -translate-x-1 group-hover:translate-x-0" />
         </h3>
-
-        {/* Details badges */}
-        <div className="space-y-1.5 mb-5 w-full">
-          <div className="flex items-center justify-center gap-1.5 text-xs text-gray-600 font-medium">
-            <Clock className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-            <span>Duration: 3 Months Onwards</span>
-          </div>
-          <div className="flex items-center justify-center gap-1.5 text-xs text-gray-600 font-medium">
-            <Users className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
-            <span>Age: 3+</span>
-          </div>
-        </div>
-
-        {/* Action Link */}
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider hover:gap-2.5 transition-all"
-          style={{ color: '#D4952B' }}
-        >
-          <span>ENQUIRE NOW</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -2,11 +2,11 @@
 import Image from 'next/image';
 
 const accreditations = [
-  { src: '/assets/logos/ugc.webp', alt: 'UGC Recognized' },
-  { src: '/assets/logos/trinity.webp', alt: 'Trinity College London' },
-  { src: '/assets/logos/prayag.webp', alt: 'Prayag Sangit Samiti' },
-  { src: '/assets/logos/pracheen.webp', alt: 'Pracheen Kala Kendra' },
-  { src: '/assets/logos/iso-certified.webp', alt: 'Certified ISO 9001' },
+  { src: '/assets/affiliations/ugc.webp', alt: 'UGC Recognized' },
+  { src: '/assets/affiliations/trinity.webp', alt: 'Trinity College London' },
+  { src: '/assets/affiliations/prayag.webp', alt: 'Prayag Sangit Samiti' },
+  { src: '/assets/affiliations/pracheen.webp', alt: 'Pracheen Kala Kendra' },
+  { src: '/assets/affiliations/iso-certified.webp', alt: 'Certified ISO 9001' },
 ];
 
 export function Accreditation() {

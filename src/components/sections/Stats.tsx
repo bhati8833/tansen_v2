@@ -12,35 +12,10 @@ function formatNumber(num: number): string {
   return num.toLocaleString('en-IN');
 }
 
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setStarted(true); },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!started) return;
-    let frame = 0;
-    const total = 80;
-    const timer = setInterval(() => {
-      frame++;
-      setCount(Math.min(Math.round((frame / total) * value), value));
-      if (frame >= total) clearInterval(timer);
-    }, 25);
-    return () => clearInterval(timer);
-  }, [started, value]);
-
+function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold" style={{ color: '#E37216' }}>
-      {formatNumber(count)}{suffix}
+    <div className="text-4xl md:text-5xl font-bold" style={{ color: '#D4952B' }}>
+      {value}{suffix}
     </div>
   );
 }

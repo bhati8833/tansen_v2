@@ -54,30 +54,30 @@ export function CoursesGrid() {
               className="text-3xl md:text-4xl font-bold"
               style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
             >
-              Nine Disciplines. Certified Curriculum.
+              Eight Disciplines. Certified Curriculum.
             </h2>
             <p className="text-sm text-gray-600 mt-2 font-medium">
-              Duration: 3 Months Onwards (for all courses) &nbsp;|&nbsp; Age: 3+ (for all courses)
+              Explore our structured programs in music, dance, instruments, and fine arts.
             </p>
           </div>
 
-          {/* Slider Controls */}
+          {/* Slider Controls — Uniform Arrow Styling */}
           <div className="flex items-center gap-2 self-start md:self-auto">
             <button
               type="button"
               aria-label="Previous courses"
               onClick={() => scroll('left')}
-              className="w-10 h-10 rounded-lg border-2 border-gray-800 bg-white flex items-center justify-center font-bold text-gray-800 shadow-[2.5px_2.5px_0px_#0A101C] transition-all hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B]"
+              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               type="button"
               aria-label="Next courses"
               onClick={() => scroll('right')}
-              className="w-10 h-10 rounded-lg border-2 border-gray-800 bg-white flex items-center justify-center font-bold text-gray-800 shadow-[2.5px_2.5px_0px_#0A101C] transition-all hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B]"
+              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         </div>

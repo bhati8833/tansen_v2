@@ -5,14 +5,21 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { X, ZoomIn } from 'lucide-react';
 
-const galleryImages = Array.from({ length: 10 }, (_, i) => ({
-  id: i + 1,
-  src: `/assets/gallery/gallery-${i + 1}.jpg`,
-  alt: `Tansen Sangeet Mahavidyalaya Gallery Image ${i + 1}`,
-}));
+const galleryImages = [
+  { id: 1, src: '/assets/gallery/gallery-1.jpg', alt: 'Vocal Singing Class' },
+  { id: 2, src: '/assets/gallery/gallery-2.jpg', alt: 'Western Dance Practice' },
+  { id: 3, src: '/assets/gallery/gallery-3.jpg', alt: 'Kathak Classical Dance' },
+  { id: 4, src: '/assets/gallery/gallery-4.jpg', alt: 'Keyboard Piano Class' },
+  { id: 5, src: '/assets/gallery/gallery-5.jpg', alt: 'Drum Session' },
+  { id: 6, src: '/assets/gallery/gallery-6.jpg', alt: 'Guitar Workshop' },
+  { id: 7, src: '/assets/gallery/gallery-7.jpg', alt: 'Vocal Studio Practice' },
+  { id: 8, src: '/assets/gallery/gallery-8.jpg', alt: 'Kathak Dance Studio' },
+  { id: 9, src: '/assets/gallery/gallery-9.jpg', alt: 'Keyboard Studio Lesson' },
+  { id: 10, src: '/assets/gallery/gallery-10.jpg', alt: 'Acoustic Drums Practice' },
+];
 
 export function Gallery() {
-  const [lightbox, setLightbox] = useState<number | null>(null);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   return (
     <section id="gallery" className="py-16" style={{ backgroundColor: '#FCF7F1' }}>
@@ -26,7 +33,7 @@ export function Gallery() {
             Moments that Inspire
           </h2>
           <a
-            href="/our-photo-gallery"
+            href="/gallery"
             className="text-sm font-bold tracking-widest transition-colors hover:opacity-80"
             style={{ color: '#E37216' }}
           >
@@ -39,8 +46,8 @@ export function Gallery() {
           {galleryImages.map((img) => (
             <button
               key={img.id}
-              onClick={() => setLightbox(img.id)}
-              className="relative overflow-hidden rounded-lg group aspect-square w-full"
+              onClick={() => setLightboxSrc(img.src)}
+              className="relative overflow-hidden rounded-2xl border border-gray-100/50 group aspect-square w-full shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
               style={{ aspectRatio: '1/1' }}
             >
               <Image
@@ -60,14 +67,14 @@ export function Gallery() {
       </div>
 
       {/* Lightbox */}
-      {lightbox !== null && (
+      {lightboxSrc !== null && (
         <div
           className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setLightbox(null)}
+          onClick={() => setLightboxSrc(null)}
         >
           <button
             className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-            onClick={() => setLightbox(null)}
+            onClick={() => setLightboxSrc(null)}
             aria-label="Close lightbox"
           >
             <X className="w-6 h-6 text-white" />
@@ -77,8 +84,8 @@ export function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={`/assets/gallery/gallery-${lightbox}.jpg`}
-              alt={`Gallery image ${lightbox}`}
+              src={lightboxSrc}
+              alt="Gallery image preview"
               fill
               className="object-contain"
               sizes="90vw"

@@ -21,22 +21,14 @@ export function BookDemo() {
           Experience the joy of learning with India&apos;s leading music &amp; dance academy.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           {/* Primary CTA */}
           <a
-            href="tel:+919773965448"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-md font-bold tracking-widest text-sm transition-all bg-white hover:bg-gray-50"
+            href="tel:+919818083588"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-md font-bold tracking-widest text-sm transition-all bg-white hover:bg-gray-50 shadow-lg"
             style={{ color: '#E37216' }}
           >
             BOOK FREE DEMO
-          </a>
-
-          {/* Secondary CTA */}
-          <a
-            href="/own-tsm-franchise"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-md font-bold tracking-widest text-sm border-2 border-white text-white transition-all hover:bg-white hover:text-[#E37216]"
-          >
-            FRANCHISE OPPORTUNITY
           </a>
         </div>
       </div>

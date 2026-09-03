@@ -19,8 +19,8 @@ const features = [
   },
   {
     icon: Music,
-    title: '125+ Centers',
-    subtitle: 'in 18+ Cities',
+    title: 'Master Faculty',
+    subtitle: 'Expert Gurus',
   },
   {
     icon: MonitorSmartphone,
@@ -61,8 +61,7 @@ export function WhyChooseUs() {
             return (
               <div
                 key={i}
-                className="rounded-2xl p-5 flex flex-col items-center text-center transition-transform hover:-translate-y-1"
-                style={{ backgroundColor: '#FFF8EF', border: '1px solid rgba(212,149,43,0.15)' }}
+                className="bg-white rounded-2xl p-5 flex flex-col items-center text-center border border-gray-100 hover:border-orange-200/80 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
               >
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
