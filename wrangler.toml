@@ -1,0 +1,18 @@
+name = "tansen-v1"
+compatibility_date = "2026-09-03"
+
+# Cloudflare Pages - Static site deploy config
+# Run: npx wrangler pages deploy out/
+
+[site]
+bucket = "./out"
+
+# Custom domain (Cloudflare Dashboard se bhi set kar sakte ho)
+# [routes]
+# pattern = "tansengurugram.com/*"
+# zone_name = "tansengurugram.com"
+
+# Build settings (optional - sirf build command chalana ho to)
+# [build]
+# command = "npm run build"
+# directory = "out"

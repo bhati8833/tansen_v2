@@ -223,7 +223,7 @@ export function FineArtsContent() {
             <div className="lg:col-span-5">
               <div className="relative h-[340px] sm:h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                 <Image
-                  src="/assets/courses/fine-arts-cover.jpg"
+                  src="/assets/courses/fine-arts-cover.webp"
                   alt="Fine Arts Classes in Gurugram"
                   fill
                   className="object-cover"
@@ -249,7 +249,7 @@ export function FineArtsContent() {
             <div className="lg:col-span-5 relative">
               <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <Image
-                  src="/assets/courses/fine-arts-cover.jpg"
+                  src="/assets/courses/fine-arts-cover.webp"
                   alt="Creative Fine Arts Studio at Tansen Gurugram"
                   fill
                   className="object-cover"

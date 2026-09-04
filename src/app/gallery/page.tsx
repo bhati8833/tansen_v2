@@ -15,16 +15,16 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  { id: 1, title: 'Vocal Music Recital', category: 'Music', image: '/assets/gallery/gallery-1.jpg', caption: 'Young vocal prodigies performing Hindustani classical ragas' },
-  { id: 2, title: 'Celebrity Guest Visit', category: 'Celebrity', image: '/assets/testimonials/annu-kapoor.png', caption: 'Shri Annu Kapoor interacting with Tansen music students' },
-  { id: 3, title: 'Kathak Dance Recital', category: 'Dance', image: '/assets/gallery/gallery-3.jpg', caption: 'Kathak graduation performance in traditional attire' },
-  { id: 4, title: 'Guitar Masterclass', category: 'Music', image: '/assets/gallery/gallery-6.jpg', caption: 'Interactive jam session with acoustic & electric guitar faculty' },
-  { id: 5, title: 'Keyboard Performance', category: 'Music', image: '/assets/gallery/gallery-4.jpg', caption: 'Young prodigies performing intricate piano & keyboard sonatas' },
-  { id: 6, title: 'Fine Arts Studio', category: 'Visual Arts', image: '/assets/courses/fine-arts-cover.jpg', caption: 'Sketching, painting and visual arts creations' },
-  { id: 7, title: 'Acoustic Drums Ensemble', category: 'Music', image: '/assets/gallery/gallery-5.jpg', caption: 'Rhythmic beats and percussion showcase' },
-  { id: 8, title: 'Western Dance Showcase', category: 'Dance', image: '/assets/gallery/gallery-2.jpg', caption: 'High-energy Hip Hop, Jazz and Freestyle dance performance' },
-  { id: 9, title: 'Celebrity Masterclass', category: 'Celebrity', image: '/assets/testimonials/saroj-khan.png', caption: 'Legendary Saroj Khan mentoring Tansen dance students' },
-  { id: 10, title: 'Vocal Practice Studio', category: 'Center Moments', image: '/assets/courses/vocal-inside.jpg', caption: 'Acoustic practice studio setup at Sushant Lok center' },
+  { id: 1, title: 'Vocal Music Recital', category: 'Music', image: '/assets/gallery/gallery-1.webp', caption: 'Young vocal prodigies performing Hindustani classical ragas' },
+  { id: 2, title: 'Celebrity Guest Visit', category: 'Celebrity', image: '/assets/testimonials/annu-kapoor.webp', caption: 'Shri Annu Kapoor interacting with Tansen music students' },
+  { id: 3, title: 'Kathak Dance Recital', category: 'Dance', image: '/assets/gallery/gallery-3.webp', caption: 'Kathak graduation performance in traditional attire' },
+  { id: 4, title: 'Guitar Masterclass', category: 'Music', image: '/assets/gallery/gallery-6.webp', caption: 'Interactive jam session with acoustic & electric guitar faculty' },
+  { id: 5, title: 'Keyboard Performance', category: 'Music', image: '/assets/gallery/gallery-4.webp', caption: 'Young prodigies performing intricate piano & keyboard sonatas' },
+  { id: 6, title: 'Fine Arts Studio', category: 'Visual Arts', image: '/assets/courses/fine-arts-cover.webp', caption: 'Sketching, painting and visual arts creations' },
+  { id: 7, title: 'Acoustic Drums Ensemble', category: 'Music', image: '/assets/gallery/gallery-5.webp', caption: 'Rhythmic beats and percussion showcase' },
+  { id: 8, title: 'Western Dance Showcase', category: 'Dance', image: '/assets/gallery/gallery-2.webp', caption: 'High-energy Hip Hop, Jazz and Freestyle dance performance' },
+  { id: 9, title: 'Celebrity Masterclass', category: 'Celebrity', image: '/assets/testimonials/saroj-khan.webp', caption: 'Legendary Saroj Khan mentoring Tansen dance students' },
+  { id: 10, title: 'Vocal Practice Studio', category: 'Center Moments', image: '/assets/courses/vocal-inside.webp', caption: 'Acoustic practice studio setup at Sushant Lok center' },
 ];
 
 export default function GalleryPage() {

@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
       <h3>4. Boosting Academic and Analytical Performance</h3>
       <p>Studies consistently reveal that children engaged in structured music education score higher in mathematical problem-solving and linguistic comprehension.</p>
     `,
-    coverImage: '/assets/courses/vocal-cover.jpg',
+    coverImage: '/assets/courses/vocal-cover.webp',
     author: 'Pandit Shastri',
     date: 'August 14, 2026',
     readTime: '4 min read',
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Nava Rasas and Emotional Expression</h3>
       <p>Through <em>Abhinaya</em>, dancers convey nine fundamental human emotions (Nava Rasas). This expressive art form nurtures deep emotional intelligence and confidence in young performers.</p>
     `,
-    coverImage: '/assets/courses/kathak-cover.png',
+    coverImage: '/assets/courses/kathak-cover.webp',
     author: 'Vidushi Sunita Sharma',
     date: 'July 28, 2026',
     readTime: '5 min read',
@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Choosing Your First Keyboard</h3>
       <p>Look for a keyboard with at least <strong>61 full-sized keys</strong> and touch-sensitive dynamic response. Brands like Yamaha, Casio, and Roland offer excellent starter models equipped with sustain pedal compatibility.</p>
     `,
-    coverImage: '/assets/courses/guitar-cover.png',
+    coverImage: '/assets/courses/guitar-cover.webp',
     author: 'Mahesh Kumar',
     date: 'June 19, 2026',
     readTime: '6 min read',

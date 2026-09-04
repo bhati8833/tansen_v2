@@ -38,6 +38,18 @@ export const metadata: Metadata = {
   title: 'Tansen Sangeet Mahavidyalaya – Best Music & Dance Academy in India',
   description:
     "Join India's most trusted music and dance academy. Learn Vocal, Guitar, Tabla, Keyboard, Kathak, Western Dance & more. 50+ years of excellence.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Tansen Sangeet Mahavidyalaya – Music & Dance Academy',
     description: "Join India's premier music & dance academy at Sector-43 Gurugram. Learn Vocal, Guitar, Kathak, Western Dance & more.",

@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ============================================================
+# SECRET FOLDER - Git mein track hota hai, hosting pe NAHI jaata
+# ============================================================
+# secret/ folder intentionally NOT ignored - git mein safe hai
+# Live hosting / out/ folder mein automatically exclude hota hai
+# kyunki /out/ already ignore mein hai

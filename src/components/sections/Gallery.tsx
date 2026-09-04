@@ -6,16 +6,16 @@ import Image from 'next/image';
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryImages = [
-  { id: 1, src: '/assets/gallery/gallery-1.jpg', alt: 'Vocal Singing Class' },
-  { id: 2, src: '/assets/gallery/gallery-2.jpg', alt: 'Western Dance Practice' },
-  { id: 3, src: '/assets/gallery/gallery-3.jpg', alt: 'Kathak Classical Dance' },
-  { id: 4, src: '/assets/gallery/gallery-4.jpg', alt: 'Keyboard Piano Class' },
-  { id: 5, src: '/assets/gallery/gallery-5.jpg', alt: 'Drum Session' },
-  { id: 6, src: '/assets/gallery/gallery-6.jpg', alt: 'Guitar Workshop' },
-  { id: 7, src: '/assets/gallery/gallery-7.jpg', alt: 'Vocal Studio Practice' },
-  { id: 8, src: '/assets/gallery/gallery-8.jpg', alt: 'Kathak Dance Studio' },
-  { id: 9, src: '/assets/gallery/gallery-9.jpg', alt: 'Keyboard Studio Lesson' },
-  { id: 10, src: '/assets/gallery/gallery-10.jpg', alt: 'Acoustic Drums Practice' },
+  { id: 1, src: '/assets/gallery/gallery-1.webp', alt: 'Vocal Singing Class' },
+  { id: 2, src: '/assets/gallery/gallery-2.webp', alt: 'Western Dance Practice' },
+  { id: 3, src: '/assets/gallery/gallery-3.webp', alt: 'Kathak Classical Dance' },
+  { id: 4, src: '/assets/gallery/gallery-4.webp', alt: 'Keyboard Piano Class' },
+  { id: 5, src: '/assets/gallery/gallery-5.webp', alt: 'Drum Session' },
+  { id: 6, src: '/assets/gallery/gallery-6.webp', alt: 'Guitar Workshop' },
+  { id: 7, src: '/assets/gallery/gallery-7.webp', alt: 'Vocal Studio Practice' },
+  { id: 8, src: '/assets/gallery/gallery-8.webp', alt: 'Kathak Dance Studio' },
+  { id: 9, src: '/assets/gallery/gallery-9.webp', alt: 'Keyboard Studio Lesson' },
+  { id: 10, src: '/assets/gallery/gallery-10.webp', alt: 'Acoustic Drums Practice' },
 ];
 
 export function Gallery() {

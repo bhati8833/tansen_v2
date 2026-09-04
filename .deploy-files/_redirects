@@ -1,0 +1,8 @@
+# Cloudflare Redirects
+# https://tansengurugram.com
+
+# www to non-www redirect
+https://www.tansengurugram.com/:splat https://tansengurugram.com/:splat 301!
+
+# HTTP to HTTPS redirect
+http://tansengurugram.com/:splat https://tansengurugram.com/:splat 301!

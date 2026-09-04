@@ -12,7 +12,7 @@ const studentTestimonials = [
     role: 'Fine & Arts Student',
     quote:
       'Highly recommended! Excellent dance training, supportive teachers, and a very professional setup. My child loves the classes and the environment is extremely safe',
-    avatar: '/assets/students/stuti-tiwari.png',
+    avatar: '/assets/students/stuti-tiwari.webp',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const studentTestimonials = [
     role: 'Guitar Student',
     quote:
       'Tansen Sangeet Mahavidyalaya has transformed my guitar playing completely. The structured curriculum and personal attention from faculty are unmatched.',
-    avatar: '/assets/students/rohan-sharma.png',
+    avatar: '/assets/students/rohan-sharma.webp',
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const studentTestimonials = [
     role: 'Vocal Music Student',
     quote:
       'Learning Hindustani classical vocal at Tansen has been a deeply inspiring journey. The faculty is immensely patient and knowledgeable.',
-    avatar: '/assets/students/arti.png',
+    avatar: '/assets/students/arti.webp',
   },
 ];
 
@@ -37,31 +37,31 @@ const celebrities = [
     id: 1,
     name: 'Shri Annu Kapoor',
     role: 'Actor & Host',
-    image: '/assets/testimonials/annu-kapoor.png',
+    image: '/assets/testimonials/annu-kapoor.webp',
   },
   {
     id: 2,
     name: 'Late Shri Mati Saroj Khan',
     role: 'Choreographer',
-    image: '/assets/testimonials/saroj-khan.png',
+    image: '/assets/testimonials/saroj-khan.webp',
   },
   {
     id: 3,
     name: 'Shri Shakti Kapoor',
     role: 'Veteran Actor',
-    image: '/assets/testimonials/shakti-kapoor.png',
+    image: '/assets/testimonials/shakti-kapoor.webp',
   },
   {
     id: 4,
     name: 'Shri Ismail Darbar',
     role: 'Music Composer',
-    image: '/assets/testimonials/ismail-darbar.png',
+    image: '/assets/testimonials/ismail-darbar.webp',
   },
   {
     id: 5,
     name: 'Master Marzi Pestonji',
     role: 'Dance Maestro',
-    image: '/assets/testimonials/marzi-pestonji.png',
+    image: '/assets/testimonials/marzi-pestonji.webp',
   },
 ];
 

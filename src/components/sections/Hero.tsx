@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 2,
-    image: '/assets/hero/western-dance-hero.png',
+    image: '/assets/hero/western-dance-hero.webp',
     tagline: "India's largest music & dance school",
     title: 'Western & Modern Dance',
     subtitle: '50+ Years of Legacy',
@@ -36,7 +36,7 @@ const slides = [
   },
   {
     id: 3,
-    image: '/assets/hero/kathak-hero.png',
+    image: '/assets/hero/kathak-hero.webp',
     tagline: "India's largest music & dance school",
     title: 'Classical Kathak Dance',
     subtitle: '50+ Years of Legacy',
@@ -50,7 +50,7 @@ const slides = [
   },
   {
     id: 4,
-    image: '/assets/hero/keyboard-hero.png',
+    image: '/assets/hero/keyboard-hero.webp',
     tagline: "India's largest music & dance school",
     title: 'Keyboard & Piano Academy',
     subtitle: '50+ Years of Legacy',
@@ -64,7 +64,7 @@ const slides = [
   },
   {
     id: 5,
-    image: '/assets/hero/drums-hero.png',
+    image: '/assets/hero/drums-hero.webp',
     tagline: "India's largest music & dance school",
     title: 'Drums & Percussion',
     subtitle: '50+ Years of Legacy',
@@ -78,7 +78,7 @@ const slides = [
   },
   {
     id: 6,
-    image: '/assets/hero/guitar-hero.png',
+    image: '/assets/hero/guitar-hero.webp',
     tagline: "India's largest music & dance school",
     title: 'Guitar Masterclasses',
     subtitle: '50+ Years of Legacy',
