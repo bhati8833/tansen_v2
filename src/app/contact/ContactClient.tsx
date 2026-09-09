@@ -203,28 +203,12 @@ export function ContactClient(_props: ContactClientProps) {
         breadcrumbs={[{ label: 'Contact Us' }]}
         title="Let's Begin Your Musical &"
         highlight="Artistic Journey"
-        subtitle="Have a question about our courses, batches, admissions, fees, or demo classes? Our team is here to help you find the right learning opportunity for you or your child."
+        subtitle="Questions about courses, batches, fees, or demo classes? Our team is here to help."
       />
 
       {/* 3. CONTACT INTRODUCTION */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="container-site max-w-5xl">
-          <div className="flex flex-wrap items-center gap-4 mb-6">
-            <button
-              onClick={() => handleQuickEnquire('Free Demo Class')}
-              className="px-7 py-3.5 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-sm transition-all shadow-lg hover:shadow-amber-500/20 active:scale-95 flex items-center gap-2"
-            >
-              <Gift className="w-4 h-4" />
-              <span>Book Free Demo</span>
-            </button>
-            <button
-              onClick={() => handleQuickEnquire('General Enquiry')}
-              className="px-7 py-3.5 bg-[#0A101C] hover:bg-gray-800 text-white font-bold rounded-full text-sm border border-gray-300 transition-all active:scale-95 flex items-center gap-2"
-            >
-              <Send className="w-4 h-4 text-[#D4952B]" />
-              <span>Enquire Now</span>
-            </button>
-          </div>
           <div className="bg-orange-50/60 rounded-3xl p-6 sm:p-10 border border-orange-100/80 shadow-2xs">
             <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
               Welcome to Tansen Sangeet Mahavidyalaya

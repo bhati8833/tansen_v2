@@ -29,7 +29,7 @@ export default function CoursesPage() {
         breadcrumbs={[{ label: 'Courses' }]}
         title="Our Performing &"
         highlight="Creative Arts Courses"
-        subtitle="Explore our 8 certified programs categorized across Music & Vocal, Instruments, Dance, and Creative Arts designed for beginners to advanced performers."
+        subtitle="Our 8 certified programs across Music & Vocal, Instruments, Dance, and Creative Arts for every age and level."
       />
 
       {/* Search & Filter Bar */}

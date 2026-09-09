@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { faqs, faqPageHeader, faqFooterContact, FAQItem } from '@/data/faq';
+import { faqs, faqFooterContact, FAQItem } from '@/data/faq';
 import { 
   ChevronRight, 
   ChevronDown, 
@@ -48,9 +48,9 @@ export default function FAQPage() {
       {/* 1. HERO BANNER */}
       <PageHeader
         breadcrumbs={[{ label: 'FAQ' }]}
-        title={faqPageHeader.title}
+        title="Frequently Asked"
         highlight="Questions"
-        subtitle={faqPageHeader.description}
+        subtitle="Answers to your questions about courses, age groups, classes, demo sessions, and admissions."
       />
 
       {/* 2. SEARCH & CATEGORY FILTER BAR */}

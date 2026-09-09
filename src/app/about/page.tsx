@@ -40,7 +40,7 @@ export default function AboutPage() {
         breadcrumbs={[{ label: 'About Us' }]}
         title="About Tansen Sangeet"
         highlight="Mahavidyalaya"
-        subtitle={aboutData.introParagraphs[0]}
+        subtitle="A leading academy for music, dance, and performing arts education in Gurugram."
       />
 
       {/* 2. INTRODUCTION & APPROACH */}
