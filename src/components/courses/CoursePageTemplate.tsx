@@ -69,8 +69,6 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           { label: data.title },
         ]}
         title={data.locationTitle.replace(' in Gurugram', '')}
-        highlight="in Gurugram"
-        subtitle={data.tagline}
       />
 
       {/* 2. COURSE OVERVIEW (HERO BODY) */}
@@ -80,7 +78,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-5">
               <div className="flex items-center gap-3">
-                <span className="bg-[#D4952B] text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                <span className="bg-[#E37216] text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
                   {data.categoryName}
                 </span>
                 <span className="bg-gray-100 text-gray-700 text-xs font-medium px-3.5 py-1.5 rounded-full border border-gray-200">
@@ -96,7 +94,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   href="/contact"
-                  className="bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-3.5 px-8 rounded-full transition-colors shadow-lg text-sm"
+                  className="bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-3.5 px-8 rounded-full transition-colors shadow-lg text-sm"
                 >
                   Book Free Demo
                 </Link>
@@ -110,15 +108,15 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
               <div className="flex flex-wrap gap-6 text-xs text-gray-500 border-t border-gray-200 pt-4">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#D4952B]" />
+                  <Clock className="w-4 h-4 text-[#E37216]" />
                   <span>Duration: <strong className="text-gray-900">{data.schedule.weeklyHours}</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-[#D4952B]" />
+                  <Users className="w-4 h-4 text-[#E37216]" />
                   <span>Eligibility: <strong className="text-gray-900">{data.schedule.ageGroup}</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#D4952B]" />
+                  <ShieldCheck className="w-4 h-4 text-[#E37216]" />
                   <span>Board: <strong className="text-gray-900">Prayag & Trinity Associated</strong></span>
                 </div>
               </div>
@@ -136,7 +134,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                   <div className="text-white">
-                    <span className="text-xs font-bold text-[#D4952B] uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block mb-1">
                       Tansen Academy Studio
                     </span>
                     <p className="text-sm text-gray-200">
@@ -169,7 +167,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
             {/* Right Text (100-150 words) */}
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block">
+              <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block">
                 Course Introduction
               </span>
               <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 leading-snug">
@@ -185,7 +183,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <div className="pt-2 flex items-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-sm transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-sm transition-colors shadow-sm"
                 >
                   <span>Book Free Demo</span>
                   <ArrowRight className="w-4 h-4" />
@@ -201,7 +199,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-12 bg-orange-50/40 border-b border-gray-100">
         <div className="container-site max-w-5xl mx-auto px-4">
           <div className="bg-white p-8 sm:p-10 rounded-3xl border border-orange-100 shadow-2xs flex flex-col md:flex-row items-start gap-6">
-            <div className="w-14 h-14 rounded-2xl bg-[#D4952B]/10 text-[#D4952B] flex items-center justify-center flex-shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-[#E37216]/10 text-[#E37216] flex items-center justify-center flex-shrink-0">
               <HelpCircle className="w-7 h-7" />
             </div>
             <div>
@@ -222,7 +220,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-gray-50">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Curriculum & Skill Mastery
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
@@ -242,7 +240,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                   key={idx} 
                   className="bg-white p-6 rounded-2xl border border-gray-100 shadow-2xs hover:border-orange-200 transition-all group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-orange-50 text-[#D4952B] flex items-center justify-center mb-4 group-hover:bg-[#D4952B] group-hover:text-white transition-colors">
+                  <div className="w-11 h-11 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-4 group-hover:bg-[#E37216] group-hover:text-white transition-colors">
                     <IconComp className="w-5 h-5" />
                   </div>
                   <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">
@@ -262,7 +260,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-white border-y border-gray-100">
         <div className="container-site max-w-5xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Program Benefits & Features
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900">
@@ -273,7 +271,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {data.highlights.map((highlight, idx) => (
               <div key={idx} className="p-4 bg-orange-50/50 rounded-xl border border-orange-100/80 flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                 <span className="text-xs font-semibold text-gray-800">{highlight}</span>
               </div>
             ))}
@@ -285,7 +283,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-gray-50">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Target Audience
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
@@ -297,7 +295,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.audienceCards.map((aud, idx) => (
               <div key={idx} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs hover:border-orange-200 transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[#D4952B]/10 text-[#D4952B] flex items-center justify-center mb-4 font-bold font-poppins text-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#E37216]/10 text-[#C2410C] flex items-center justify-center mb-4 font-bold font-poppins text-sm">
                   0{idx + 1}
                 </div>
                 <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">{aud.title}</h3>
@@ -312,7 +310,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-[#FCF7F1]">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               The Tansen Advantage
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
@@ -322,7 +320,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.whyChooseFeatures.map((feat, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-amber-100 shadow-2xs">
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-orange-100 shadow-2xs">
                 <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">{feat.title}</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">{feat.description}</p>
               </div>
@@ -335,7 +333,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Progressive Learning Framework
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
@@ -348,7 +346,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             {data.learningJourney.map((s, idx) => (
               <div key={idx} className="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-extrabold text-[#D4952B] uppercase tracking-wider block mb-2">
+                  <span className="text-xs font-extrabold text-[#C2410C] uppercase tracking-wider block mb-2">
                     Step {s.step}
                   </span>
                   <h3 className="font-bold text-gray-900 font-poppins text-base mb-2">
@@ -372,7 +370,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             {/* Schedule Box */}
             <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#D4952B] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6">
                   <Calendar className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
@@ -407,7 +405,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             {data.certification && (
               <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-2xs flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#D4952B] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6">
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
@@ -420,7 +418,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                   <div className="space-y-2 mb-6">
                     {data.certification.affiliations.map((aff, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs font-semibold text-gray-800 bg-orange-50/60 p-2.5 rounded-lg border border-orange-100">
-                        <CheckCircle2 className="w-4 h-4 text-[#D4952B]" />
+                        <CheckCircle2 className="w-4 h-4 text-[#E37216]" />
                         <span>{aff}</span>
                       </div>
                     ))}
@@ -442,7 +440,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
         <section className="py-16 bg-white border-b border-gray-100">
           <div className="container-site max-w-6xl mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-10">
-              <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+              <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
                 Studio & Learning Moments
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900">
@@ -471,7 +469,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       <section className="py-16 bg-gray-50">
         <div className="container-site max-w-4xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Got Questions?
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
@@ -486,17 +484,17 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 <div
                   key={idx}
                   className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                    isOpen ? 'border-[#D4952B] bg-white shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] bg-white shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
                   }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-${idx}`}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-gray-900 font-poppins text-base hover:text-[#D4952B] transition-colors"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-gray-900 font-poppins text-base hover:text-[#C2410C] transition-colors"
                   >
                     <span>{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 text-[#D4952B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-5 h-5 text-[#E37216] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isOpen && (
                     <div id={`faq-${idx}`} className="px-5 pb-5 pt-1 text-gray-700 text-sm leading-relaxed border-t border-orange-100 bg-orange-50/20">
@@ -511,7 +509,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           <div className="mt-8 text-center">
             <Link
               href="/faq"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4952B] hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#C2410C] hover:underline"
             >
               <span>View All FAQs</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -522,7 +520,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
       {/* 14. FINAL CTA & 15. CONTACT / FOOTER BAR */}
       <section id="contact-form" className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
         
         <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -536,7 +534,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-4 px-9 rounded-full transition-colors shadow-lg text-base"
+                className="bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-4 px-9 rounded-full transition-colors shadow-lg text-base"
               >
                 Book Free Demo
               </Link>
@@ -554,26 +552,26 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-200">
               
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Call Us</div>
-                  <a href="tel:9818083588" className="block text-gray-300 hover:text-[#D4952B] text-xs transition-colors">9818083588</a>
-                  <a href="tel:9871833588" className="block text-gray-300 hover:text-[#D4952B] text-xs transition-colors">9871833588</a>
+                  <a href="tel:9818083588" className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">9818083588</a>
+                  <a href="tel:9871833588" className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">9871833588</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Email Us</div>
-                  <a href="mailto:tansengurugram43@gmail.com" className="text-gray-300 hover:text-[#D4952B] text-xs transition-colors break-all">
+                  <a href="mailto:tansengurugram43@gmail.com" className="text-gray-300 hover:text-[#E37216] text-xs transition-colors break-all">
                     tansengurugram43@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Location</div>
                   <p className="text-gray-300 text-xs leading-relaxed">
@@ -589,19 +587,19 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-400">
             <span className="block font-semibold text-gray-300 mb-3 uppercase tracking-wider">Explore Other Performing Arts Courses:</span>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-              <Link href="/courses/music/classical-vocal-singing" className="hover:text-[#D4952B] transition-colors">Classical Vocal Singing</Link>
+              <Link href="/courses/music/classical-vocal-singing" className="hover:text-[#E37216] transition-colors">Classical Vocal Singing</Link>
               <span>•</span>
-              <Link href="/courses/dance/kathak" className="hover:text-[#D4952B] transition-colors">Kathak Classes</Link>
+              <Link href="/courses/dance/kathak" className="hover:text-[#E37216] transition-colors">Kathak Classes</Link>
               <span>•</span>
-              <Link href="/courses/instruments/tabla" className="hover:text-[#D4952B] transition-colors">Tabla Classes</Link>
+              <Link href="/courses/instruments/tabla" className="hover:text-[#E37216] transition-colors">Tabla Classes</Link>
               <span>•</span>
-              <Link href="/courses/instruments/guitar" className="hover:text-[#D4952B] transition-colors">Guitar Classes</Link>
+              <Link href="/courses/instruments/guitar" className="hover:text-[#E37216] transition-colors">Guitar Classes</Link>
               <span>•</span>
-              <Link href="/courses/instruments/keyboard-piano" className="hover:text-[#D4952B] transition-colors">Keyboard / Piano Classes</Link>
+              <Link href="/courses/instruments/keyboard-piano" className="hover:text-[#E37216] transition-colors">Keyboard / Piano Classes</Link>
               <span>•</span>
-              <Link href="/courses/dance/western-dance" className="hover:text-[#D4952B] transition-colors">Western Dance Classes</Link>
+              <Link href="/courses/dance/western-dance" className="hover:text-[#E37216] transition-colors">Western Dance Classes</Link>
               <span>•</span>
-              <Link href="/courses/creative-arts/fine-arts" className="hover:text-[#D4952B] transition-colors">Fine Arts Classes</Link>
+              <Link href="/courses/creative-arts/fine-arts" className="hover:text-[#E37216] transition-colors">Fine Arts Classes</Link>
             </div>
           </div>
 

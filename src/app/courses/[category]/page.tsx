@@ -45,8 +45,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <PageHeader
         breadcrumbs={[{ label: 'Courses', href: '/courses' }, { label: categoryInfo.name }]}
         title={categoryInfo.name}
-        highlight="Courses"
-        subtitle={categoryInfo.description}
       />
 
       {/* Courses in this Category Grid */}
@@ -65,13 +63,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-[#D4952B] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                  <div className="absolute top-4 left-4 bg-[#E37216] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                     {course.category}
                   </div>
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold font-poppins text-gray-900 group-hover:text-[#D4952B] transition-colors mb-2">
+                  <h3 className="text-xl font-bold font-poppins text-gray-900 group-hover:text-[#E37216] transition-colors mb-2">
                     {course.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
@@ -80,18 +78,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
                   <div className="space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-500 mb-6">
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-[#D4952B]" />
+                      <Clock className="w-4 h-4 text-[#E37216]" />
                       <span>Duration: {course.duration}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Award className="w-4 h-4 text-[#D4952B]" />
+                      <Award className="w-4 h-4 text-[#E37216]" />
                       <span>Eligibility: {course.level}</span>
                     </div>
                   </div>
 
                   <Link
                     href={course.fullSlug}
-                    className="w-full py-3 px-4 bg-orange-50 hover:bg-[#D4952B] text-[#D4952B] hover:text-white font-bold rounded-xl text-center text-sm transition-all duration-200 flex items-center justify-center gap-2 group/btn"
+                    className="w-full py-3 px-4 bg-orange-50 hover:bg-[#E37216] text-[#E37216] hover:text-white font-bold rounded-xl text-center text-sm transition-all duration-200 flex items-center justify-center gap-2 group/btn"
                   >
                     <span>Explore Course</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

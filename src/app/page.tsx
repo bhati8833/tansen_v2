@@ -1,7 +1,8 @@
 import { Hero } from '@/components/sections/Hero';
 import { CoursesGrid } from '@/components/sections/CoursesGrid';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
-import { Testimonials } from '@/components/sections/Testimonials';
+import { CelebrityRecognition } from '@/components/sections/CelebrityRecognition';
+import { StudentSuccessStories } from '@/components/sections/StudentSuccessStories';
 import { Gallery } from '@/components/sections/Gallery';
 import { Accreditation } from '@/components/sections/Accreditation';
 import { BookDemo } from '@/components/sections/BookDemo';
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <CoursesGrid />
       <WhyChooseUs />
-      <Testimonials />
+      <CelebrityRecognition />
+      <StudentSuccessStories />
       <Gallery />
       <Accreditation />
       <BookDemo />

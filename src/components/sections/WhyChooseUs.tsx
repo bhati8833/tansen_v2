@@ -38,12 +38,12 @@ export function WhyChooseUs() {
   return (
     <section id="about" className="relative py-20 overflow-hidden" style={{ backgroundColor: '#FDF9F3' }}>
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:16px_16px]" />
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:16px_16px]" />
 
       <div className="container-site relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#D4952B' }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#E37216' }}>
             WHY CHOOSE US
           </p>
           <h2
@@ -65,9 +65,9 @@ export function WhyChooseUs() {
               >
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
-                  style={{ backgroundColor: 'rgba(212,149,43,0.12)' }}
+                  style={{ backgroundColor: 'rgba(227,114,22,0.12)' }}
                 >
-                  <Icon className="w-6 h-6" style={{ color: '#D4952B' }} />
+                  <Icon className="w-6 h-6" style={{ color: '#E37216' }} />
                 </div>
                 <h3
                   className="font-bold text-base md:text-lg leading-snug"

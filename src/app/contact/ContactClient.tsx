@@ -201,16 +201,14 @@ export function ContactClient(_props: ContactClientProps) {
       {/* 1. BREADCRUMB & 2. HERO SECTION */}
       <PageHeader
         breadcrumbs={[{ label: 'Contact Us' }]}
-        title="Let's Begin Your Musical &"
-        highlight="Artistic Journey"
-        subtitle="Questions about courses, batches, fees, or demo classes? Our team is here to help."
+        title="Contact Us"
       />
 
       {/* 3. CONTACT INTRODUCTION */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="container-site max-w-5xl">
           <div className="bg-orange-50/60 rounded-3xl p-6 sm:p-10 border border-orange-100/80 shadow-2xs">
-            <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Welcome to Tansen Sangeet Mahavidyalaya
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900 mb-4">
@@ -242,7 +240,7 @@ export function ContactClient(_props: ContactClientProps) {
               
               {/* Section Header */}
               <div>
-                <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+                <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
                   Direct Reach
                 </span>
                 <h2 className="text-3xl font-bold font-poppins text-gray-900 mb-2">
@@ -259,7 +257,7 @@ export function ContactClient(_props: ContactClientProps) {
                 {/* 1. Call Us Card */}
                 <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#D4952B] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
@@ -268,17 +266,17 @@ export function ContactClient(_props: ContactClientProps) {
                         Speak directly with our team for course, admission, batch, and schedule enquiries.
                       </p>
                       <div className="pt-1 flex flex-col gap-1 text-sm font-semibold text-gray-900">
-                        <a href="tel:9818083588" className="hover:text-[#D4952B] transition-colors flex items-center gap-2">
+                        <a href="tel:9818083588" className="hover:text-[#E37216] transition-colors flex items-center gap-2">
                           <span>9818083588</span>
                         </a>
-                        <a href="tel:9871833588" className="hover:text-[#D4952B] transition-colors flex items-center gap-2">
+                        <a href="tel:9871833588" className="hover:text-[#E37216] transition-colors flex items-center gap-2">
                           <span>9871833588</span>
                         </a>
                       </div>
                       <div className="pt-2">
                         <a
                           href="tel:9818083588"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#D4952B] hover:bg-[#b8842b] text-white text-xs font-bold rounded-lg transition-colors shadow-2xs"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#E37216] hover:bg-[#c96213] text-white text-xs font-bold rounded-lg transition-colors shadow-2xs"
                         >
                           <Phone className="w-3.5 h-3.5" />
                           <span>Call Now</span>
@@ -291,7 +289,7 @@ export function ContactClient(_props: ContactClientProps) {
                 {/* 2. Email Us Card */}
                 <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-amber-100/70 text-[#D4952B] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
@@ -301,7 +299,7 @@ export function ContactClient(_props: ContactClientProps) {
                       </p>
                       <a
                         href="mailto:tansengurugram43@gmail.com"
-                        className="inline-block text-sm font-semibold text-gray-900 hover:text-[#D4952B] transition-colors break-all"
+                        className="inline-block text-sm font-semibold text-gray-900 hover:text-[#E37216] transition-colors break-all"
                       >
                         tansengurugram43@gmail.com
                       </a>
@@ -321,7 +319,7 @@ export function ContactClient(_props: ContactClientProps) {
                 {/* 3. Visit Us Card */}
                 <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#D4952B] flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
@@ -352,7 +350,7 @@ export function ContactClient(_props: ContactClientProps) {
               {/* 5. QUICK CONTACT CARDS */}
               <div className="pt-4 space-y-4">
                 <div>
-                  <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-1">
+                  <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-1">
                     Quick Options
                   </span>
                   <h3 className="text-xl font-bold font-poppins text-gray-900">
@@ -366,16 +364,16 @@ export function ContactClient(_props: ContactClientProps) {
                   <button
                     type="button"
                     onClick={() => handleQuickEnquire('Course Information')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#D4952B] hover:shadow-md transition-all group"
+                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#D4952B] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                       <Music className="w-4 h-4" />
                     </div>
                     <h4 className="font-bold text-gray-900 text-sm mb-1">🎵 Course Enquiry</h4>
                     <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                       Want to know more about a particular music, dance, or creative arts course?
                     </p>
-                    <span className="text-xs font-bold text-[#D4952B] group-hover:underline inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
                       Enquire About Courses →
                     </span>
                   </button>
@@ -384,16 +382,16 @@ export function ContactClient(_props: ContactClientProps) {
                   <button
                     type="button"
                     onClick={() => handleQuickEnquire('Admission')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#D4952B] hover:shadow-md transition-all group"
+                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-amber-100 text-[#D4952B] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                       <GraduationCap className="w-4 h-4" />
                     </div>
                     <h4 className="font-bold text-gray-900 text-sm mb-1">🎓 Admission Enquiry</h4>
                     <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                       Looking to join Tansen Sangeet Mahavidyalaya?
                     </p>
-                    <span className="text-xs font-bold text-[#D4952B] group-hover:underline inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
                       Ask About Admission →
                     </span>
                   </button>
@@ -402,16 +400,16 @@ export function ContactClient(_props: ContactClientProps) {
                   <button
                     type="button"
                     onClick={() => handleQuickEnquire('Batch & Timings')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#D4952B] hover:shadow-md transition-all group"
+                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#D4952B] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                       <Calendar className="w-4 h-4" />
                     </div>
                     <h4 className="font-bold text-gray-900 text-sm mb-1">📅 Batch &amp; Timing</h4>
                     <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                       Want to know available batch days and class timings?
                     </p>
-                    <span className="text-xs font-bold text-[#D4952B] group-hover:underline inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
                       Check Available Batches →
                     </span>
                   </button>
@@ -420,7 +418,7 @@ export function ContactClient(_props: ContactClientProps) {
                   <button
                     type="button"
                     onClick={() => handleQuickEnquire('Free Demo Class')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#D4952B] hover:shadow-md transition-all group"
+                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                       <Gift className="w-4 h-4" />
@@ -429,7 +427,7 @@ export function ContactClient(_props: ContactClientProps) {
                     <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                       Experience the learning environment before enrolling.
                     </p>
-                    <span className="text-xs font-bold text-[#D4952B] group-hover:underline inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
                       Book Free Demo →
                     </span>
                   </button>
@@ -444,7 +442,7 @@ export function ContactClient(_props: ContactClientProps) {
               <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-gray-200 shadow-xl relative">
                 
                 <div className="mb-6 pb-6 border-b border-gray-100">
-                  <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-1">
+                  <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-1">
                     Online Form
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900 mb-2">
@@ -475,7 +473,7 @@ export function ContactClient(_props: ContactClientProps) {
                         setMessage('');
                         setConsent(false);
                       }}
-                      className="px-6 py-2.5 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-xs transition-colors shadow-md"
+                      className="px-6 py-2.5 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-xs transition-colors shadow-md"
                     >
                       Submit Another Enquiry
                     </button>
@@ -502,7 +500,7 @@ export function ContactClient(_props: ContactClientProps) {
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
                           placeholder="Enter your name"
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         />
                       </div>
 
@@ -516,7 +514,7 @@ export function ContactClient(_props: ContactClientProps) {
                           value={phoneNumber}
                           onChange={(e) => setPhoneNumber(e.target.value)}
                           placeholder="Enter your phone number"
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         />
                       </div>
                     </div>
@@ -532,7 +530,7 @@ export function ContactClient(_props: ContactClientProps) {
                           value={emailAddress}
                           onChange={(e) => setEmailAddress(e.target.value)}
                           placeholder="Enter your email address"
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         />
                       </div>
 
@@ -545,7 +543,7 @@ export function ContactClient(_props: ContactClientProps) {
                           value={studentAge}
                           onChange={(e) => setStudentAge(e.target.value)}
                           placeholder="Enter age or select age group"
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         />
                       </div>
                     </div>
@@ -560,7 +558,7 @@ export function ContactClient(_props: ContactClientProps) {
                           required
                           value={interestedCourse}
                           onChange={(e) => setInterestedCourse(e.target.value)}
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         >
                           <option value="">Select Course</option>
                           <option value="Classical Vocal Singing">Classical Vocal Singing</option>
@@ -582,7 +580,7 @@ export function ContactClient(_props: ContactClientProps) {
                         <select
                           value={enquiryType}
                           onChange={(e) => setEnquiryType(e.target.value)}
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                         >
                           <option value="">Select Enquiry Type</option>
                           <option value="Course Information">Course Information</option>
@@ -609,7 +607,7 @@ export function ContactClient(_props: ContactClientProps) {
                             onClick={() => setPreferredContact(method)}
                             className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 border transition-all ${
                               preferredContact === method
-                                ? 'bg-[#D4952B] text-white border-[#D4952B] shadow-2xs'
+                                ? 'bg-[#E37216] text-white border-[#E37216] shadow-2xs'
                                 : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                             }`}
                           >
@@ -630,7 +628,7 @@ export function ContactClient(_props: ContactClientProps) {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Tell us what you would like to know..."
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#E37216] focus:bg-white transition-all"
                       />
                     </div>
 
@@ -641,7 +639,7 @@ export function ContactClient(_props: ContactClientProps) {
                         id="consent-check"
                         checked={consent}
                         onChange={(e) => setConsent(e.target.checked)}
-                        className="mt-1 w-4 h-4 text-[#D4952B] border-gray-300 rounded focus:ring-[#D4952B]"
+                        className="mt-1 w-4 h-4 text-[#E37216] border-gray-300 rounded focus:ring-[#E37216]"
                       />
                       <label htmlFor="consent-check" className="text-xs text-gray-600 cursor-pointer select-none leading-relaxed">
                         I agree to be contacted by Tansen Sangeet Mahavidyalaya regarding my enquiry.
@@ -652,7 +650,7 @@ export function ContactClient(_props: ContactClientProps) {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-[#D4952B] hover:bg-[#b8842b] disabled:bg-gray-400 text-white font-bold rounded-xl text-sm transition-all shadow-lg hover:shadow-amber-500/20 flex items-center justify-center gap-2 active:scale-[0.99]"
+                      className="w-full py-4 bg-[#E37216] hover:bg-[#c96213] disabled:bg-gray-400 text-white font-bold rounded-xl text-sm transition-all shadow-lg hover:shadow-orange-500/20 flex items-center justify-center gap-2 active:scale-[0.99]"
                     >
                       {isSubmitting ? (
                         <>
@@ -680,9 +678,9 @@ export function ContactClient(_props: ContactClientProps) {
 
       {/* 7. FREE DEMO CTA */}
       <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
-          <div className="w-12 h-12 rounded-full bg-[#D4952B]/20 border border-[#D4952B]/40 text-[#D4952B] flex items-center justify-center mx-auto mb-4">
+          <div className="w-12 h-12 rounded-full bg-[#E37216]/20 border border-[#E37216]/40 text-[#E37216] flex items-center justify-center mx-auto mb-4">
             <Gift className="w-6 h-6" />
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-white mb-4">
@@ -701,7 +699,7 @@ export function ContactClient(_props: ContactClientProps) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
             <button
               onClick={() => handleQuickEnquire('Free Demo Class')}
-              className="w-full sm:w-auto px-8 py-4 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-base transition-all shadow-xl hover:shadow-amber-500/20 active:scale-95 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-base transition-all shadow-xl hover:shadow-orange-500/20 active:scale-95 flex items-center justify-center gap-2"
             >
               <Gift className="w-5 h-5" />
               <span>Book Free Demo</span>
@@ -717,7 +715,7 @@ export function ContactClient(_props: ContactClientProps) {
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="container-site">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Programs Offered
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
@@ -732,11 +730,11 @@ export function ContactClient(_props: ContactClientProps) {
             {coursesList.map((c, i) => (
               <div
                 key={i}
-                className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-[#D4952B] hover:shadow-lg transition-all flex flex-col justify-between group"
+                className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-[#E37216] hover:shadow-lg transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="text-3xl mb-3" aria-hidden="true">{c.icon}</div>
-                  <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2 group-hover:text-[#D4952B] transition-colors">
+                  <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2 group-hover:text-[#E37216] transition-colors">
                     {c.title}
                   </h3>
                   <p className="text-xs text-gray-600 leading-relaxed mb-6">
@@ -746,7 +744,7 @@ export function ContactClient(_props: ContactClientProps) {
                 <div>
                   <Link
                     href={c.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4952B] group-hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E37216] group-hover:underline"
                   >
                     <span>Explore Course</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -762,7 +760,7 @@ export function ContactClient(_props: ContactClientProps) {
       <section className="py-16 bg-gray-50">
         <div className="container-site">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Visit Tansen Sangeet Mahavidyalaya
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
@@ -800,7 +798,7 @@ export function ContactClient(_props: ContactClientProps) {
                 href="https://maps.google.com/?q=Tansen+Sangeet+Mahavidyalaya+Sector+43+Gurugram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-[#D4952B] hover:bg-[#b8842b] text-white text-xs font-bold rounded-full transition-colors flex items-center gap-2 flex-shrink-0"
+                className="px-6 py-3 bg-[#E37216] hover:bg-[#c96213] text-white text-xs font-bold rounded-full transition-colors flex items-center gap-2 flex-shrink-0"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Get Directions</span>
@@ -815,7 +813,7 @@ export function ContactClient(_props: ContactClientProps) {
         <div className="container-site max-w-4xl">
           <div className="bg-orange-50/50 rounded-3xl p-8 sm:p-10 border border-orange-200/70 shadow-2xs">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-[#D4952B] text-white flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#E37216] text-white flex items-center justify-center">
                 <Clock className="w-5 h-5" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900">
@@ -841,7 +839,7 @@ export function ContactClient(_props: ContactClientProps) {
                   'Demo class availability',
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-orange-100">
-                    <Check className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
+                    <Check className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                     <span className="text-sm font-semibold text-gray-800">{item}</span>
                   </div>
                 ))}
@@ -851,7 +849,7 @@ export function ContactClient(_props: ContactClientProps) {
             <div className="flex flex-wrap gap-4 pt-2 border-t border-orange-200/60">
               <a
                 href="tel:9818083588"
-                className="px-6 py-3 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-xs transition-colors flex items-center gap-2 shadow-sm"
+                className="px-6 py-3 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-xs transition-colors flex items-center gap-2 shadow-sm"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>
@@ -860,7 +858,7 @@ export function ContactClient(_props: ContactClientProps) {
                 onClick={() => handleQuickEnquire('General Enquiry')}
                 className="px-6 py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-full text-xs transition-colors flex items-center gap-2 shadow-sm"
               >
-                <Send className="w-4 h-4 text-[#D4952B]" />
+                <Send className="w-4 h-4 text-[#E37216]" />
                 <span>Enquire Now</span>
               </button>
             </div>
@@ -872,7 +870,7 @@ export function ContactClient(_props: ContactClientProps) {
       <section className="py-16 bg-gray-50">
         <div className="container-site">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Why Connect With Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
@@ -886,9 +884,9 @@ export function ContactClient(_props: ContactClientProps) {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#D4952B] shadow-2xs hover:shadow-md transition-all text-center flex flex-col items-center"
+                  className="bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#E37216] shadow-2xs hover:shadow-md transition-all text-center flex flex-col items-center"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#D4952B] flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-bold text-gray-900 font-poppins text-base mb-2">
@@ -908,7 +906,7 @@ export function ContactClient(_props: ContactClientProps) {
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="container-site max-w-4xl">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Got Questions?
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
@@ -923,17 +921,17 @@ export function ContactClient(_props: ContactClientProps) {
                 <div
                   key={idx}
                   className={`rounded-2xl border transition-all ${
-                    isOpen ? 'border-[#D4952B] bg-orange-50/20 shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] bg-orange-50/20 shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
                   }`}
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-start justify-between gap-4 font-bold text-gray-900 font-poppins text-base sm:text-lg hover:text-[#D4952B] transition-colors"
+                    className="w-full p-5 text-left flex items-start justify-between gap-4 font-bold text-gray-900 font-poppins text-base sm:text-lg hover:text-[#E37216] transition-colors"
                   >
                     <span>{faq.q}</span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform ${
-                      isOpen ? 'bg-[#D4952B] text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                      isOpen ? 'bg-[#E37216] text-white rotate-180' : 'bg-gray-100 text-gray-600'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
@@ -953,7 +951,7 @@ export function ContactClient(_props: ContactClientProps) {
 
       {/* 13. FINAL CTA */}
       <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
         <div className="container-site relative z-10 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-white mb-4">
             Ready to Take the First Step?
@@ -965,7 +963,7 @@ export function ContactClient(_props: ContactClientProps) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => handleQuickEnquire('Free Demo Class')}
-              className="px-8 py-4 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-sm transition-all shadow-xl hover:shadow-amber-500/20 active:scale-95 flex items-center gap-2"
+              className="px-8 py-4 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-sm transition-all shadow-xl hover:shadow-orange-500/20 active:scale-95 flex items-center gap-2"
             >
               <Gift className="w-4 h-4" />
               <span>Book Free Demo</span>
@@ -974,7 +972,7 @@ export function ContactClient(_props: ContactClientProps) {
               href="tel:9818083588"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-sm border border-white/20 transition-all active:scale-95 flex items-center gap-2"
             >
-              <Phone className="w-4 h-4 text-[#D4952B]" />
+              <Phone className="w-4 h-4 text-[#E37216]" />
               <span>Call Now</span>
             </a>
           </div>
@@ -985,7 +983,7 @@ export function ContactClient(_props: ContactClientProps) {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 p-2.5 md:hidden shadow-2xl flex items-center justify-around gap-2">
         <a
           href="tel:9818083588"
-          className="flex-1 py-2.5 px-3 bg-[#D4952B] text-white rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
+          className="flex-1 py-2.5 px-3 bg-[#E37216] text-white rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
         >
           <Phone className="w-3.5 h-3.5" />
           <span>Call</span>
@@ -1003,7 +1001,7 @@ export function ContactClient(_props: ContactClientProps) {
           onClick={() => handleQuickEnquire('Free Demo Class')}
           className="flex-1 py-2.5 px-3 bg-gray-900 text-white rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
         >
-          <Gift className="w-3.5 h-3.5 text-[#D4952B]" />
+          <Gift className="w-3.5 h-3.5 text-[#E37216]" />
           <span>Demo</span>
         </button>
       </div>

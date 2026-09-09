@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
-import { ChevronRight, Clock, User, Calendar, Tag, ArrowLeft } from 'lucide-react';
+import { Tag, ArrowLeft } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 interface BlogDetailPageProps {
   params: Promise<{
@@ -38,40 +39,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
       {/* Hero Header */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20">
-        <div className="container-site relative z-10 max-w-4xl mx-auto">
-          <div className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-4">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <Link href="/blog" className="hover:underline">Blog</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300 line-clamp-1">{post.title}</span>
-          </div>
-
-          <span className="bg-[#D4952B] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4">
-            {post.category}
-          </span>
-
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold font-poppins text-white tracking-tight mb-6 leading-tight">
-            {post.title}
-          </h1>
-
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 border-t border-white/10 pt-4">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4 text-[#D4952B]" />
-              <span>By <strong className="text-white">{post.author}</strong></span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-[#D4952B]" />
-              <span>{post.date}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-[#D4952B]" />
-              <span>{post.readTime}</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: post.category }, { label: post.title }]}
+        title={post.title}
+      />
 
       {/* Article Content */}
       <section className="py-16 bg-white flex-grow">
@@ -96,7 +67,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           {/* Tags */}
           <div className="mt-12 pt-6 border-t border-gray-200 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Tag className="w-4 h-4 text-[#D4952B]" />
+              <Tag className="w-4 h-4 text-[#E37216]" />
               <span className="text-xs font-semibold text-gray-500 uppercase">Tags:</span>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((t) => (
@@ -109,7 +80,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-[#D4952B] font-bold text-sm hover:underline"
+              className="inline-flex items-center gap-1.5 text-[#E37216] font-bold text-sm hover:underline"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to All Articles</span>
@@ -118,7 +89,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
           {/* Author Box */}
           <div className="mt-8 p-6 bg-orange-50/60 rounded-2xl border border-orange-100 flex items-center gap-4">
-            <div className="w-14 h-14 bg-[#D4952B] text-white font-bold text-xl rounded-full flex items-center justify-center font-poppins flex-shrink-0">
+            <div className="w-14 h-14 bg-[#E37216] text-white font-bold text-xl rounded-full flex items-center justify-center font-poppins flex-shrink-0">
               {post.author.charAt(0)}
             </div>
             <div>

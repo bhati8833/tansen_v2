@@ -57,11 +57,7 @@ export const homeFaqFooter = {
   contactUsButton: "Contact Us Today"
 };
 
-export const faqPageHeader = {
-  title: "Frequently Asked Questions",
-  subtitle: "Everything You Need to Know About Tansen Sangeet Mahavidyalaya",
-  description: "Choosing the right music and performing arts academy is an important decision. Here are answers to some of the most frequently asked questions about our courses, age groups, classes, demo sessions, performances, and admissions."
-};
+
 
 export const faqs: FAQItem[] = [
   {

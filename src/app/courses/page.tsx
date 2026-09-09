@@ -27,9 +27,7 @@ export default function CoursesPage() {
       {/* Hero Banner */}
       <PageHeader
         breadcrumbs={[{ label: 'Courses' }]}
-        title="Our Performing &"
-        highlight="Creative Arts Courses"
-        subtitle="Our 8 certified programs across Music & Vocal, Instruments, Dance, and Creative Arts for every age and level."
+        title="Courses"
       />
 
       {/* Search & Filter Bar */}
@@ -37,14 +35,14 @@ export default function CoursesPage() {
         <div className="container-site flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Filter Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-            <Filter className="w-4 h-4 text-[#D4952B] hidden sm:block flex-shrink-0" />
+            <Filter className="w-4 h-4 text-[#E37216] hidden sm:block flex-shrink-0" />
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-[#D4952B] text-white shadow-md'
+                    ? 'bg-[#E37216] text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -61,7 +59,7 @@ export default function CoursesPage() {
               placeholder="Search courses (e.g. Guitar, Tabla, Kathak)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-[#D4952B] focus:ring-1 focus:ring-[#D4952B] transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-[#E37216] focus:ring-1 focus:ring-[#E37216] transition-all"
             />
           </div>
         </div>
@@ -78,7 +76,7 @@ export default function CoursesPage() {
                   setSelectedCategory('All');
                   setSearchQuery('');
                 }}
-                className="text-[#D4952B] font-bold text-sm hover:underline"
+                className="text-[#E37216] font-bold text-sm hover:underline"
               >
                 Reset Filters
               </button>
@@ -97,13 +95,13 @@ export default function CoursesPage() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 bg-[#D4952B] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                    <div className="absolute top-4 left-4 bg-[#E37216] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                       {course.category}
                     </div>
                   </div>
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold font-poppins text-gray-900 group-hover:text-[#D4952B] transition-colors mb-2">
+                    <h3 className="text-xl font-bold font-poppins text-gray-900 group-hover:text-[#E37216] transition-colors mb-2">
                       {course.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
@@ -112,18 +110,18 @@ export default function CoursesPage() {
 
                     <div className="space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-500 mb-6">
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-[#D4952B]" />
+                        <Clock className="w-4 h-4 text-[#E37216]" />
                         <span>Duration: {course.duration}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Award className="w-4 h-4 text-[#D4952B]" />
+                        <Award className="w-4 h-4 text-[#E37216]" />
                         <span>Eligibility: {course.level}</span>
                       </div>
                     </div>
 
                     <Link
                       href={course.fullSlug}
-                      className="w-full py-3 px-4 bg-orange-50 hover:bg-[#D4952B] text-[#D4952B] hover:text-white font-bold rounded-xl text-center text-sm transition-all duration-200 flex items-center justify-center gap-2 group/btn"
+                      className="w-full py-3 px-4 bg-orange-50 hover:bg-[#E37216] text-[#E37216] hover:text-white font-bold rounded-xl text-center text-sm transition-all duration-200 flex items-center justify-center gap-2 group/btn"
                     >
                       <span>Explore Course</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -145,7 +143,7 @@ export default function CoursesPage() {
           </div>
           <Link
             href="/contact"
-            className="bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-3.5 px-8 rounded-full whitespace-nowrap transition-colors shadow-lg"
+            className="bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-3.5 px-8 rounded-full whitespace-nowrap transition-colors shadow-lg"
           >
             Get Free Counseling
           </Link>

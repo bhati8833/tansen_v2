@@ -42,9 +42,7 @@ export default function GalleryPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
       <PageHeader
         breadcrumbs={[{ label: 'Gallery' }]}
-        title="Photo & Performance"
-        highlight="Gallery"
-        subtitle="Moments of joy, stage performances, celebrity visits, and artistic achievements at Tansen Sangeet Mahavidyalaya."
+        title="Gallery"
       />
 
       {/* Category Tabs */}
@@ -56,7 +54,7 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${
                 selectedCategory === cat
-                  ? 'bg-[#D4952B] text-white shadow-md'
+                  ? 'bg-[#E37216] text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -89,7 +87,7 @@ export default function GalleryPage() {
                 </div>
 
                 <div className="absolute bottom-0 inset-x-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                  <span className="text-xs font-bold text-[#D4952B] uppercase tracking-wider block mb-1">
+                  <span className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block mb-1">
                     {item.category}
                   </span>
                   <h3 className="text-lg font-bold font-poppins mb-1">{item.title}</h3>
@@ -109,7 +107,7 @@ export default function GalleryPage() {
         >
           <button
             onClick={() => setActiveModalItem(null)}
-            className="absolute top-6 right-6 text-white hover:text-[#D4952B] p-2 bg-white/10 rounded-full transition-colors"
+            className="absolute top-6 right-6 text-white hover:text-[#E37216] p-2 bg-white/10 rounded-full transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
@@ -127,7 +125,7 @@ export default function GalleryPage() {
               />
             </div>
             <div className="p-6 bg-[#0A101C] text-white">
-              <span className="text-xs font-bold text-[#D4952B] uppercase tracking-wider block mb-1">
+              <span className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block mb-1">
                 {activeModalItem.category}
               </span>
               <h3 className="text-xl font-bold font-poppins mb-2">{activeModalItem.title}</h3>

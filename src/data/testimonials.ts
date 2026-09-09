@@ -1,90 +1,76 @@
 // src/data/testimonials.ts
-export interface Testimonial {
+
+export interface StudentTestimonial {
   id: number;
   name: string;
-  title: string;
-  image: string;
+  role: string;
   quote: string;
-  rating?: number;
+  avatar: string;
 }
 
-export const testimonials: Testimonial[] = [
+export interface Celebrity {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+}
+
+export const studentTestimonials: StudentTestimonial[] = [
   {
     id: 1,
-    name: 'Annu Kapoor',
-    title: 'Renowned Actor, Host & Music Connoisseur',
-    image: '/assets/testimonials/annu-kapoor.webp',
+    name: 'Stuti Tiwari',
+    role: 'Fine & Arts Student',
     quote:
-      'Tansen Sangeet Mahavidyalaya is doing extraordinary work in preserving and propagating classical Indian music and performing arts across generations.',
-    rating: 5,
+      'Highly recommended! Excellent dance training, supportive teachers, and a very professional setup. My child loves the classes and the environment is extremely safe',
+    avatar: '/assets/students/stuti-tiwari.webp',
   },
   {
     id: 2,
-    name: 'Late Shri Mati Saroj Khan',
-    title: 'Legendary Bollywood Choreographer',
-    image: '/assets/testimonials/saroj-khan.webp',
+    name: 'Rohan Sharma',
+    role: 'Guitar Student',
     quote:
-      'A wonderful institution that genuinely cares about students. The discipline in dance and passion for arts here is truly inspirational.',
-    rating: 5,
+      'Tansen Sangeet Mahavidyalaya has transformed my guitar playing completely. The structured curriculum and personal attention from faculty are unmatched.',
+    avatar: '/assets/students/rohan-sharma.webp',
   },
   {
     id: 3,
-    name: 'Shakti Kapoor',
-    title: 'Veteran Film Actor',
-    image: '/assets/testimonials/shakti-kapoor.webp',
+    name: 'Arti Verma',
+    role: 'Vocal Music Student',
     quote:
-      'I highly recommend Tansen Sangeet Mahavidyalaya to every young artist. Their systematic curriculum and expert faculty make learning music a joy.',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'Ismail Darbar',
-    title: 'Acclaimed Bollywood Music Director',
-    image: '/assets/testimonials/ismail-darbar.webp',
-    quote:
-      'Tansen’s contribution to nurturing young musical talent is unparalleled. Their student performances reflect true classical rigor and soul.',
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: 'Marzi Pestonji',
-    title: 'Celebrity Dance Judge & Choreographer',
-    image: '/assets/testimonials/marzi-pestonji.webp',
-    quote:
-      'The energy and technical perfection of Tansen dance students is exceptional. A top-tier academy for western and classical dance enthusiasts.',
-    rating: 5,
+      'Learning Hindustani classical vocal at Tansen has been a deeply inspiring journey. The faculty is immensely patient and knowledgeable.',
+    avatar: '/assets/students/arti.webp',
   },
 ];
 
-export const celebrities = [
+export const celebrities: Celebrity[] = [
   {
     id: 1,
-    name: 'Annu Kapoor',
-    title: 'Bollywood Host & Singer',
+    name: 'Shri Annu Kapoor',
+    role: 'Actor & Host',
     image: '/assets/testimonials/annu-kapoor.webp',
   },
   {
     id: 2,
     name: 'Late Shri Mati Saroj Khan',
-    title: 'Legendary Choreographer',
+    role: 'Choreographer',
     image: '/assets/testimonials/saroj-khan.webp',
   },
   {
     id: 3,
-    name: 'Shakti Kapoor',
-    title: 'Veteran Film Actor',
+    name: 'Shri Shakti Kapoor',
+    role: 'Veteran Actor',
     image: '/assets/testimonials/shakti-kapoor.webp',
   },
   {
     id: 4,
-    name: 'Ismail Darbar',
-    title: 'Music Composer',
+    name: 'Shri Ismail Darbar',
+    role: 'Music Composer',
     image: '/assets/testimonials/ismail-darbar.webp',
   },
   {
     id: 5,
-    name: 'Marzi Pestonji',
-    title: 'Dance Maestro',
+    name: 'Master Marzi Pestonji',
+    role: 'Dance Maestro',
     image: '/assets/testimonials/marzi-pestonji.webp',
   },
 ];

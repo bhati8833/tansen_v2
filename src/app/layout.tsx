@@ -1,35 +1,25 @@
 import type { Metadata } from 'next';
-import { Roboto, Roboto_Slab, Poppins, Playfair_Display } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingAction } from '@/components/common/FloatingAction';
 import './globals.css';
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  variable: '--font-roboto-var',
-  weight: ['300', '400', '500', '700'],
+const dmSans = localFont({
+  src: '../fonts/DM-Sans-Variable.woff2',
+  variable: '--font-dm-sans-var',
   display: 'swap',
 });
 
-const robotoSlab = Roboto_Slab({
-  subsets: ['latin'],
-  variable: '--font-roboto-slab-var',
-  weight: ['400', '600', '700'],
-  display: 'swap',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  variable: '--font-poppins-var',
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair-var',
-  weight: ['400', '600', '700'],
+const spectral = localFont({
+  src: [
+    { path: '../fonts/Spectral-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/Spectral-Medium.woff2', weight: '500', style: 'normal' },
+    { path: '../fonts/Spectral-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../fonts/Spectral-Bold.woff2', weight: '700', style: 'normal' },
+    { path: '../fonts/Spectral-Italic.woff2', weight: '400', style: 'italic' },
+  ],
+  variable: '--font-spectral-var',
   display: 'swap',
 });
 
@@ -82,11 +72,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${robotoSlab.variable} ${poppins.variable} ${playfair.variable}`}
+      className={`${dmSans.variable} ${spectral.variable}`}
     >
       <body
         style={{
-          fontFamily: 'var(--font-roboto-var), Roboto, sans-serif',
+          fontFamily: 'var(--font-dm-sans-var), "DM Sans", sans-serif',
           color: '#333333',
           backgroundColor: '#ffffff',
         }}

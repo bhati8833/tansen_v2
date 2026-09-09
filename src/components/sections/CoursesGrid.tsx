@@ -47,7 +47,7 @@ export function CoursesGrid() {
         {/* Section Header — Left aligned title, Right aligned Slider Arrows */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: '#D4952B' }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: '#E37216' }}>
               OUR COURSES
             </p>
             <h2
@@ -67,7 +67,7 @@ export function CoursesGrid() {
               type="button"
               aria-label="Previous courses"
               onClick={() => scroll('left')}
-              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
+              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -75,7 +75,7 @@ export function CoursesGrid() {
               type="button"
               aria-label="Next courses"
               onClick={() => scroll('right')}
-              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
+              className="w-9 h-9 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

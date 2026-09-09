@@ -38,9 +38,7 @@ export default function AboutPage() {
       {/* 1. HERO HEADER */}
       <PageHeader
         breadcrumbs={[{ label: 'About Us' }]}
-        title="About Tansen Sangeet"
-        highlight="Mahavidyalaya"
-        subtitle="A leading academy for music, dance, and performing arts education in Gurugram."
+        title="About Tansen Sangeet Mahavidyalaya"
       />
 
       {/* 2. INTRODUCTION & APPROACH */}
@@ -48,7 +46,7 @@ export default function AboutPage() {
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block">
+              <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block">
                 Holistic Performing Arts Education
               </span>
               <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif leading-snug">
@@ -70,7 +68,7 @@ export default function AboutPage() {
                   const IconComp = item.icon;
                   return (
                     <div key={idx} className="p-3 bg-orange-50/70 border border-orange-100/80 rounded-xl text-center flex flex-col items-center justify-center">
-                      <IconComp className="w-5 h-5 text-[#D4952B] mb-1.5" />
+                      <IconComp className="w-5 h-5 text-[#E37216] mb-1.5" />
                       <span className="text-xs font-bold text-gray-800">{item.title}</span>
                     </div>
                   );
@@ -88,7 +86,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
                   <div className="text-white">
-                    <div className="text-[#D4952B] text-xs font-bold uppercase tracking-wider mb-1">Empowering Performers</div>
+                    <div className="text-[#C2410C] text-xs font-bold uppercase tracking-wider mb-1">Empowering Performers</div>
                     <p className="text-sm text-gray-200 leading-snug">Creating a supportive & inspiring atmosphere for artists of all ages.</p>
                   </div>
                 </div>
@@ -102,7 +100,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#FCF7F1]">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Honoring Heritage
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif">
@@ -113,7 +111,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-amber-100 shadow-sm space-y-8">
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-orange-100 shadow-sm space-y-8">
             <div className="space-y-4 text-gray-700 leading-relaxed text-base sm:text-lg">
               {aboutData.legacy.paragraphs.map((p, idx) => (
                 <p key={idx}>{p}</p>
@@ -124,7 +122,7 @@ export default function AboutPage() {
               {/* Founder Sons */}
               <div className="bg-orange-50/50 p-6 rounded-2xl border border-orange-100">
                 <h3 className="text-lg font-bold text-gray-900 font-poppins mb-3 flex items-center gap-2">
-                  <Building className="w-5 h-5 text-[#D4952B]" />
+                  <Building className="w-5 h-5 text-[#E37216]" />
                   Guidance & Leadership
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -137,14 +135,14 @@ export default function AboutPage() {
               </div>
 
               {/* Supporting Management Team */}
-              <div className="bg-amber-50/50 p-6 rounded-2xl border border-amber-100">
+              <div className="bg-orange-50/50 p-6 rounded-2xl border border-orange-100">
                 <h3 className="text-lg font-bold text-gray-900 font-poppins mb-3 flex items-center gap-2">
-                  <Users className="w-5 h-5 text-[#D4952B]" />
+                  <Users className="w-5 h-5 text-[#E37216]" />
                   Dedicated Management Team
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {aboutData.legacy.team.map((name, idx) => (
-                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-amber-200 text-gray-800 text-sm font-semibold rounded-lg shadow-2xs">
+                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-orange-200 text-gray-800 text-sm font-semibold rounded-lg shadow-2xs">
                       {name}
                     </span>
                   ))}
@@ -162,9 +160,9 @@ export default function AboutPage() {
             
             {/* Vision Card */}
             <div className="bg-gradient-to-br from-[#0A101C] to-[#162136] text-white p-8 sm:p-10 rounded-3xl shadow-lg relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#D4952B]/10 rounded-full blur-2xl" />
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#E37216]/10 rounded-full blur-2xl" />
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#D4952B]/20 border border-[#D4952B]/40 flex items-center justify-center text-[#D4952B] mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#E37216]/20 border border-[#E37216]/40 flex items-center justify-center text-[#E37216] mb-6">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white mb-6">
@@ -177,7 +175,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-3 text-xs text-[#D4952B] font-semibold uppercase tracking-wider">
+              <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-3 text-xs text-[#E37216] font-semibold uppercase tracking-wider">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Nurturing Lifelong Passion For Performing Arts</span>
               </div>
@@ -186,7 +184,7 @@ export default function AboutPage() {
             {/* Mission Card */}
             <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-[#D4952B] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900 mb-3">
@@ -199,7 +197,7 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {aboutData.mission.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm sm:text-base">
-                      <CheckCircle2 className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -215,7 +213,7 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50 border-y border-gray-200/60">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Our Core Philosophy
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-serif">
@@ -250,10 +248,10 @@ export default function AboutPage() {
               const IconComp = item.icon;
               return (
                 <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative group">
-                  <div className="text-4xl font-extrabold text-orange-200/70 font-poppins absolute top-6 right-6 group-hover:text-[#D4952B]/30 transition-colors">
+                  <div className="text-4xl font-extrabold text-orange-200/70 font-poppins absolute top-6 right-6 group-hover:text-[#E37216]/30 transition-colors">
                     {item.step}
                   </div>
-                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#D4952B] flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6">
                     <IconComp className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 font-poppins mb-3">
@@ -279,7 +277,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Comprehensive Curriculum
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
@@ -302,7 +300,7 @@ export default function AboutPage() {
               return (
                 <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-orange-200 transition-colors">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#D4952B] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 font-poppins">{cat.category}</h3>
@@ -311,7 +309,7 @@ export default function AboutPage() {
                   <ul className="space-y-3">
                     {cat.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-2.5 text-gray-700 text-sm font-medium py-1.5 border-b border-gray-50 last:border-0">
-                        <CheckCircle2 className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -322,7 +320,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-6 bg-orange-50/60 rounded-2xl border border-orange-100 text-center max-w-3xl mx-auto flex items-center justify-center gap-3">
-            <Smile className="w-5 h-5 text-[#D4952B] flex-shrink-0" />
+            <Smile className="w-5 h-5 text-[#E37216] flex-shrink-0" />
             <p className="text-sm font-medium text-gray-800">
               {aboutData.courses.note}
             </p>
@@ -334,7 +332,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#FCF7F1]">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Inclusive Learning
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
@@ -346,9 +344,9 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-3xl border border-amber-100 shadow-sm flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="inline-block px-3 py-1 bg-amber-100 text-[#D4952B] text-xs font-bold rounded-full mb-4">
+                <div className="inline-block px-3 py-1 bg-orange-100 text-[#C2410C] text-xs font-bold rounded-full mb-4">
                   Ages 3+ to Young Learners
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 font-poppins mb-3">
@@ -365,9 +363,9 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-amber-100 shadow-sm flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="inline-block px-3 py-1 bg-amber-100 text-[#D4952B] text-xs font-bold rounded-full mb-4">
+                <div className="inline-block px-3 py-1 bg-orange-100 text-[#C2410C] text-xs font-bold rounded-full mb-4">
                   Teens, Adults & Seniors
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 font-poppins mb-3">
@@ -391,7 +389,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Structured Methodology
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-3">
@@ -407,7 +405,7 @@ export default function AboutPage() {
             {aboutData.studentFocused.steps.map((s, idx) => (
               <div key={idx} className="p-5 bg-gray-50 rounded-2xl border border-gray-100 hover:border-orange-200 transition-colors flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-extrabold text-[#D4952B] uppercase tracking-wider block mb-2">
+                  <span className="text-xs font-extrabold text-[#C2410C] uppercase tracking-wider block mb-2">
                     Step {s.step}
                   </span>
                   <h3 className="font-bold text-gray-900 font-poppins text-base mb-2">
@@ -421,7 +419,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="text-center text-sm font-semibold text-gray-700 bg-amber-50/60 p-4 rounded-xl border border-amber-100 max-w-2xl mx-auto">
+          <div className="text-center text-sm font-semibold text-gray-700 bg-orange-50/60 p-4 rounded-xl border border-orange-100 max-w-2xl mx-auto">
             {aboutData.studentFocused.conclusion}
           </div>
         </div>
@@ -432,7 +430,7 @@ export default function AboutPage() {
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+              <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
                 Heritage & Innovation
               </span>
               <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-6">
@@ -447,7 +445,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#D4952B] flex items-center justify-center mb-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-3">
                   <Music className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-gray-900 font-poppins text-base mb-2">Indian Classical</h3>
@@ -457,7 +455,7 @@ export default function AboutPage() {
               </div>
 
               <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 text-[#D4952B] flex items-center justify-center mb-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-3">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-gray-900 font-poppins text-base mb-2">Modern & Western</h3>
@@ -478,7 +476,7 @@ export default function AboutPage() {
             {/* Performance Card */}
             <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-6 shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-2xs">
                   <Flame className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
@@ -493,9 +491,9 @@ export default function AboutPage() {
             </div>
 
             {/* Certifications Card */}
-            <div className="p-8 bg-amber-50/50 rounded-3xl border border-amber-100 flex flex-col justify-between">
+            <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-6 shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-2xs">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
@@ -509,8 +507,8 @@ export default function AboutPage() {
 
                 <div className="space-y-2">
                   {aboutData.certifications.affiliationsList.map((aff, idx) => (
-                    <div key={idx} className="p-3 bg-white rounded-xl border border-amber-200/60 flex items-center gap-3 text-xs">
-                      <Award className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
+                    <div key={idx} className="p-3 bg-white rounded-xl border border-orange-200/60 flex items-center gap-3 text-xs">
+                      <Award className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                       <div>
                         <span className="font-bold text-gray-900">{aff.name}</span> — <span className="text-gray-600">{aff.detail}</span>
                       </div>
@@ -528,7 +526,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#FCF7F1]">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               Key Highlights
             </span>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif">
@@ -540,10 +538,10 @@ export default function AboutPage() {
             {aboutData.whyChooseUs.map((item, idx) => (
               <div 
                 key={idx} 
-                className="bg-white p-6 rounded-2xl border border-amber-100 shadow-2xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl border border-orange-100 shadow-2xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#D4952B] flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-4">
                     <Star className="w-5 h-5" />
                   </div>
                   <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">
@@ -562,7 +560,7 @@ export default function AboutPage() {
       {/* 12. OUR COMMITMENT */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="container-site max-w-4xl mx-auto px-4 text-center">
-          <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+          <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
             Our Promise To Every Student
           </span>
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-6">
@@ -575,8 +573,8 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="p-8 bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 rounded-3xl border border-amber-200/80 shadow-xs relative">
-            <p className="text-xl md:text-2xl font-bold text-[#D4952B] font-poppins italic">
+          <div className="p-8 bg-gradient-to-r from-orange-50 via-orange-50 to-orange-50 rounded-3xl border border-orange-200/80 shadow-xs relative">
+            <p className="text-xl md:text-2xl font-bold text-[#E37216] font-poppins italic">
               &ldquo;{aboutData.commitment.quote}&rdquo;
             </p>
           </div>
@@ -585,7 +583,7 @@ export default function AboutPage() {
 
       {/* 13. CALL TO ACTION & CONTACT DETAILS */}
       <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
         
         <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -595,13 +593,13 @@ export default function AboutPage() {
             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
               {aboutData.contactInfo.subtitle}
             </p>
-            <p className="text-[#D4952B] text-lg font-semibold font-poppins mb-8">
+            <p className="text-[#E37216] text-lg font-semibold font-poppins mb-8">
               {aboutData.contactInfo.callout}
             </p>
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-4 px-9 rounded-full transition-colors shadow-lg hover:shadow-xl text-base"
+              className="inline-flex items-center gap-2 bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-4 px-9 rounded-full transition-colors shadow-lg hover:shadow-xl text-base"
             >
               <span>{aboutData.contactInfo.ctaButtonText}</span>
               <ArrowRight className="w-5 h-5" />
@@ -610,14 +608,14 @@ export default function AboutPage() {
 
           {/* Branch Contact Details Card */}
           <div className="mt-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-10 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold font-poppins text-[#D4952B] mb-6 text-center border-b border-white/10 pb-4">
+            <h3 className="text-xl font-bold font-poppins text-[#E37216] mb-6 text-center border-b border-white/10 pb-4">
               {aboutData.contactInfo.branchName}
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-200">
               {/* Address */}
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Address</div>
                   <p className="text-gray-300 text-xs leading-relaxed">
@@ -628,12 +626,12 @@ export default function AboutPage() {
 
               {/* Phone */}
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Call Us</div>
                   <div className="space-y-1">
                     {aboutData.contactInfo.phones.map((ph, idx) => (
-                      <a key={idx} href={`tel:${ph}`} className="block text-gray-300 hover:text-[#D4952B] text-xs transition-colors">
+                      <a key={idx} href={`tel:${ph}`} className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">
                         {ph}
                       </a>
                     ))}
@@ -643,12 +641,12 @@ export default function AboutPage() {
 
               {/* Email */}
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-white mb-1">Email Us</div>
                   <a 
                     href={`mailto:${aboutData.contactInfo.email}`} 
-                    className="text-gray-300 hover:text-[#D4952B] text-xs transition-colors break-all"
+                    className="text-gray-300 hover:text-[#E37216] text-xs transition-colors break-all"
                   >
                     {aboutData.contactInfo.email}
                   </a>

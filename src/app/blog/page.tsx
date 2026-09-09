@@ -28,15 +28,13 @@ export default function BlogPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
       <PageHeader
         breadcrumbs={[{ label: 'Blog' }]}
-        title="Performing Arts &"
-        highlight="Music Insights"
-        subtitle="Expert articles, practice guides, raaga theory, and dance heritage news written by Tansen senior faculty."
+        title="Blog"
       />
 
       {/* Featured Article */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="container-site">
-          <div className="bg-gradient-to-r from-orange-50/50 to-amber-50/50 rounded-3xl p-6 md:p-8 border border-orange-100 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="bg-gradient-to-r from-orange-50/50 to-orange-50/50 rounded-3xl p-6 md:p-8 border border-orange-100 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden bg-gray-200">
               <Image
                 src={featuredPost.coverImage}
@@ -46,10 +44,10 @@ export default function BlogPage() {
               />
             </div>
             <div>
-              <span className="bg-[#D4952B] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+              <span className="bg-[#E37216] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
                 Featured Article
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold font-poppins text-gray-900 mb-4 hover:text-[#D4952B] transition-colors">
+              <h2 className="text-2xl md:text-3xl font-bold font-poppins text-gray-900 mb-4 hover:text-[#E37216] transition-colors">
                 <Link href={`/blog/${featuredPost.slug}`}>{featuredPost.title}</Link>
               </h2>
               <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
@@ -57,17 +55,17 @@ export default function BlogPage() {
               </p>
               <div className="flex items-center gap-4 text-xs text-gray-500 mb-6">
                 <div className="flex items-center gap-1.5">
-                  <User className="w-4 h-4 text-[#D4952B]" />
+                  <User className="w-4 h-4 text-[#E37216]" />
                   <span>{featuredPost.author}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-[#D4952B]" />
+                  <Clock className="w-4 h-4 text-[#E37216]" />
                   <span>{featuredPost.readTime}</span>
                 </div>
               </div>
               <Link
                 href={`/blog/${featuredPost.slug}`}
-                className="inline-flex items-center gap-2 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-3 px-6 rounded-xl text-sm transition-colors shadow-md"
+                className="inline-flex items-center gap-2 bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-3 px-6 rounded-xl text-sm transition-colors shadow-md"
               >
                 <span>Read Full Article</span>
                 <ArrowRight className="w-4 h-4" />
@@ -83,14 +81,14 @@ export default function BlogPage() {
           {/* Search & Tag filter */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
             <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-              <Tag className="w-4 h-4 text-[#D4952B] hidden sm:block flex-shrink-0" />
+              <Tag className="w-4 h-4 text-[#E37216] hidden sm:block flex-shrink-0" />
               {tags.map((t) => (
                 <button
                   key={t}
                   onClick={() => setSelectedTag(t)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                     selectedTag === t
-                      ? 'bg-[#D4952B] text-white shadow'
+                      ? 'bg-[#E37216] text-white shadow'
                       : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
                   }`}
                 >
@@ -106,7 +104,7 @@ export default function BlogPage() {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-full text-xs focus:outline-none focus:border-[#D4952B]"
+                className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-full text-xs focus:outline-none focus:border-[#E37216]"
               />
             </div>
           </div>
@@ -125,7 +123,7 @@ export default function BlogPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-[#D4952B] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+                  <div className="absolute top-3 left-3 bg-[#E37216] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
                     {post.category}
                   </div>
                 </div>
@@ -137,7 +135,7 @@ export default function BlogPage() {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-poppins text-gray-900 group-hover:text-[#D4952B] transition-colors mb-2 line-clamp-2">
+                  <h3 className="text-lg font-bold font-poppins text-gray-900 group-hover:text-[#E37216] transition-colors mb-2 line-clamp-2">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
 
@@ -147,7 +145,7 @@ export default function BlogPage() {
 
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1.5 text-[#D4952B] font-bold text-xs hover:underline mt-auto"
+                    className="inline-flex items-center gap-1.5 text-[#E37216] font-bold text-xs hover:underline mt-auto"
                   >
                     <span>Read Article</span>
                     <ArrowRight className="w-3.5 h-3.5" />

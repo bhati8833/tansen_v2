@@ -11,15 +11,15 @@ export function TopBar() {
           {/* Left: Notices */}
           <div className="flex items-center gap-5">
             <div className="flex items-center gap-1.5 text-gray-700">
-              <Music className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
+              <Music className="w-3.5 h-3.5" style={{ color: '#E37216' }} />
               <span>Admissions Open for 2026-2027</span>
             </div>
             <span className="text-gray-300">|</span>
             <a
               href="#contact"
-              className="flex items-center gap-1.5 text-gray-700 hover:text-[#D4952B] transition-colors"
+              className="flex items-center gap-1.5 text-gray-700 hover:text-[#C2410C] transition-colors"
             >
-              <Calendar className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
+              <Calendar className="w-3.5 h-3.5" style={{ color: '#E37216' }} />
               <span>Book a Free Demo Class Today!</span>
             </a>
           </div>
@@ -29,17 +29,17 @@ export function TopBar() {
             <div className="flex items-center gap-4 text-gray-700">
               <a
                 href="mailto:Tansengurugram43@gmail.com"
-                className="flex items-center gap-1.5 hover:text-[#D4952B] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#C2410C] transition-colors"
               >
-                <Mail className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
+                <Mail className="w-3.5 h-3.5" style={{ color: '#E37216' }} />
                 <span>Tansengurugram43@gmail.com</span>
               </a>
               <span className="text-gray-300">|</span>
               <a
                 href="tel:+919818083588"
-                className="flex items-center gap-1.5 hover:text-[#D4952B] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#C2410C] transition-colors"
               >
-                <Phone className="w-3.5 h-3.5" style={{ color: '#D4952B' }} />
+                <Phone className="w-3.5 h-3.5" style={{ color: '#E37216' }} />
                 <span>+91 98180 83588</span>
               </a>
             </div>

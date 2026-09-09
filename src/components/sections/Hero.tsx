@@ -158,7 +158,7 @@ export function Hero() {
           <div className="container-site w-full">
             <div className="max-w-2xl text-gray-900">
               {/* Tagline */}
-              <p className="text-sm md:text-base font-medium mb-1.5 flex items-center gap-2" style={{ color: '#D4952B' }}>
+              <p className="text-sm md:text-base font-medium mb-1.5 flex items-center gap-2" style={{ color: '#E37216' }}>
                 <span>—</span>
                 <span>{slide.tagline}</span>
               </p>
@@ -168,7 +168,7 @@ export function Hero() {
                 key={`title-${current}`}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight"
                 style={{
-                  fontFamily: 'var(--font-playfair-var), Georgia, serif',
+                  fontFamily: 'var(--font-spectral-var), "Spectral", serif',
                   color: '#0A101C',
                   animation: 'slideUp 0.6s ease-out',
                 }}
@@ -179,7 +179,7 @@ export function Hero() {
               {/* Subtitle */}
               <h2
                 className="text-xl md:text-2xl font-bold mb-3"
-                style={{ fontFamily: 'var(--font-playfair-var), Georgia, serif', color: '#0A101C' }}
+                style={{ fontFamily: 'var(--font-spectral-var), "Spectral", serif', color: '#0A101C' }}
               >
                 {slide.subtitle}
               </h2>
@@ -193,8 +193,8 @@ export function Hero() {
               <div className="flex flex-wrap items-center gap-4 mt-8">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:bg-[#b8842b] hover:shadow-lg"
-                  style={{ backgroundColor: '#D4952B' }}
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:bg-[#c96213] hover:shadow-lg"
+                  style={{ backgroundColor: '#E37216' }}
                 >
                   BOOK FREE DEMO
                 </a>
@@ -215,14 +215,14 @@ export function Hero() {
         {/* Prev/Next Arrows */}
         <button
           onClick={() => { prev(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-md transition-all duration-200 focus:outline-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-md transition-all duration-200 focus:outline-none"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={() => { next(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#D4952B] hover:text-white hover:border-[#D4952B] shadow-md transition-all duration-200 focus:outline-none"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-md transition-all duration-200 focus:outline-none"
           aria-label="Next slide"
         >
           <ChevronRight className="w-5 h-5" />
@@ -239,7 +239,7 @@ export function Hero() {
               style={{
                 width: i === current ? '24px' : '8px',
                 height: '8px',
-                backgroundColor: i === current ? '#D4952B' : 'rgba(0,0,0,0.3)',
+                backgroundColor: i === current ? '#E37216' : 'rgba(0,0,0,0.3)',
               }}
             />
           ))}
@@ -256,7 +256,7 @@ export function Hero() {
                 key={i}
                 className={`flex flex-col items-center text-center group ${i > 0 ? 'pt-3 sm:pt-0' : ''}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-amber-50/80 border border-amber-200/50 flex items-center justify-center text-[#D4952B] mb-2 group-hover:scale-105 group-hover:bg-[#D4952B] group-hover:text-white transition-all duration-300 shadow-2xs">
+                <div className="w-10 h-10 rounded-xl bg-orange-50/80 border border-orange-200/50 flex items-center justify-center text-[#E37216] mb-2 group-hover:scale-105 group-hover:bg-[#E37216] group-hover:text-white transition-all duration-300 shadow-2xs">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="text-sm md:text-base font-bold text-gray-900 font-poppins tracking-tight">

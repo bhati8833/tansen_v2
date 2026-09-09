@@ -113,14 +113,13 @@ export default function TermsPage() {
         <PageHeader
           breadcrumbs={[{ label: 'Terms of Service' }]}
           title="Terms of Service"
-          subtitle="Last Updated: September 3, 2026"
         />
 
         {/* PREAMBLE NOTICE */}
-        <section className="py-8 bg-amber-50/70 border-b border-amber-100">
+        <section className="py-8 bg-orange-50/70 border-b border-orange-100">
           <div className="container-site max-w-5xl">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-[#D4952B] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
+              <div className="w-10 h-10 rounded-xl bg-[#E37216] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
                 <Info className="w-5 h-5" />
               </div>
               <div className="space-y-2 text-gray-800 text-sm sm:text-base leading-relaxed">
@@ -143,7 +142,7 @@ export default function TermsPage() {
               {/* SIDEBAR QUICK INDEX (LG: COL-SPAN-4 STICKY) */}
               <div className="lg:col-span-4 bg-gray-50 p-6 rounded-2xl border border-gray-200 sticky top-24 space-y-4 max-h-[80vh] overflow-y-auto hidden lg:block">
                 <div className="flex items-center gap-2 pb-3 border-b border-gray-200">
-                  <BookOpen className="w-4 h-4 text-[#D4952B]" />
+                  <BookOpen className="w-4 h-4 text-[#E37216]" />
                   <h3 className="font-bold text-gray-900 font-poppins text-xs uppercase tracking-wider">
                     Table of Contents
                   </h3>
@@ -153,7 +152,7 @@ export default function TermsPage() {
                     <li key={sec.id}>
                       <a
                         href={`#${sec.id}`}
-                        className="block py-1 px-2 rounded-lg hover:bg-orange-100/60 hover:text-[#D4952B] transition-colors line-clamp-1"
+                        className="block py-1 px-2 rounded-lg hover:bg-orange-100/60 hover:text-[#E37216] transition-colors line-clamp-1"
                       >
                         {sec.title}
                       </a>
@@ -167,7 +166,7 @@ export default function TermsPage() {
                 
                 {/* 1. About Tansen Sangeet Mahavidyalaya */}
                 <article id="sec-1" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Building2 className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       1. About Tansen Sangeet Mahavidyalaya
@@ -186,7 +185,7 @@ export default function TermsPage() {
 
                 {/* 2. Use of This Website */}
                 <article id="sec-2" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Globe className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       2. Use of This Website
@@ -210,7 +209,7 @@ export default function TermsPage() {
 
                 {/* 3. Eligibility */}
                 <article id="sec-3" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <UserCheck className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       3. Eligibility
@@ -229,7 +228,7 @@ export default function TermsPage() {
 
                 {/* 4. Course Information */}
                 <article id="sec-4" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <BookOpen className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       4. Course Information
@@ -244,14 +243,14 @@ export default function TermsPage() {
                   <p>
                     Information displayed on the website should not be considered a guarantee that a particular course, batch, instructor, timing, or activity will always be available.
                   </p>
-                  <p className="font-medium text-[#D4952B]">
+                  <p className="font-medium text-[#E37216]">
                     For the latest information regarding admissions, fees, schedules, and availability, please contact Tansen Sangeet Mahavidyalaya directly.
                   </p>
                 </article>
 
                 {/* 5. Free Demo Classes and Enquiries */}
                 <article id="sec-5" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Gift className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       5. Free Demo Classes and Enquiries
@@ -273,7 +272,7 @@ export default function TermsPage() {
 
                 {/* 6. Admissions and Registration */}
                 <article id="sec-6" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <CheckCircle className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       6. Admissions and Registration
@@ -292,7 +291,7 @@ export default function TermsPage() {
 
                 {/* 7. Fees and Payments */}
                 <article id="sec-7" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <CreditCard className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       7. Fees and Payments
@@ -311,7 +310,7 @@ export default function TermsPage() {
 
                 {/* 8. Class Schedules and Changes */}
                 <article id="sec-8" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Calendar className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       8. Class Schedules and Changes
@@ -330,7 +329,7 @@ export default function TermsPage() {
 
                 {/* 9. Student and Parent/Guardian Responsibilities */}
                 <article id="sec-9" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <HeartHandshake className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       9. Student and Parent/Guardian Responsibilities
@@ -357,7 +356,7 @@ export default function TermsPage() {
 
                 {/* 10. Participation and Conduct */}
                 <article id="sec-10" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <ShieldCheck className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       10. Participation and Conduct
@@ -376,7 +375,7 @@ export default function TermsPage() {
 
                 {/* 11. Intellectual Property */}
                 <article id="sec-11" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Lock className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       11. Intellectual Property
@@ -395,7 +394,7 @@ export default function TermsPage() {
 
                 {/* 12. Website Content and Accuracy */}
                 <article id="sec-12" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <FileText className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       12. Website Content and Accuracy
@@ -414,7 +413,7 @@ export default function TermsPage() {
 
                 {/* 13. Third-Party Websites and Services */}
                 <article id="sec-13" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <ExternalLink className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       13. Third-Party Websites and Services
@@ -433,7 +432,7 @@ export default function TermsPage() {
 
                 {/* 14. Privacy and Personal Information */}
                 <article id="sec-14" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <ShieldCheck className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       14. Privacy and Personal Information
@@ -449,7 +448,7 @@ export default function TermsPage() {
 
                 {/* 15. Website Availability */}
                 <article id="sec-15" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Globe className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       15. Website Availability
@@ -465,7 +464,7 @@ export default function TermsPage() {
 
                 {/* 16. Limitation of Liability */}
                 <article id="sec-16" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <AlertTriangle className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       16. Limitation of Liability
@@ -488,7 +487,7 @@ export default function TermsPage() {
 
                 {/* 17. Prohibited Activities */}
                 <article id="sec-17" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <AlertTriangle className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       17. Prohibited Activities
@@ -510,7 +509,7 @@ export default function TermsPage() {
 
                 {/* 18. Suspension or Termination */}
                 <article id="sec-18" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <ShieldCheck className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       18. Suspension or Termination
@@ -526,7 +525,7 @@ export default function TermsPage() {
 
                 {/* 19. Changes to These Terms */}
                 <article id="sec-19" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Calendar className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       19. Changes to These Terms
@@ -545,7 +544,7 @@ export default function TermsPage() {
 
                 {/* 20. Governing Law and Jurisdiction */}
                 <article id="sec-20" className="scroll-mt-28 space-y-3 pb-8 border-b border-gray-100">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Scale className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       20. Governing Law and Jurisdiction
@@ -561,7 +560,7 @@ export default function TermsPage() {
 
                 {/* 21. Contact Us */}
                 <article id="sec-21" className="scroll-mt-28 space-y-4 p-6 sm:p-8 bg-orange-50/60 rounded-3xl border border-orange-200/80">
-                  <div className="flex items-center gap-2.5 text-[#D4952B]">
+                  <div className="flex items-center gap-2.5 text-[#E37216]">
                     <Phone className="w-5 h-5 flex-shrink-0" />
                     <h2 className="text-xl sm:text-2xl font-bold font-poppins text-gray-900">
                       21. Contact Us
@@ -576,16 +575,16 @@ export default function TermsPage() {
                       Tansen Sangeet Mahavidyalaya
                     </p>
                     <div className="flex items-start gap-2.5 text-gray-700">
-                      <MapPin className="w-4 h-4 text-[#D4952B] flex-shrink-0 mt-0.5" />
+                      <MapPin className="w-4 h-4 text-[#E37216] flex-shrink-0 mt-0.5" />
                       <span>{siteContent.footer.contact.address}</span>
                     </div>
                     <div className="flex items-center gap-2.5 text-gray-700">
-                      <Phone className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
+                      <Phone className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                       <span>Phone: 9818083588 / 9871833588</span>
                     </div>
                     <div className="flex items-center gap-2.5 text-gray-700">
-                      <Mail className="w-4 h-4 text-[#D4952B] flex-shrink-0" />
-                      <a href={`mailto:${siteContent.footer.contact.email}`} className="hover:text-[#D4952B] underline">
+                      <Mail className="w-4 h-4 text-[#E37216] flex-shrink-0" />
+                      <a href={`mailto:${siteContent.footer.contact.email}`} className="hover:text-[#E37216] underline">
                         {siteContent.footer.contact.email}
                       </a>
                     </div>
@@ -608,40 +607,40 @@ export default function TermsPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <Link
                       href="/contact"
-                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#D4952B] transition-all flex items-center justify-between group"
+                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#E37216] transition-all flex items-center justify-between group"
                     >
-                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#D4952B]">Contact Us</span>
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#D4952B]" />
+                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#E37216]">Contact Us</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#E37216]" />
                     </Link>
 
                     <Link
                       href="/faq"
-                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#D4952B] transition-all flex items-center justify-between group"
+                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#E37216] transition-all flex items-center justify-between group"
                     >
-                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#D4952B]">Frequently Asked Questions (FAQ)</span>
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#D4952B]" />
+                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#E37216]">Frequently Asked Questions (FAQ)</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#E37216]" />
                     </Link>
 
                     <Link
                       href="/contact"
-                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#D4952B] transition-all flex items-center justify-between group"
+                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#E37216] transition-all flex items-center justify-between group"
                     >
-                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#D4952B]">Book Free Demo</span>
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#D4952B]" />
+                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#E37216]">Book Free Demo</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#E37216]" />
                     </Link>
 
                     <Link
                       href="/courses"
-                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#D4952B] transition-all flex items-center justify-between group"
+                      className="p-4 bg-gray-50 hover:bg-orange-50 rounded-2xl border border-gray-200 hover:border-[#E37216] transition-all flex items-center justify-between group"
                     >
-                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#D4952B]">Course Information</span>
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#D4952B]" />
+                      <span className="font-bold text-sm text-gray-900 group-hover:text-[#E37216]">Course Information</span>
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#E37216]" />
                     </Link>
                   </div>
 
                   {/* Brand Footnote */}
                   <div className="pt-8 border-t border-gray-100 text-center space-y-1">
-                    <p className="font-bold font-poppins text-[#D4952B] text-base">
+                    <p className="font-bold font-poppins text-[#E37216] text-base">
                       Tansen Sangeet Mahavidyalaya
                     </p>
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">

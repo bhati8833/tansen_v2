@@ -15,7 +15,7 @@ export function Accreditation() {
       <div className="container-site">
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#D4952B' }}>
+          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#E37216' }}>
             Tansen Sangeet Mahavidyalaya
           </p>
           <h2

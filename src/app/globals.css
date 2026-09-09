@@ -7,9 +7,6 @@
   /* Brand Colors */
   --color-brand-orange: #E37216;
   --color-brand-orange-hover: #c96213;
-  --color-brand-orange-light: #f5a623;
-  --color-brand-gold: #CF9531;
-  --color-brand-gold-hover: #b8842b;
   --color-brand-green: #25D366;
   --color-brand-green-hover: #1da851;
 
@@ -20,11 +17,19 @@
   --color-gallery-bg: #FCF7F1;
   --color-topbar-light: #FBF3E8;
 
-  /* Custom Font Families */
-  --font-roboto: var(--font-roboto-var), "Roboto", sans-serif;
-  --font-roboto-slab: var(--font-roboto-slab-var), "Roboto Slab", serif;
-  --font-poppins: var(--font-poppins-var), "Poppins", sans-serif;
-  --font-playfair: var(--font-playfair-var), "Playfair Display", serif;
+  /* Custom Font Families.
+     DM Sans = modern UI / body / navigation / buttons (default sans).
+     Spectral = classical / editorial / hero / selected headings / quotes (serif).
+     The legacy token names (--font-roboto, --font-poppins, --font-playfair)
+     are kept and remapped so existing `font-*` utility classes inherit the
+     new families without touching every component. */
+  --font-sans: var(--font-dm-sans-var), "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-spectral-var), "Spectral", ui-serif, Georgia, serif;
+
+  --font-roboto: var(--font-dm-sans-var), "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-roboto-slab: var(--font-spectral-var), "Spectral", ui-serif, Georgia, serif;
+  --font-poppins: var(--font-dm-sans-var), "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: var(--font-spectral-var), "Spectral", ui-serif, Georgia, serif;
 
   /* Custom Animations */
   --animate-fade-in: fadeIn 0.5s ease-in-out;
@@ -41,6 +46,15 @@
   /* Custom Max Widths */
   --container-8xl: 88rem;
   --container-9xl: 96rem;
+}
+
+/* Backwards-compatible aliases so existing inline fontFamily: var(...)
+   references (e.g. var(--font-poppins-var)) resolve to the new local
+   fonts loaded via next/font/local in layout.tsx. */
+:root {
+  --font-roboto-var: var(--font-dm-sans-var);
+  --font-poppins-var: var(--font-dm-sans-var);
+  --font-playfair-var: var(--font-spectral-var);
 }
 
 /* Keyframes */
@@ -144,7 +158,7 @@ body {
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #E37216;
+  color: #C2410C;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;

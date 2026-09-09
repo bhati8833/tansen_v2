@@ -48,9 +48,7 @@ export default function FAQPage() {
       {/* 1. HERO BANNER */}
       <PageHeader
         breadcrumbs={[{ label: 'FAQ' }]}
-        title="Frequently Asked"
-        highlight="Questions"
-        subtitle="Answers to your questions about courses, age groups, classes, demo sessions, and admissions."
+        title="Frequently Asked Questions"
       />
 
       {/* 2. SEARCH & CATEGORY FILTER BAR */}
@@ -64,7 +62,7 @@ export default function FAQPage() {
               placeholder="Search questions (e.g. age, beginners, guitar, demo class, fees)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-full text-base focus:outline-none focus:border-[#D4952B] focus:bg-white transition-all shadow-2xs"
+              className="w-full pl-12 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-full text-base focus:outline-none focus:border-[#E37216] focus:bg-white transition-all shadow-2xs"
             />
             {searchQuery && (
               <button 
@@ -84,7 +82,7 @@ export default function FAQPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-[#D4952B] text-white shadow-sm'
+                    ? 'bg-[#E37216] text-white shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -102,7 +100,7 @@ export default function FAQPage() {
           <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
             <span>Showing {filteredFaqs.length} of {faqs.length} questions</span>
             {activeCategory !== 'All' && (
-              <span className="font-semibold text-[#D4952B]">Category: {activeCategory}</span>
+              <span className="font-semibold text-[#E37216]">Category: {activeCategory}</span>
             )}
           </div>
 
@@ -115,7 +113,7 @@ export default function FAQPage() {
               </p>
               <button
                 onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
-                className="px-5 py-2.5 bg-[#D4952B] text-white font-bold rounded-full text-sm hover:bg-[#b8842b] transition-colors"
+                className="px-5 py-2.5 bg-[#E37216] text-white font-bold rounded-full text-sm hover:bg-[#c96213] transition-colors"
               >
                 Reset Search & Filters
               </button>
@@ -127,16 +125,16 @@ export default function FAQPage() {
                 <div
                   key={faq.id}
                   className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
-                    isOpen ? 'border-[#D4952B] shadow-md' : 'border-gray-200 shadow-2xs hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] shadow-md' : 'border-gray-200 shadow-2xs hover:border-orange-200'
                   }`}
                 >
                   <button
                     onClick={() => setOpenId(isOpen ? null : faq.id)}
-                    className="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 font-bold text-gray-900 font-poppins text-base sm:text-lg hover:text-[#D4952B] transition-colors"
+                    className="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 font-bold text-gray-900 font-poppins text-base sm:text-lg hover:text-[#C2410C] transition-colors"
                   >
                     <span className="flex-grow leading-snug">{faq.question}</span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'bg-[#D4952B] text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                      isOpen ? 'bg-[#E37216] text-white rotate-180' : 'bg-gray-100 text-gray-600'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
@@ -153,7 +151,7 @@ export default function FAQPage() {
                           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                             {faq.bullets.map((bullet, i) => (
                               <li key={i} className="flex items-start gap-2 text-gray-800 font-medium">
-                                <CheckCircle2 className="w-4 h-4 text-[#D4952B] flex-shrink-0 mt-1" />
+                                <CheckCircle2 className="w-4 h-4 text-[#E37216] flex-shrink-0 mt-1" />
                                 <span>{bullet}</span>
                               </li>
                             ))}
@@ -173,7 +171,7 @@ export default function FAQPage() {
       <section className="py-16 bg-white border-t border-gray-200">
         <div className="container-site max-w-5xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
               We Are Here To Help
             </span>
             <h2 className="text-2xl md:text-4xl font-bold font-poppins text-gray-900 mb-3">
@@ -189,13 +187,13 @@ export default function FAQPage() {
             
             {/* Phone Card */}
             <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-4 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Call Us</h3>
               <div className="text-xs text-gray-600 space-y-1 mb-3">
                 {faqFooterContact.phones.map((ph, idx) => (
-                  <a key={idx} href={`tel:${ph}`} className="block font-semibold text-gray-800 hover:text-[#D4952B] transition-colors">
+                  <a key={idx} href={`tel:${ph}`} className="block font-semibold text-gray-800 hover:text-[#C2410C] transition-colors">
                     +91 {ph}
                   </a>
                 ))}
@@ -203,14 +201,14 @@ export default function FAQPage() {
             </div>
 
             {/* Email Card */}
-            <div className="p-6 bg-amber-50/50 rounded-2xl border border-amber-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-4 shadow-2xs">
+            <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
                 <Mail className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Email Us</h3>
               <a 
                 href={`mailto:${faqFooterContact.email}`}
-                className="text-xs font-semibold text-gray-800 hover:text-[#D4952B] transition-colors break-all mb-3"
+                className="text-xs font-semibold text-gray-800 hover:text-[#C2410C] transition-colors break-all mb-3"
               >
                 {faqFooterContact.email}
               </a>
@@ -218,7 +216,7 @@ export default function FAQPage() {
 
             {/* Address Card */}
             <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-4 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Visit Us</h3>
@@ -231,9 +229,9 @@ export default function FAQPage() {
 
           {/* Book Your Free Demo Class Box */}
           <div className="bg-[#0A101C] text-white rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:16px_16px]" />
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:16px_16px]" />
             <div className="relative z-10 max-w-2xl mx-auto">
-              <div className="w-10 h-10 rounded-full bg-[#D4952B]/20 border border-[#D4952B]/40 text-[#D4952B] flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#E37216]/20 border border-[#E37216]/40 text-[#E37216] flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold font-poppins text-white mb-3">
@@ -246,7 +244,7 @@ export default function FAQPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold py-3.5 px-8 rounded-full text-sm transition-colors shadow-lg"
+                  className="bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-3.5 px-8 rounded-full text-sm transition-colors shadow-lg"
                 >
                   Book Free Demo Class
                 </Link>

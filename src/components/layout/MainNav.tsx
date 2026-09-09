@@ -47,7 +47,7 @@ export function MainNav() {
               alt="Tansen Sangeet Mahavidyalaya"
               width={200}
               height={70}
-              className="h-14 w-auto object-contain"
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -66,7 +66,7 @@ export function MainNav() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-gray-800 hover:text-[#D4952B] transition-colors whitespace-nowrap"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-gray-800 hover:text-[#C2410C] transition-colors whitespace-nowrap"
                     style={{ fontFamily: 'var(--font-poppins-var)' }}
                   >
                     {item.label}
@@ -87,7 +87,7 @@ export function MainNav() {
                             <Link
                               href={cat.href}
                               onClick={() => setActiveDropdown(null)}
-                              className="font-bold text-xs uppercase tracking-wider text-[#D4952B] font-poppins hover:underline block pb-1 border-b border-orange-100"
+                              className="font-bold text-xs uppercase tracking-wider text-[#E37216] font-poppins hover:underline block pb-1 border-b border-orange-100"
                             >
                               {cat.name}
                             </Link>
@@ -99,7 +99,7 @@ export function MainNav() {
                                   <Link
                                     href={subItem.href}
                                     onClick={() => setActiveDropdown(null)}
-                                    className="text-xs text-gray-700 hover:text-[#D4952B] font-medium transition-colors block py-0.5"
+                                    className="text-xs text-gray-700 hover:text-[#C2410C] font-medium transition-colors block py-0.5"
                                   >
                                     {subItem.label}
                                   </Link>
@@ -116,7 +116,7 @@ export function MainNav() {
                         <Link
                           href="/courses"
                           onClick={() => setActiveDropdown(null)}
-                          className="font-bold text-[#D4952B] hover:underline flex items-center gap-1"
+                          className="font-bold text-[#E37216] hover:underline flex items-center gap-1"
                         >
                           <span>View All Courses</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -132,7 +132,7 @@ export function MainNav() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-[#D4952B]"
+            className="lg:hidden p-2 text-gray-700 hover:text-[#C2410C]"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -153,7 +153,7 @@ export function MainNav() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="block py-3 text-gray-800 font-bold hover:text-[#D4952B] transition-colors text-sm"
+                      className="block py-3 text-gray-800 font-bold hover:text-[#C2410C] transition-colors text-sm"
                       onClick={() => !hasCategories && setIsOpen(false)}
                     >
                       {item.label}
@@ -164,10 +164,10 @@ export function MainNav() {
                         onClick={() =>
                           setOpenMobileMenu(isCoursesOpen ? null : item.label)
                         }
-                        className="p-2 text-gray-500 hover:text-[#D4952B]"
+                        className="p-2 text-gray-500 hover:text-[#C2410C]"
                       >
                         <ChevronDown
-                          className={`w-4 h-4 transition-transform ${isCoursesOpen ? 'rotate-180 text-[#D4952B]' : ''}`}
+                          className={`w-4 h-4 transition-transform ${isCoursesOpen ? 'rotate-180 text-[#E37216]' : ''}`}
                         />
                       </button>
                     )}
@@ -181,7 +181,7 @@ export function MainNav() {
                           <div className="flex items-center justify-between">
                             <Link
                               href={cat.href}
-                              className="text-xs font-bold text-[#D4952B] uppercase tracking-wider block py-1"
+                              className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block py-1"
                               onClick={() => setIsOpen(false)}
                             >
                               {cat.name}
@@ -193,7 +193,7 @@ export function MainNav() {
                               <Link
                                 key={sub.label}
                                 href={sub.href}
-                                className="block py-1 text-xs text-gray-700 hover:text-[#D4952B] font-medium transition-colors"
+                                className="block py-1 text-xs text-gray-700 hover:text-[#C2410C] font-medium transition-colors"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {sub.label}

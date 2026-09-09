@@ -36,19 +36,19 @@ export function CourseCard({ title, category, image, fullSlug }: Course) {
         />
 
         {/* Floating Category Icon Badge at bottom center */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-md border-2 border-orange-100 flex items-center justify-center group-hover:border-[#D4952B] transition-colors">
-          <Icon className="w-5 h-5" style={{ color: '#D4952B' }} />
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-md border-2 border-orange-100 flex items-center justify-center group-hover:border-[#E37216] transition-colors">
+          <Icon className="w-5 h-5" style={{ color: '#E37216' }} />
         </div>
       </div>
 
       {/* Content */}
       <div className="pt-8 pb-6 px-5 text-center flex flex-col items-center flex-grow justify-center">
         <h3
-          className="text-lg font-bold transition-colors group-hover:text-[#D4952B] inline-flex items-center gap-1.5 justify-center"
+          className="text-lg font-bold transition-colors group-hover:text-[#C2410C] inline-flex items-center gap-1.5 justify-center"
           style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
         >
           <span>{title}</span>
-          <ArrowRight className="w-4 h-4 text-[#D4952B] opacity-0 group-hover:opacity-100 transition-all transform -translate-x-1 group-hover:translate-x-0" />
+          <ArrowRight className="w-4 h-4 text-[#E37216] opacity-0 group-hover:opacity-100 transition-all transform -translate-x-1 group-hover:translate-x-0" />
         </h3>
       </div>
     </Link>

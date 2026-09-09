@@ -14,7 +14,7 @@ function formatNumber(num: number): string {
 
 function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
   return (
-    <div className="text-4xl md:text-5xl font-bold" style={{ color: '#D4952B' }}>
+    <div className="text-4xl md:text-5xl font-bold" style={{ color: '#E37216' }}>
       {value}{suffix}
     </div>
   );
