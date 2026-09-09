@@ -10,15 +10,12 @@ import {
   Clock, 
   Award, 
   CheckCircle2, 
-  Phone, 
   ShieldCheck, 
   Sparkles, 
   Music, 
   Mic, 
   Users, 
   Calendar, 
-  Mail, 
-  MapPin, 
   ChevronDown, 
   ArrowRight,
   Flame,
@@ -134,7 +131,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                   <div className="text-white">
-                    <span className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-bold text-[#E37216] uppercase tracking-wider block mb-1">
                       Tansen Academy Studio
                     </span>
                     <p className="text-sm text-gray-200">
@@ -515,94 +512,6 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* 14. FINAL CTA & 15. CONTACT / FOOTER BAR */}
-      <section id="contact-form" className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
-        
-        <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-white mb-4">
-              Ready to Begin Your {data.title} Journey?
-            </h2>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-              Book a free demo class and discover the right learning path for you.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="bg-[#E37216] hover:bg-[#c96213] text-white font-bold py-4 px-9 rounded-full transition-colors shadow-lg text-base"
-              >
-                Book Free Demo
-              </Link>
-              <a
-                href="tel:9818083588"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-9 rounded-full border border-white/20 transition-colors text-base"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-
-          {/* Contact Details */}
-          <div className="mt-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-10 max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-200">
-              
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-bold text-white mb-1">Call Us</div>
-                  <a href="tel:9818083588" className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">9818083588</a>
-                  <a href="tel:9871833588" className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">9871833588</a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-bold text-white mb-1">Email Us</div>
-                  <a href="mailto:tansengurugram43@gmail.com" className="text-gray-300 hover:text-[#E37216] text-xs transition-colors break-all">
-                    tansengurugram43@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-bold text-white mb-1">Location</div>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    NS-16, Block-C, Sushant Lok-1, Sector-43, Gurugram, Haryana – 122002
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* Internal Links */}
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-400">
-            <span className="block font-semibold text-gray-300 mb-3 uppercase tracking-wider">Explore Other Performing Arts Courses:</span>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-              <Link href="/courses/music/classical-vocal-singing" className="hover:text-[#E37216] transition-colors">Classical Vocal Singing</Link>
-              <span>•</span>
-              <Link href="/courses/dance/kathak" className="hover:text-[#E37216] transition-colors">Kathak Classes</Link>
-              <span>•</span>
-              <Link href="/courses/instruments/tabla" className="hover:text-[#E37216] transition-colors">Tabla Classes</Link>
-              <span>•</span>
-              <Link href="/courses/instruments/guitar" className="hover:text-[#E37216] transition-colors">Guitar Classes</Link>
-              <span>•</span>
-              <Link href="/courses/instruments/keyboard-piano" className="hover:text-[#E37216] transition-colors">Keyboard / Piano Classes</Link>
-              <span>•</span>
-              <Link href="/courses/dance/western-dance" className="hover:text-[#E37216] transition-colors">Western Dance Classes</Link>
-              <span>•</span>
-              <Link href="/courses/creative-arts/fine-arts" className="hover:text-[#E37216] transition-colors">Fine Arts Classes</Link>
-            </div>
-          </div>
-
         </div>
       </section>
 

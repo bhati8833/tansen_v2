@@ -49,3 +49,4 @@ secret/credentials.env
 # secret/ folder intentionally NOT ignored - git mein safe hai
 # Live hosting / out/ folder mein automatically exclude hota hai
 # kyunki /out/ already ignore mein hai
+.gstack/
