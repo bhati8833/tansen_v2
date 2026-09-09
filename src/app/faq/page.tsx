@@ -16,6 +16,7 @@ import {
   HelpCircle,
   CheckCircle2
 } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,33 +46,12 @@ export default function FAQPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
       
       {/* 1. HERO BANNER */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20 overflow-hidden">
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4952B]/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="container-site relative z-10 max-w-5xl mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-4">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">FAQ</span>
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4952B]/15 border border-[#D4952B]/30 text-[#D4952B] text-xs font-semibold uppercase tracking-wider mb-4">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Help & Support Center</span>
-          </div>
-
-          <h1 className="text-3xl md:text-5xl font-bold font-poppins text-white tracking-tight leading-tight mb-3">
-            {faqPageHeader.title}
-          </h1>
-          <p className="text-lg md:text-xl text-[#D4952B] font-semibold font-poppins mb-4">
-            {faqPageHeader.subtitle}
-          </p>
-          <p className="text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
-            {faqPageHeader.description}
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        breadcrumbs={[{ label: 'FAQ' }]}
+        title={faqPageHeader.title}
+        highlight="Questions"
+        subtitle={faqPageHeader.description}
+      />
 
       {/* 2. SEARCH & CATEGORY FILTER BAR */}
       <section className="py-6 bg-white border-b border-gray-200 sticky top-20 z-30 shadow-2xs">

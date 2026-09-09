@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { siteContent } from '@/data/site-content';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 interface ContactClientProps {
   // Pass any initial data if needed
@@ -198,38 +199,17 @@ export function ContactClient(_props: ContactClientProps) {
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800 pb-20 md:pb-0">
       
       {/* 1. BREADCRUMB & 2. HERO SECTION */}
-      <section className="relative bg-[#0A101C] text-white py-14 md:py-20 border-b border-gold-500/20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4952B]/10 rounded-full blur-3xl pointer-events-none" />
+      <PageHeader
+        breadcrumbs={[{ label: 'Contact Us' }]}
+        title="Let's Begin Your Musical &"
+        highlight="Artistic Journey"
+        subtitle="Have a question about our courses, batches, admissions, fees, or demo classes? Our team is here to help you find the right learning opportunity for you or your child."
+      />
 
-        <div className="container-site relative z-10">
-          {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-4">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">Contact Us</span>
-          </nav>
-
-          {/* Hero Kicker */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4952B]/15 border border-[#D4952B]/30 text-[#D4952B] text-xs font-bold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>GET IN TOUCH</span>
-          </div>
-
-          {/* H1 Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-poppins text-white tracking-tight leading-tight mb-4">
-            Let’s Begin Your Musical &amp; Artistic Journey
-          </h1>
-
-          {/* Description */}
-          <p className="text-gray-300 text-base md:text-xl max-w-3xl leading-relaxed mb-8">
-            Have a question about our courses, batches, admissions, fees, or demo classes? Our team is here to help you find the right learning opportunity for you or your child.
-          </p>
-
-          {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4">
+      {/* 3. CONTACT INTRODUCTION */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="container-site max-w-5xl">
+          <div className="flex flex-wrap items-center gap-4 mb-6">
             <button
               onClick={() => handleQuickEnquire('Free Demo Class')}
               className="px-7 py-3.5 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-full text-sm transition-all shadow-lg hover:shadow-amber-500/20 active:scale-95 flex items-center gap-2"
@@ -239,18 +219,12 @@ export function ContactClient(_props: ContactClientProps) {
             </button>
             <button
               onClick={() => handleQuickEnquire('General Enquiry')}
-              className="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-sm border border-white/20 transition-all active:scale-95 flex items-center gap-2"
+              className="px-7 py-3.5 bg-[#0A101C] hover:bg-gray-800 text-white font-bold rounded-full text-sm border border-gray-300 transition-all active:scale-95 flex items-center gap-2"
             >
               <Send className="w-4 h-4 text-[#D4952B]" />
               <span>Enquire Now</span>
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* 3. CONTACT INTRODUCTION */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="container-site max-w-5xl">
           <div className="bg-orange-50/60 rounded-3xl p-6 sm:p-10 border border-orange-100/80 shadow-2xs">
             <span className="text-[#D4952B] font-bold text-xs uppercase tracking-widest block mb-2">
               Welcome to Tansen Sangeet Mahavidyalaya
@@ -777,7 +751,7 @@ export function ContactClient(_props: ContactClientProps) {
                 className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-[#D4952B] hover:shadow-lg transition-all flex flex-col justify-between group"
               >
                 <div>
-                  <div className="text-3xl mb-3">{c.icon}</div>
+                  <div className="text-3xl mb-3" aria-hidden="true">{c.icon}</div>
                   <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2 group-hover:text-[#D4952B] transition-colors">
                     {c.title}
                   </h3>

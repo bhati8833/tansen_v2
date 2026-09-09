@@ -5,7 +5,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts, BlogPost } from '@/data/blog';
-import { Search, ChevronRight, Clock, User, ArrowRight, Tag } from 'lucide-react';
+import { Search, Clock, User, ArrowRight, Tag } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,22 +26,12 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
-      {/* Hero Banner */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20">
-        <div className="container-site relative z-10">
-          <div className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-3">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">Blog</span>
-          </div>
-          <h1 className="text-3xl md:text-5xl font-bold font-poppins text-white tracking-tight mb-4">
-            Performing Arts & <span className="text-[#D4952B]">Music Insights</span>
-          </h1>
-          <p className="text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
-            Expert articles, practice guides, raaga theory, and dance heritage news written by Tansen senior faculty.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        breadcrumbs={[{ label: 'Blog' }]}
+        title="Performing Arts &"
+        highlight="Music Insights"
+        subtitle="Expert articles, practice guides, raaga theory, and dance heritage news written by Tansen senior faculty."
+      />
 
       {/* Featured Article */}
       <section className="py-12 bg-white border-b border-gray-100">

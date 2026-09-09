@@ -4,7 +4,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronRight, X, Maximize2 } from 'lucide-react';
+import { X, Maximize2 } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 interface GalleryItem {
   id: number;
@@ -39,22 +40,12 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
-      {/* Hero Banner */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20">
-        <div className="container-site relative z-10">
-          <div className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-3">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">Gallery</span>
-          </div>
-          <h1 className="text-3xl md:text-5xl font-bold font-poppins text-white tracking-tight mb-4">
-            Photo & Performance <span className="text-[#D4952B]">Gallery</span>
-          </h1>
-          <p className="text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
-            Moments of joy, stage performances, celebrity visits, and artistic achievements at Tansen Sangeet Mahavidyalaya.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        breadcrumbs={[{ label: 'Gallery' }]}
+        title="Photo & Performance"
+        highlight="Gallery"
+        subtitle="Moments of joy, stage performances, celebrity visits, and artistic achievements at Tansen Sangeet Mahavidyalaya."
+      />
 
       {/* Category Tabs */}
       <section className="py-6 bg-white border-b border-gray-200 sticky top-20 z-30 shadow-sm">

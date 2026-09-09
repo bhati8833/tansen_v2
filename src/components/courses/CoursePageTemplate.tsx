@@ -5,8 +5,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { DetailedCourseData } from '@/data/course-details';
-import { 
-  ChevronRight, 
+import { PageHeader } from '@/components/layout/PageHeader';
+import {
   Clock, 
   Award, 
   CheckCircle2, 
@@ -61,44 +61,34 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
       
-      {/* 1. BREADCRUMB & 2. HERO SECTION */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20 overflow-hidden">
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4952B]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* 1. BREADCRUMB & 2. HERO HEADER */}
+      <PageHeader
+        breadcrumbs={[
+          { label: 'Courses', href: '/courses' },
+          { label: data.categoryName, href: `/courses/${data.categorySlug}` },
+          { label: data.title },
+        ]}
+        title={data.locationTitle.replace(' in Gurugram', '')}
+        highlight="in Gurugram"
+        subtitle={data.tagline}
+      />
 
-        <div className="container-site relative z-10 max-w-6xl mx-auto px-4">
-          {/* Clickable Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-6">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <Link href="/courses" className="hover:underline">Courses</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <Link href={`/courses/${data.categorySlug}`} className="hover:underline">{data.categoryName}</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">{data.title}</span>
-          </nav>
-
+      {/* 2. COURSE OVERVIEW (HERO BODY) */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="container-site max-w-6xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Desktop Left / Mobile Top: Text Content */}
-            <div className="lg:col-span-7 space-y-4">
+            {/* Text Content */}
+            <div className="lg:col-span-7 space-y-5">
               <div className="flex items-center gap-3">
                 <span className="bg-[#D4952B] text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
                   {data.categoryName}
                 </span>
-                <span className="bg-white/10 text-gray-200 text-xs font-medium px-3.5 py-1.5 rounded-full border border-white/20">
+                <span className="bg-gray-100 text-gray-700 text-xs font-medium px-3.5 py-1.5 rounded-full border border-gray-200">
                   Certified Program
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-poppins text-white tracking-tight leading-tight">
-                {data.locationTitle}
-              </h1>
-
-              <p className="text-lg md:text-xl text-[#D4952B] font-semibold font-poppins">
-                {data.tagline}
-              </p>
-
-              <p className="text-gray-300 text-base leading-relaxed max-w-2xl">
+              <p className="text-gray-700 text-base leading-relaxed">
                 {data.heroDescription}
               </p>
 
@@ -112,31 +102,31 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 </Link>
                 <Link
                   href="/contact#enquiry-form"
-                  className="bg-white/10 hover:bg-white/20 text-white font-bold py-3.5 px-8 rounded-full border border-white/20 transition-colors text-sm"
+                  className="bg-[#0A101C] hover:bg-gray-800 text-white font-bold py-3.5 px-8 rounded-full border border-gray-300 transition-colors text-sm"
                 >
                   Enquire Now
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-6 text-xs text-gray-300 border-t border-white/10 pt-4 mt-6">
+              <div className="flex flex-wrap gap-6 text-xs text-gray-500 border-t border-gray-200 pt-4">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-[#D4952B]" />
-                  <span>Duration: <strong className="text-white">{data.schedule.weeklyHours}</strong></span>
+                  <span>Duration: <strong className="text-gray-900">{data.schedule.weeklyHours}</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-[#D4952B]" />
-                  <span>Eligibility: <strong className="text-white">{data.schedule.ageGroup}</strong></span>
+                  <span>Eligibility: <strong className="text-gray-900">{data.schedule.ageGroup}</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#D4952B]" />
-                  <span>Board: <strong className="text-white">Prayag & Trinity Associated</strong></span>
+                  <span>Board: <strong className="text-gray-900">Prayag & Trinity Associated</strong></span>
                 </div>
               </div>
             </div>
 
-            {/* Desktop Right / Mobile Bottom: Visual */}
+            {/* Visual */}
             <div className="lg:col-span-5">
-              <div className="relative h-[320px] sm:h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+              <div className="relative h-[320px] sm:h-[400px] w-full rounded-3xl overflow-hidden shadow-xl border-4 border-gray-100">
                 <Image
                   src={data.heroImage}
                   alt={data.locationTitle}
@@ -182,7 +172,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block">
                 Course Introduction
               </span>
-              <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 leading-snug">
+              <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 leading-snug">
                 {data.introTitle}
               </h2>
               
@@ -215,7 +205,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <HelpCircle className="w-7 h-7" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-3">
+              <h2 className="text-2xl font-bold font-serif text-gray-900 mb-3">
                 {data.whatIsTitle}
               </h2>
               {data.whatIsDescription.map((para, idx) => (
@@ -235,7 +225,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Curriculum & Skill Mastery
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
               What Will You Learn in {data.title}?
             </h2>
             <p className="text-gray-600 text-base">
@@ -275,7 +265,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Program Benefits & Features
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900">
               {data.title} Course Highlights
             </h2>
           </div>
@@ -298,7 +288,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Target Audience
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
               Who Can Join {data.title}?
             </h2>
           </div>
@@ -325,7 +315,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               The Tansen Advantage
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
               Why Choose Tansen Sangeet Mahavidyalaya?
             </h2>
           </div>
@@ -348,7 +338,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Progressive Learning Framework
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
               Learning Journey
             </h2>
           </div>
@@ -455,7 +445,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
                 Studio & Learning Moments
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900">
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900">
                 Course Gallery
               </h2>
             </div>
@@ -484,7 +474,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Got Questions?
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-gray-900 mb-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -536,7 +526,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
         
         <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold font-poppins text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-white mb-4">
               Ready to Begin Your {data.title} Journey?
             </h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">

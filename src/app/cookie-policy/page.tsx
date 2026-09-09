@@ -24,6 +24,7 @@ import {
   UserCheck,
 } from 'lucide-react';
 import { siteContent } from '@/data/site-content';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | Tansen Sangeet Mahavidyalaya',
@@ -107,34 +108,11 @@ export default function CookiePolicyPage() {
       <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
         
         {/* 1. HERO BANNER */}
-        <section className="relative bg-[#0A101C] text-white py-14 md:py-20 border-b border-gold-500/20 overflow-hidden">
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4952B]/10 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="container-site relative z-10">
-            {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-4">
-              <Link href="/" className="hover:underline">
-                Home
-              </Link>
-              <ChevronRight className="w-4 h-4 text-gray-400" />
-              <span className="text-gray-300">Cookie Policy</span>
-            </nav>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4952B]/15 border border-[#D4952B]/30 text-[#D4952B] text-xs font-bold uppercase tracking-widest mb-4">
-              <Cookie className="w-3.5 h-3.5" />
-              <span>TECHNICAL POLICIES &amp; PRIVACY</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-poppins text-white tracking-tight leading-tight mb-4">
-              Cookie Policy
-            </h1>
-
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl leading-relaxed">
-              Last Updated: <span className="text-white font-semibold">September 3, 2026</span>
-            </p>
-          </div>
-        </section>
+        <PageHeader
+          breadcrumbs={[{ label: 'Cookie Policy' }]}
+          title="Cookie Policy"
+          subtitle="Last Updated: September 3, 2026"
+        />
 
         {/* PREAMBLE NOTICE */}
         <section className="py-8 bg-amber-50/70 border-b border-amber-100">

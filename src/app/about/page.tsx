@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { aboutData } from '@/data/about';
-import { 
-  ChevronRight, 
+import {
   CheckCircle2, 
   Sparkles, 
   BookOpen, 
@@ -25,6 +24,7 @@ import {
   Target,
   Smile
 } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
 
 export const metadata = {
   title: 'About Us | Tansen Sangeet Mahavidyalaya',
@@ -36,36 +36,12 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
       
       {/* 1. HERO HEADER */}
-      <section className="relative bg-[#0A101C] text-white py-16 lg:py-24 border-b border-gold-500/20 overflow-hidden">
-        {/* Decorative Grid Backdrop */}
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#D4952B]/10 rounded-full blur-3xl pointer-events-none" />
-        
-        <div className="container-site relative z-10 max-w-6xl mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-[#D4952B] font-medium mb-4">
-            <Link href="/" className="hover:underline">Home</Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-300">About Us</span>
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4952B]/15 border border-[#D4952B]/30 text-[#D4952B] text-xs font-semibold uppercase tracking-wider mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{aboutData.unitText}</span>
-          </div>
-
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-poppins text-white tracking-tight leading-tight mb-4">
-            {aboutData.title}
-          </h1>
-
-          <p className="text-xl md:text-2xl text-[#D4952B] font-semibold font-poppins mb-6">
-            {aboutData.tagline}
-          </p>
-
-          <p className="text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
-            {aboutData.introParagraphs[0]}
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        breadcrumbs={[{ label: 'About Us' }]}
+        title="About Tansen Sangeet"
+        highlight="Mahavidyalaya"
+        subtitle={aboutData.introParagraphs[0]}
+      />
 
       {/* 2. INTRODUCTION & APPROACH */}
       <section className="py-16 bg-white border-b border-gray-100">
@@ -75,7 +51,7 @@ export default function AboutPage() {
               <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block">
                 Holistic Performing Arts Education
               </span>
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins leading-snug">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif leading-snug">
                 Nurturing Creativity, Discipline & Confidence Through Art
               </h2>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
@@ -129,7 +105,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Honoring Heritage
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif">
               {aboutData.legacy.title}
             </h2>
             <p className="text-gray-600 mt-2 text-base">
@@ -191,7 +167,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#D4952B]/20 border border-[#D4952B]/40 flex items-center justify-center text-[#D4952B] mb-6">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white mb-6">
                   {aboutData.vision.title}
                 </h2>
                 <div className="space-y-4 text-gray-300 leading-relaxed text-base">
@@ -213,7 +189,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 text-[#D4952B] flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900 mb-3">
+                <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900 mb-3">
                   {aboutData.mission.title}
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm sm:text-base font-medium">
@@ -242,7 +218,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Our Core Philosophy
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-poppins">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-serif">
               {aboutData.philosophy.title}
             </h2>
             <p className="text-gray-600 mt-4 text-base leading-relaxed">
@@ -306,7 +282,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Comprehensive Curriculum
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
               {aboutData.courses.title}
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -361,7 +337,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Inclusive Learning
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
               {aboutData.learningForEveryAge.title}
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
@@ -418,7 +394,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Structured Methodology
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins mb-3">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-3">
               {aboutData.studentFocused.title}
             </h2>
             <p className="text-gray-600 text-base">
@@ -459,7 +435,7 @@ export default function AboutPage() {
               <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
                 Heritage & Innovation
               </span>
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-6">
                 {aboutData.traditionAndModernity.title}
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed text-base">
@@ -505,7 +481,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-6 shadow-2xs">
                   <Flame className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
+                <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
                   {aboutData.performanceConfidence.title}
                 </h2>
                 <div className="space-y-3 text-gray-700 text-sm sm:text-base leading-relaxed">
@@ -522,7 +498,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-white text-[#D4952B] flex items-center justify-center mb-6 shadow-2xs">
                   <GraduationCap className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
+                <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
                   {aboutData.certifications.title}
                 </h2>
                 <div className="space-y-3 text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
@@ -555,7 +531,7 @@ export default function AboutPage() {
             <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
               Key Highlights
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif">
               Why Choose Tansen Sangeet Mahavidyalaya?
             </h2>
           </div>
@@ -589,7 +565,7 @@ export default function AboutPage() {
           <span className="text-[#D4952B] font-semibold text-xs uppercase tracking-widest block mb-2">
             Our Promise To Every Student
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-poppins mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-6">
             {aboutData.commitment.title}
           </h2>
           
@@ -613,7 +589,7 @@ export default function AboutPage() {
         
         <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold font-poppins text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-white mb-4">
               {aboutData.contactInfo.title}
             </h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
