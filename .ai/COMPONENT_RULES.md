@@ -15,6 +15,7 @@ src/components/
 │   ├── TopBar.tsx    # Server component
 │   ├── MainNav.tsx   # Client component (mega menu)
 │   ├── Footer.tsx    # Client component
+│   ├── PageHeader.tsx # Shared non-homepage header (gallery pattern)
 │   └── Container.tsx # Server component (width utility)
 └── sections/        # Homepage sections
     ├── Hero.tsx         # Image slider + stats

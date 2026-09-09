@@ -2,6 +2,10 @@
 
 ## v0.1.0 (Current)
 
+### September 9, 2026
+- feat(ui): unify all page headers with the shared `PageHeader` component (gallery pattern — breadcrumb div + gold-accented h1 + one-line subtitle; no gradients, orbs, or kicker pills) across 12 non-homepage pages
+- refactor(courses): split course-detail dark hero into short `PageHeader` + white COURSE OVERVIEW body (badges, description, CTAs, meta, hero image preserved)
+
 ### September 3, 2026
 - feat: complete website updates, contact page, legal pages, course card updates, and documentation
 

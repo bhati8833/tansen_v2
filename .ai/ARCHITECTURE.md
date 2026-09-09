@@ -124,12 +124,14 @@ layout.tsx (root)
 
 ## Shared Patterns
 
-### Dark Hero Pattern
-Every page uses a dark `#0A101C` hero section with:
-- Decorative radial gradient grid overlay
-- Breadcrumb navigation
-- Gold accent text
-- Page title and subtitle
+### Page Header Pattern (`PageHeader`)
+Every page **except the homepage** uses the shared `src/components/layout/PageHeader.tsx`:
+- Dark `#0A101C` background, `py-16 lg:py-20`, gold bottom border
+- Plain `div` breadcrumb (Home + `ChevronRight` + label(s); no `<nav>`, no badge pills)
+- One `h1` with optional gold `highlight` on the last word + one short `p` subtitle
+- No radial gradient grid, no blurred circles, no kicker pills, no CTAs
+
+Add any new page by passing `<PageHeader breadcrumbs title highlight subtitle />`. The old two-column course-detail hero content now renders as a white COURSE OVERVIEW section below the header.
 
 ### Legal Pages Layout
 Terms, Privacy, Cookie Policy, and Disclaimer share:

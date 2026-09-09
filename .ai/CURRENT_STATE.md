@@ -28,6 +28,7 @@
 | FloatingAction (WhatsApp) | ✅ Complete | Fixed position, pulse animation |
 | CourseCard | ✅ Complete | Reusable card component |
 | CoursePageTemplate | ✅ Complete | Data-driven template |
+| PageHeader | ✅ Complete | Shared non-homepage header (gallery pattern) |
 | Container | ✅ Complete | Width utility (underused) |
 
 ## Data Layer Status

@@ -106,15 +106,21 @@ All cards share:
 - `transition-all duration-300`
 - Consistent padding (`p-6` or `p-8`)
 
-### Hero Section Pattern
+### Page Header Pattern (`PageHeader`)
 
-Every page hero uses:
-- `bg-[#0A101C]` dark background
-- Radial gradient grid overlay (CSS `radial-gradient`)
-- Decorative blurred circles
-- Breadcrumb with `ChevronRight` separators
-- Gold accent text (`text-[#D4952B]` or `text-amber-400`)
-- Title in white, subtitle in gray-300
+Every page **except the homepage** uses the shared `src/components/layout/PageHeader.tsx` component:
+- `bg-[#0A101C]` dark background, `py-16 lg:py-20`
+- `border-b border-gold-500/20` divider
+- `container-site` width (no `max-w` overrides, no `mx-auto` padding tweaks)
+- Breadcrumb as a plain `div` (not `<nav>`): `Home` + `ChevronRight` + label(s), gold `text-[#D4952B]`
+- One `h1`: `text-3xl md:text-5xl font-bold font-poppins text-white tracking-tight mb-4` with an optional gold `highlight` span on the trailing word
+- One short `p` subtitle: `text-gray-300 max-w-3xl`
+
+Strictly **no** radial gradient grid, no decorative blurred circles, no kicker/badge pills, no CTAs, no taglines.
+
+Pattern is identical across every non-homepage page: `/about`, `/blog`, `/contact`, `/cookie-policy`, `/courses`, `/courses/[category]`, `/courses/[category]/[slug]`, `/disclaimer`, `/faq`, `/gallery`, `/privacy`, `/terms`.
+
+On the course detail page the old two-column hero content (category badges, `heroDescription`, CTAs, duration/eligibility/board meta, hero image) now lives in a light `bg-white` **COURSE OVERVIEW** section immediately below the `PageHeader`.
 
 ### Section Tag
 
