@@ -51,7 +51,7 @@ export const celebrities: Celebrity[] = [
   },
   {
     id: 2,
-    name: 'Late Shri Mati Saroj Khan',
+    name: 'Late Smt. Saroj Khan',
     role: 'Choreographer',
     image: '/assets/testimonials/saroj-khan.webp',
   },

@@ -26,14 +26,16 @@ export function CourseCard({ title, category, image, fullSlug }: Course) {
       className="block group bg-white rounded-2xl overflow-hidden transition-all duration-300 border border-gray-100 hover:border-orange-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between h-full cursor-pointer"
     >
       {/* Image Container */}
-      <div className="relative overflow-hidden w-full" style={{ aspectRatio: '3/4' }}>
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
-        />
+      <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+        <div className="absolute inset-0 overflow-hidden rounded-t-2xl">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+          />
+        </div>
 
         {/* Floating Category Icon Badge at bottom center */}
         <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-md border-2 border-orange-100 flex items-center justify-center group-hover:border-[#E37216] transition-colors">

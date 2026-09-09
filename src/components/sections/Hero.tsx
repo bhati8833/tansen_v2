@@ -3,7 +3,7 @@
 // src/components/sections/Hero.tsx — exact layout with bottom floating stat card matching live site
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Shield, Users, MapPin, Key, Star, Building2, Globe, GraduationCap, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Shield, Users, MapPin, Key, Star, Globe, GraduationCap } from 'lucide-react';
 
 const slides = [
   {
@@ -125,7 +125,7 @@ export function Hero() {
   return (
     <div className="relative bg-white pb-16 lg:pb-24">
       {/* Main Hero Slider Container */}
-      <section className="relative w-full overflow-hidden" style={{ height: 'clamp(500px, 68vh, 750px)' }}>
+      <section className="relative w-full overflow-hidden" style={{ aspectRatio: '1537 / 1023', maxHeight: 'min(80vh, 800px)' }}>
         {/* Background Images */}
         {slides.map((s, i) => (
           <div
@@ -144,73 +144,7 @@ export function Hero() {
           </div>
         ))}
 
-        {/* Soft Light-to-Dark Fade Overlay */}
-        <div
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              'linear-gradient(90deg, rgba(253,249,243,0.92) 0%, rgba(253,249,243,0.75) 45%, rgba(0,0,0,0.15) 100%)',
-          }}
-        />
 
-        {/* Content Overlay */}
-        <div className="absolute inset-0 z-20 flex items-center">
-          <div className="container-site w-full">
-            <div className="max-w-2xl text-gray-900">
-              {/* Tagline */}
-              <p className="text-sm md:text-base font-medium mb-1.5 flex items-center gap-2" style={{ color: '#E37216' }}>
-                <span>—</span>
-                <span>{slide.tagline}</span>
-              </p>
-
-              {/* Main Title */}
-              <h1
-                key={`title-${current}`}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight"
-                style={{
-                  fontFamily: 'var(--font-spectral-var), "Spectral", serif',
-                  color: '#0A101C',
-                  animation: 'slideUp 0.6s ease-out',
-                }}
-              >
-                {slide.title}
-              </h1>
-
-              {/* Subtitle */}
-              <h2
-                className="text-xl md:text-2xl font-bold mb-3"
-                style={{ fontFamily: 'var(--font-spectral-var), "Spectral", serif', color: '#0A101C' }}
-              >
-                {slide.subtitle}
-              </h2>
-
-              {/* Description */}
-              <p className="text-gray-700 text-sm md:text-base mb-6 font-medium">
-                {slide.description}
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap items-center gap-4 mt-8">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-white font-bold text-xs md:text-sm tracking-wider shadow-md transition-all hover:bg-[#c96213] hover:shadow-lg"
-                  style={{ backgroundColor: '#E37216' }}
-                >
-                  BOOK FREE DEMO
-                </a>
-                <a
-                  href="#courses"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-xs md:text-sm tracking-wider border-2 border-gray-900 text-gray-900 transition-all hover:bg-gray-900 hover:text-white"
-                >
-                  <span>EXPLORE COURSES</span>
-                  <span className="w-5 h-5 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs">
-                    <ArrowRight className="w-3 h-3" />
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Prev/Next Arrows */}
         <button

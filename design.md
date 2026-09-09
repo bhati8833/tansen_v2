@@ -92,47 +92,59 @@ Use `BreadcrumbList` structured data.
 
 ---
 
-# 2. Hero Section
+# 2. Hero Section (Homepage)
 
-Hero should immediately communicate:
-
-* Course name
-* Location
-* Short description
-* Primary CTA
-* Secondary CTA
-* Course-related visual
+Full-width image slider showcasing academy disciplines. Clean design with no text overlay — images speak for themselves.
 
 ### Layout
 
-Desktop:
+* Full-width section with aspect-ratio matching image dimensions (1537×1023)
+* Max-height capped at `min(80vh, 800px)` for balanced proportions
+* Background images use `object-cover` for clean display
+* No text overlay, taglines, or CTA buttons on hero images
+* Soft gradient overlay removed — clean image display only
 
-Left:
+### Navigation
 
-* Small category label
-* H1
-* 2–3 line description
-* CTA buttons
+* Prev/Next arrow buttons (left/right sides)
+* Dot indicators at bottom center
+* Auto-slide every 5 seconds
 
-Right:
+### Floating Stats Bar
 
-* Course image / visual
+Overlapping stats bar positioned below hero (`-mt-12`) showing:
 
-Mobile:
+* 50+ Years Legacy
+* 1 Lakh+ Students
+* ISO Certified
+* Sector-43 Gurugram
+* Online & Offline
+* Govt. Certified
 
-* Text first
-* Image below
-* CTA buttons below description
+---
 
-### H1 Format
+# Page Header (Non-Homepage)
 
-`[Course Name] Classes in Gurugram`
+All internal pages use a consistent `PageHeader` component with:
 
-Example:
+### Layout
 
-`Classical Vocal Singing Classes in Gurugram`
+* Breadcrumb navigation (Home → Section → Page)
+* Page title (H1)
+* Full-width section with border-bottom
 
-`Fine Arts Classes in Gurugram`
+### Background Design
+
+* Soft gradient flowing from left (orange to white)
+* Playful geometric scattered shapes on left side (triangles, circles, diamonds)
+* Scattered music instrument icons on right side (Guitar, Mic, Drum, Music, Piano, Headphones)
+* Icons in light orange tones, various sizes, rotated at different angles
+* Semi-transparent, decorative only (not interactive)
+
+### Typography
+
+* Breadcrumbs: small, bold, orange tones
+* Title: large, bold, dark color
 
 ---
 
@@ -495,11 +507,20 @@ Course pages may use subtle course-specific visual accents, but the primary bran
 
 All course cards should have:
 
-* Consistent border radius
+* Consistent border radius (rounded-2xl)
 * Consistent padding
 * Subtle border/shadow
 * Consistent icon placement
 * Consistent hover animation
+
+### Course Card Structure
+
+* Image container with `aspect-ratio: 3/4`
+* Image wrapped in `overflow-hidden rounded-t-2xl` container (separate from icon)
+* Floating category icon badge at bottom center (`-bottom-5`)
+* Icon positioned OUTSIDE overflow-hidden container to prevent clipping
+* Content area with title and hover arrow
+* Hover effects: border color change, shadow increase, slight translate-y
 
 Avoid excessive animations.
 
