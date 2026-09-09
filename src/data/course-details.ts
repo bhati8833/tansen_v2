@@ -137,10 +137,10 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       affiliations: ['Prayag Sangeet Samiti', 'Trinity College London Associated']
     },
     galleryImages: [
-      '/assets/courses/vocal-cover.webp',
-      '/assets/courses/vocal-inside.webp',
-      '/assets/hero-bg.webp',
-      '/assets/gallery/hero-student.jpeg'
+      '/assets/gallery/gallery-1.webp',
+      '/assets/gallery/gallery-10.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp'
     ],
     faqs: [
       { question: 'Is Classical Vocal Singing suitable for beginners?', answer: 'Yes. Beginners can start the course without previous musical training. Students begin with Swar and Alankars.' },
@@ -236,9 +236,10 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       affiliations: ['Prayag Sangeet Samiti Art Affiliated', 'Annual Art Showcases']
     },
     galleryImages: [
-      '/assets/courses/fine-arts-cover.webp',
-      '/assets/hero-bg.webp',
-      '/assets/gallery/hero-student.jpeg'
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-9.webp',
+      '/assets/gallery/gallery-10.webp'
     ],
     faqs: [
       { question: 'Is Fine Arts suitable for beginners?', answer: 'Yes. Beginners are welcome and do not need previous art training to start learning.' },
@@ -271,7 +272,7 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       'Learning guitar involves developing both practical playing skills and an understanding of basic musical concepts. Students gradually learn how to hold and play the instrument correctly, develop finger coordination, understand chords and scales, follow rhythm and timing, and apply these skills while playing melodies and songs.'
     ],
     heroImage: '/assets/courses/guitar-cover.webp',
-    introImage: '/assets/courses/guitar-cover.webp',
+    introImage: '/assets/courses/guitar-inside.webp',
     learningModules: [
       { iconName: 'Music', title: 'Acoustic Guitar Playing', description: 'Students are introduced to acoustic guitar playing and develop basic skills to play comfortably and confidently.' },
       { iconName: 'Sparkles', title: 'Posture & Hand Positioning', description: 'Correct posture, hand positioning, and playing techniques to build proper lifelong playing habits.' },
@@ -337,9 +338,10 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       affiliations: ['Trinity College London Associated', 'Prayag Sangeet Samiti']
     },
     galleryImages: [
-      '/assets/courses/guitar-cover.webp',
-      '/assets/hero-bg.webp',
-      '/assets/gallery/hero-student.jpeg'
+      '/assets/gallery/gallery-6.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-9.webp'
     ],
     faqs: [
       { question: 'Is Guitar suitable for beginners?', answer: 'Yes. Beginners can start from the fundamentals without previous guitar training.' },
@@ -373,7 +375,7 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       'Keyboard and Piano learning introduces students to the fundamentals of playing while developing a strong understanding of music. Students learn correct hand positioning, musical notes, rhythm, scales, chords, and basic music theory.'
     ],
     heroImage: '/assets/courses/keyboard-cover.webp',
-    introImage: '/assets/courses/keyboard-cover.webp',
+    introImage: '/assets/courses/keyboard-inside.webp',
     learningModules: [
       { iconName: 'Music', title: 'Introduction to Keyboard & Piano', description: 'Understand the instrument, its fundamentals, white and black keys, and basic playing techniques.' },
       { iconName: 'Sparkles', title: 'Posture & Finger Techniques', description: 'Learn correct posture, hand positioning, finger placement, and techniques for comfortable playing.' },
@@ -432,9 +434,10 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       affiliations: ['Trinity College London Associated', 'Prayag Sangeet Samiti']
     },
     galleryImages: [
-      '/assets/courses/keyboard-cover.webp',
-      '/assets/hero-bg.webp',
-      '/assets/gallery/hero-student.jpeg'
+      '/assets/gallery/gallery-4.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-10.webp'
     ],
     faqs: [
       { question: 'Is Keyboard & Piano suitable for beginners?', answer: 'Yes. The program is designed for beginners as well as students who already have some experience.' },
@@ -471,7 +474,7 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       'Drums learning introduces students to the fundamentals of drumming while developing a strong sense of rhythm, timing, coordination, and musical control. Our Drums program combines structured practice with practical playing, helping students understand the drum kit, learn essential techniques, develop rhythmic accuracy, and gradually build confidence as a performer.'
     ],
     heroImage: '/assets/courses/drums-cover.webp',
-    introImage: '/assets/courses/drums-cover.webp',
+    introImage: '/assets/courses/drums-inside.webp',
     learningModules: [
       { iconName: 'Music', title: 'Introduction to the Drum Kit', description: 'Understand the drum kit, its different components, and their basic functions.' },
       { iconName: 'Sparkles', title: 'Posture & Grip', description: 'Learn correct sitting posture, stick grip, hand positioning, and fundamental playing techniques.' },
@@ -529,7 +532,12 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       description: 'Structured Drums training at Tansen Sangeet Mahavidyalaya with opportunities for stage performances, cultural events, and certified examinations.',
       affiliations: ['Trinity College London Associated', 'Prayag Sangeet Samiti Affiliated']
     },
-    galleryImages: ['/assets/courses/drums-cover.webp'],
+    galleryImages: [
+      '/assets/gallery/gallery-5.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-9.webp'
+    ],
     faqs: [
       { question: 'Are Drums classes suitable for beginners?', answer: 'Yes. The program is suitable for beginners as well as students with prior experience.' },
       { question: 'What age can students start Drums classes?', answer: 'We welcome learners from 3+ to adults, with teaching adapted according to age, level, and learning ability.' },
@@ -619,7 +627,12 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       description: 'Structured Tabla training at Tansen Sangeet Mahavidyalaya with opportunities for stage performances, cultural events, and Prayag Sangeet Samiti examinations.',
       affiliations: ['Prayag Sangeet Samiti Affiliated']
     },
-    galleryImages: ['/assets/courses/tabla-cover.webp'],
+    galleryImages: [
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-9.webp',
+      '/assets/gallery/gallery-10.webp'
+    ],
     faqs: [
       { question: 'What age can students start Tabla classes?', answer: 'Students can start from the age of 3+, with learning adjusted according to age and ability.' },
       { question: 'Can beginners join Tabla classes?', answer: 'Yes. Beginners can join without any previous Tabla training.' },
@@ -654,7 +667,7 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       'Our Kathak classes focus on developing both the technical and expressive aspects of the art. Students learn fundamental movements and gradually build their understanding of rhythm, compositions, expressions, and performance. The learning process is structured to help students progress comfortably according to their age, learning ability, and experience level.'
     ],
     heroImage: '/assets/courses/kathak-cover.webp',
-    introImage: '/assets/courses/kathak-cover.webp',
+    introImage: '/assets/courses/kathak-inside.webp',
     learningModules: [
       { iconName: 'Sparkles', title: 'Kathak Fundamentals', description: 'Learn the basic concepts, movements, terminology, and traditions of Kathak while developing a strong foundation for further learning.' },
       { iconName: 'Flame', title: 'Tatkar & Rhythmic Footwork', description: 'Develop rhythmic precision through basic Tatkar and traditional Kathak footwork exercises.' },
@@ -710,7 +723,12 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       description: 'Tansen Sangeet Mahavidyalaya is associated with recognized music and performing arts organizations, including Prayag Sangeet Samiti and Trinity College, London. Where applicable, students can explore recognized certification and structured learning opportunities through the relevant programs.',
       affiliations: ['Prayag Sangeet Samiti Associated', 'Trinity College London Associated']
     },
-    galleryImages: ['/assets/courses/kathak-cover.webp'],
+    galleryImages: [
+      '/assets/gallery/gallery-3.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-9.webp'
+    ],
     faqs: [
       { question: 'Is the Kathak course suitable for beginners?', answer: 'Yes. The Kathak program is suitable for beginners as well as students with previous dance experience. No previous Kathak training is required to get started.' },
       { question: 'What age can students join Kathak classes?', answer: 'Students from young children aged 3+ to adults can explore the program. Teaching and learning methods are adapted according to the student\'s age, level, and learning ability.' },
@@ -746,7 +764,7 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       'Our Western Dance program focuses not only on learning choreography but also on helping students understand rhythm, control their movements, express themselves creatively, and develop confidence on the dance floor and stage. The course provides a supportive environment where learners can gradually develop their dance skills and performance abilities.'
     ],
     heroImage: '/assets/courses/western-dance-cover.webp',
-    introImage: '/assets/courses/western-dance-cover.webp',
+    introImage: '/assets/courses/western-dance-inside.webp',
     learningModules: [
       { iconName: 'Sparkles', title: 'Western Dance Fundamentals', description: 'Understand the basic principles of Western Dance and develop a strong foundation in movement and technique.' },
       { iconName: 'Flame', title: 'Basic Positions & Movements', description: 'Learn essential dance positions, movements, and techniques required to build control and confidence.' },
@@ -804,7 +822,12 @@ export const detailedCoursesData: Record<string, DetailedCourseData> = {
       description: 'Tansen Sangeet Mahavidyalaya is associated with recognized music and performing arts organizations, including Prayag Sangeet Samiti and Trinity College, London. Where applicable, students can explore recognized certification and structured learning opportunities through relevant programs.',
       affiliations: ['Prayag Sangeet Samiti Associated', 'Trinity College London Associated']
     },
-    galleryImages: ['/assets/courses/western-dance-cover.webp'],
+    galleryImages: [
+      '/assets/gallery/gallery-2.webp',
+      '/assets/gallery/gallery-7.webp',
+      '/assets/gallery/gallery-8.webp',
+      '/assets/gallery/gallery-10.webp'
+    ],
     faqs: [
       { question: 'Is Western Dance suitable for beginners?', answer: 'Yes. The program is suitable for both beginners and students with previous dance experience. Beginners can start with the fundamentals and gradually develop their skills.' },
       { question: 'What age can students join Western Dance classes?', answer: 'Students from young children aged 3+ to adults can explore the program. Teaching methods are adapted according to the student\'s age, level, and learning ability.' },

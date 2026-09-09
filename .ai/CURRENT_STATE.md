@@ -28,8 +28,6 @@
 | FloatingAction (WhatsApp) | ✅ Complete | Fixed position, pulse animation |
 | CourseCard | ✅ Complete | Reusable card component |
 | CoursePageTemplate | ✅ Complete | Data-driven template |
-| ClassicalVocalContent | ⚠️ Legacy | Hardcoded, should migrate to template |
-| FineArtsContent | ⚠️ Legacy | Hardcoded, should migrate to template |
 | Container | ✅ Complete | Width utility (underused) |
 
 ## Data Layer Status

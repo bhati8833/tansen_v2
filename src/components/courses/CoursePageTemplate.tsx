@@ -58,90 +58,9 @@ const iconMap: Record<string, React.ElementType> = {
 export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  // Structured Data (JSON-LD Schemas)
-  const courseSchema = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": data.locationTitle,
-    "description": data.metaDescription,
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Tansen Sangeet Mahavidyalaya",
-      "sameAs": "https://tansensangeet.com"
-    },
-    "url": `https://tansensangeet.com/courses/${data.categorySlug}/${data.slug}`,
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": ["In-Person", "Online"],
-      "location": {
-        "@type": "Place",
-        "name": "Tansen Sangeet Mahavidyalaya Gurugram",
-        "address": "NS-16, Block-C, Sushant Lok-1, Sector-43, Gurugram, Haryana – 122002"
-      }
-    }
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://tansensangeet.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Courses",
-        "item": "https://tansensangeet.com/courses"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": data.categoryName,
-        "item": `https://tansensangeet.com/courses/${data.categorySlug}`
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": data.title,
-        "item": `https://tansensangeet.com/courses/${data.categorySlug}/${data.slug}`
-      }
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": data.faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
-      }
-    }))
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
       
-      {/* Schema Injection */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
       {/* 1. BREADCRUMB & 2. HERO SECTION */}
       <section className="relative bg-[#0A101C] text-white py-16 lg:py-20 border-b border-gold-500/20 overflow-hidden">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#D4952B_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -191,12 +110,12 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 >
                   Book Free Demo
                 </Link>
-                <a
-                  href="#contact-form"
+                <Link
+                  href="/contact#enquiry-form"
                   className="bg-white/10 hover:bg-white/20 text-white font-bold py-3.5 px-8 rounded-full border border-white/20 transition-colors text-sm"
                 >
                   Enquire Now
-                </a>
+                </Link>
               </div>
 
               <div className="flex flex-wrap gap-6 text-xs text-gray-300 border-t border-white/10 pt-4 mt-6">
@@ -489,12 +408,9 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 </ul>
               </div>
 
-              <Link
-                href="/contact"
-                className="w-full py-3.5 bg-[#D4952B] hover:bg-[#b8842b] text-white font-bold rounded-xl text-center text-sm transition-colors block"
-              >
-                Enquire About Batches
-              </Link>
+              <div className="w-full p-3 bg-gray-50 rounded-xl text-xs text-gray-500 text-center">
+                Free demo class recommended before enrolling
+              </div>
             </div>
 
             {/* Certification Box */}
@@ -585,13 +501,15 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-${idx}`}
                     className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-gray-900 font-poppins text-base hover:text-[#D4952B] transition-colors"
                   >
                     <span>{faq.question}</span>
                     <ChevronDown className={`w-5 h-5 text-[#D4952B] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-gray-700 text-sm leading-relaxed border-t border-orange-100 bg-orange-50/20">
+                    <div id={`faq-${idx}`} className="px-5 pb-5 pt-1 text-gray-700 text-sm leading-relaxed border-t border-orange-100 bg-orange-50/20">
                       {faq.answer}
                     </div>
                   )}

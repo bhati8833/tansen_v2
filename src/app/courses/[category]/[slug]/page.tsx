@@ -1,7 +1,7 @@
 // src/app/courses/[category]/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import { courses } from '@/data/courses';
-import { detailedCoursesData } from '@/data/course-details';
+import { DetailedCourseData, detailedCoursesData } from '@/data/course-details';
 import { CoursePageTemplate } from '@/components/courses/CoursePageTemplate';
 
 interface CourseDetailPageProps {
@@ -9,6 +9,72 @@ interface CourseDetailPageProps {
     category: string;
     slug: string;
   }>;
+}
+
+const COURSE_SITE_URL = 'https://tansensangeet.com';
+
+function CourseJsonLd({ data }: { data: DetailedCourseData }) {
+  const url = `${COURSE_SITE_URL}/courses/${data.categorySlug}/${data.slug}`;
+
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: data.locationTitle,
+      description: data.metaDescription,
+      provider: {
+        "@type": "EducationalOrganization",
+        name: 'Tansen Sangeet Mahavidyalaya',
+        sameAs: COURSE_SITE_URL,
+      },
+      url,
+      hasCourseInstance: {
+        "@type": 'CourseInstance',
+        courseMode: ['In-Person', 'Online'],
+        location: {
+          "@type": 'Place',
+          name: 'Tansen Sangeet Mahavidyalaya Gurugram',
+          address: 'NS-16, Block-C, Sushant Lok-1, Sector-43, Gurugram, Haryana – 122002',
+        },
+      },
+    },
+    {
+      "@context": 'https://schema.org',
+      "@type": 'BreadcrumbList',
+      itemListElement: [
+        { "@type": 'ListItem', position: 1, name: 'Home', item: COURSE_SITE_URL },
+        { "@type": 'ListItem', position: 2, name: 'Courses', item: `${COURSE_SITE_URL}/courses` },
+        {
+          "@type": 'ListItem',
+          position: 3,
+          name: data.categoryName,
+          item: `${COURSE_SITE_URL}/courses/${data.categorySlug}`,
+        },
+        { "@type": 'ListItem', position: 4, name: data.title, item: url },
+      ],
+    },
+    {
+      "@context": 'https://schema.org',
+      "@type": 'FAQPage',
+      mainEntity: data.faqs.map((f) => ({
+        "@type": 'Question',
+        name: f.question,
+        acceptedAnswer: { "@type": 'Answer', text: f.answer },
+      })),
+    },
+  ];
+
+  return (
+    <>
+      {schemas.map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </>
+  );
 }
 
 export async function generateStaticParams() {
@@ -53,7 +119,12 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
   const detailedData = detailedCoursesData[slug];
 
   if (detailedData && detailedData.categorySlug === catSlug) {
-    return <CoursePageTemplate data={detailedData} />;
+    return (
+      <>
+        <CourseJsonLd data={detailedData} />
+        <CoursePageTemplate data={detailedData} />
+      </>
+    );
   }
 
   const course = courses.find((c) => c.categorySlug === catSlug && c.slug === slug);
@@ -61,8 +132,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
     notFound();
   }
 
-  // Fallback template for any course without custom detailed data
-  const fallbackData = {
+  const fallbackData: DetailedCourseData = {
     slug: course.slug,
     categorySlug: course.categorySlug,
     categoryName: course.category,
@@ -135,5 +205,10 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
     metaDescription: course.description
   };
 
-  return <CoursePageTemplate data={fallbackData} />;
+  return (
+    <>
+      <CourseJsonLd data={fallbackData} />
+      <CoursePageTemplate data={fallbackData} />
+    </>
+  );
 }

@@ -9,9 +9,7 @@ src/components/
 ├── common/          # Shared utilities
 │   └── FloatingAction.tsx
 ├── courses/         # Course page templates
-│   ├── CoursePageTemplate.tsx    # Data-driven template (preferred)
-│   ├── ClassicalVocalContent.tsx # Hardcoded variant (legacy)
-│   └── FineArtsContent.tsx      # Hardcoded variant (legacy)
+│   └── CoursePageTemplate.tsx    # Data-driven template (preferred)
 ├── layout/          # Structural components
 │   ├── Header.tsx    # Composes TopBar + MainNav
 │   ├── TopBar.tsx    # Server component
@@ -118,13 +116,9 @@ Data-driven component that accepts `DetailedCourseData`:
 <CoursePageTemplate data={detailedCoursesData[slug]} />
 ```
 
-### Legacy approach (hardcoded)
-
-`ClassicalVocalContent` and `FineArtsContent` are 700-800 line hardcoded variants of the same layout. These predate the template and should eventually be migrated.
-
 ### Fallback data generation
 
-`courses/[category]/[slug]/page.tsx` generates fallback data for courses that don't have entries in `detailedCoursesData`, ensuring every course has a detail page.
+`courses/[category]/[slug]/page.tsx` generates fallback data for courses that don't have entries in `detailedCoursesData`, ensuring every course has a detail page. Structured data (JSON-LD) is rendered server-side on this route — do not re-inject schema `<script>` tags inside client components.
 
 ## Component API
 

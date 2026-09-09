@@ -7,8 +7,8 @@
 ## Backlog
 
 ### High Priority
-- [ ] Remove unused `framer-motion` dependency
-- [ ] Migrate `ClassicalVocalContent` and `FineArtsContent` to `CoursePageTemplate`
+- [x] Remove unused `framer-motion` dependency (verify before removing)
+- [x] Delete legacy hardcoded course content — `ClassicalVocalContent` + `FineArtsContent` superseded by `CoursePageTemplate`
 - [ ] Add missing page-level metadata for /courses, /blog, /faq, /gallery
 - [ ] Add custom 404 page
 - [ ] Move hardcoded data to data layer (Hero, Testimonials, Gallery, WhyChooseUs, Accreditation)
