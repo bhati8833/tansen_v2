@@ -10,15 +10,15 @@ export function FAQ() {
   const [openId, setOpenId] = useState<number | null>(1);
 
   return (
-    <section className="py-16 sm:py-20 bg-white border-t border-gray-100">
+    <section className="py-16 sm:py-20 bg-band-warm">
       <div className="container-site max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-[#C2410C] text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-[#C2410C] text-sm md:text-base font-semibold uppercase tracking-wider mb-3">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins text-gray-900 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -32,8 +32,8 @@ export function FAQ() {
                 key={faq.id}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-[#E37216] shadow-md bg-white' 
-                    : 'border-gray-200/80 hover:border-orange-200 bg-white'
+                    ? 'border-[#E37216] shadow-card-soft bg-white' 
+                    : 'border-gray-200/80 hover:border-orange-200 bg-white shadow-card-soft'
                 }`}
               >
                 <button

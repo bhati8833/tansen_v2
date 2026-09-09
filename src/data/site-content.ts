@@ -2,7 +2,7 @@
 export const siteContent = {
   site: {
     name: 'Tansen Sangeet Mahavidyalaya',
-    tagline: 'Music • Dance • Performing Arts',
+    tagline: '...A Complete Music & Dance School',
     phone: '9818083588',
     phoneSecondary: '9871833588',
     phoneRaw: '+919818083588',
@@ -68,7 +68,7 @@ export const siteContent = {
 
   footer: {
     brandName: 'Tansen Sangeet Mahavidyalaya',
-    brandTagline: 'Music • Dance • Performing Arts',
+    brandTagline: '...A Complete Music & Dance School',
     brandDescription:
       'Nurturing creativity, confidence, discipline, and artistic expression through structured learning in music, dance, instruments, and fine arts. Tansen Sangeet Mahavidyalaya is a unit of Tansen Institute of Performing Arts (TIPA) Pvt. Ltd. and is committed to making performing arts accessible through quality training and a supportive learning environment.',
     ctaBanner: {

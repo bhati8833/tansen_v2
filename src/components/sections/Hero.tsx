@@ -123,7 +123,7 @@ export function Hero() {
   const slide = slides[current];
 
   return (
-    <div className="relative bg-white pb-16 lg:pb-24">
+    <div className="relative bg-sky-50 pb-16 lg:pb-24">
       {/* Main Hero Slider Container */}
       <section className="relative w-full overflow-hidden" style={{ aspectRatio: '1537 / 1023', maxHeight: 'min(80vh, 800px)' }}>
         {/* Background Images */}
@@ -149,14 +149,14 @@ export function Hero() {
         {/* Prev/Next Arrows */}
         <button
           onClick={() => { prev(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-md transition-all duration-200 focus:outline-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-[0_10px_25px_-8px_rgba(0,0,0,0.18)] transition-all duration-200 focus:outline-none"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={() => { next(); setAutoPlay(false); setTimeout(() => setAutoPlay(true), 10000); }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-md transition-all duration-200 focus:outline-none"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs border border-gray-200 text-gray-800 flex items-center justify-center hover:bg-[#E37216] hover:text-white hover:border-[#E37216] shadow-[0_10px_25px_-8px_rgba(0,0,0,0.18)] transition-all duration-200 focus:outline-none"
           aria-label="Next slide"
         >
           <ChevronRight className="w-5 h-5" />
@@ -182,7 +182,7 @@ export function Hero() {
 
       {/* FLOATING ELEGANT OVERLAPPING BADGES BAR */}
       <div className="container-site relative z-30 -mt-12 md:-mt-14">
-        <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 md:p-6 shadow-xl border border-gray-100/90 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 divide-y sm:divide-y-0 divide-gray-100">
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 md:p-6 shadow-[0_14px_35px_-12px_rgba(0,0,0,0.18)] border border-gray-100/90 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 divide-y sm:divide-y-0 divide-gray-100">
           {floatingStats.map((stat, i) => {
             const Icon = stat.icon;
             return (
@@ -190,7 +190,7 @@ export function Hero() {
                 key={i}
                 className={`flex flex-col items-center text-center group ${i > 0 ? 'pt-3 sm:pt-0' : ''}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-orange-50/80 border border-orange-200/50 flex items-center justify-center text-[#E37216] mb-2 group-hover:scale-105 group-hover:bg-[#E37216] group-hover:text-white transition-all duration-300 shadow-2xs">
+                <div className="w-10 h-10 rounded-xl bg-orange-50/80 border border-orange-200/50 flex items-center justify-center text-[#E37216] mb-2 group-hover:scale-105 group-hover:bg-[#E37216] group-hover:text-white transition-all duration-300 shadow-[0_6px_14px_-4px_rgba(0,0,0,0.12)]">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="text-sm md:text-base font-bold text-gray-900 font-poppins tracking-tight">

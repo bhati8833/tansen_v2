@@ -23,7 +23,7 @@ export function CourseCard({ title, category, image, fullSlug }: Course) {
   return (
     <Link
       href={fullSlug}
-      className="block group bg-white rounded-2xl overflow-hidden transition-all duration-300 border border-gray-100 hover:border-orange-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between h-full cursor-pointer"
+      className="block group bg-white rounded-2xl overflow-hidden transition-all duration-300 border border-gray-100 hover:border-orange-200/80 shadow-card-soft hover:shadow-card-lift hover:-translate-y-1.5 flex flex-col justify-between h-full cursor-pointer"
     >
       {/* Image Container */}
       <div className="relative w-full" style={{ aspectRatio: '3/4' }}>

@@ -16,7 +16,7 @@ export function MainNav() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -79,39 +79,29 @@ export function MainNav() {
 
                   {/* Mega Dropdown for Courses */}
                   {hasCategories && activeDropdown === item.label && (
-                    <div className="absolute top-full right-1/2 translate-x-1/2 lg:right-auto lg:translate-x-0 w-[680px] bg-white shadow-2xl rounded-2xl p-6 z-50 border border-gray-100 animate-[fadeIn_0.15s_ease]">
-                      <div className="grid grid-cols-4 gap-6">
-                        {item.categories?.map((cat) => (
-                          <div key={cat.name} className="space-y-2">
-                            {/* Category Title Header */}
-                            <Link
-                              href={cat.href}
-                              onClick={() => setActiveDropdown(null)}
-                              className="font-bold text-xs uppercase tracking-wider text-[#E37216] font-poppins hover:underline block pb-1 border-b border-orange-100"
-                            >
-                              {cat.name}
-                            </Link>
+                    <div className="absolute top-full right-1/2 translate-x-1/2 lg:right-auto lg:translate-x-0 w-[520px] bg-white shadow-2xl rounded-2xl p-6 z-50 border border-gray-100 animate-[fadeIn_0.15s_ease]">
+                      <p className="text-xs font-bold uppercase tracking-widest text-[#E37216] mb-2 font-poppins">
+                        Courses
+                      </p>
 
-                            {/* Subcategory Course Links */}
-                            <ul className="space-y-1.5 pt-1">
-                              {cat.items.map((subItem) => (
-                                <li key={subItem.label}>
-                                  <Link
-                                    href={subItem.href}
-                                    onClick={() => setActiveDropdown(null)}
-                                    className="text-xs text-gray-700 hover:text-[#C2410C] font-medium transition-colors block py-0.5"
-                                  >
-                                    {subItem.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                      <div className="grid grid-cols-2 gap-1">
+                        {item.categories?.flatMap((cat) =>
+                          cat.items.map((c) => ({ ...c, category: cat.name }))
+                        ).map((course) => (
+                          <Link
+                            key={course.href}
+                            href={course.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-gray-800 hover:text-[#C2410C] hover:bg-orange-50 transition-colors"
+                          >
+                            <span style={{ fontFamily: 'var(--font-poppins-var)' }}>{course.label}</span>
+                            <ArrowRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#E37216] group-hover:translate-x-0.5 transition-all" />
+                          </Link>
                         ))}
                       </div>
 
                       {/* Dropdown Footer */}
-                      <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs bg-orange-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                      <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs bg-orange-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
                         <span className="text-gray-600 font-medium">Explore all 8 certified performing arts disciplines</span>
                         <Link
                           href="/courses"
@@ -173,34 +163,27 @@ export function MainNav() {
                     )}
                   </div>
 
-                  {/* Mobile Accordion for Categories & Subcategories */}
+                  {/* Mobile Accordion for Courses (flat list) */}
                   {hasCategories && isCoursesOpen && (
-                    <div className="pl-3 pb-3 space-y-3 bg-gray-50/70 rounded-xl my-2 p-3 border border-gray-100">
-                      {item.categories?.map((cat) => (
-                        <div key={cat.name} className="space-y-1">
-                          <div className="flex items-center justify-between">
-                            <Link
-                              href={cat.href}
-                              className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block py-1"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {cat.name}
-                            </Link>
-                          </div>
-
-                          <div className="pl-2 space-y-1 border-l-2 border-orange-200">
-                            {cat.items.map((sub) => (
-                              <Link
-                                key={sub.label}
-                                href={sub.href}
-                                className="block py-1 text-xs text-gray-700 hover:text-[#C2410C] font-medium transition-colors"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {sub.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="pl-3 pb-3 space-y-0.5 bg-gray-50/70 rounded-xl my-2 p-3 border border-gray-100">
+                      <Link
+                        href="/courses"
+                        className="block py-2 pl-2 text-sm font-bold text-[#E37216] uppercase tracking-wider transition-colors"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        View All Courses
+                      </Link>
+                      {item.categories?.flatMap((cat) =>
+                        cat.items.map((c) => ({ ...c, category: cat.name }))
+                      ).map((course) => (
+                        <Link
+                          key={course.href}
+                          href={course.href}
+                          className="block py-2 pl-2 text-sm text-gray-700 hover:text-[#C2410C] font-medium transition-colors border-l-2 border-orange-200"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {course.label}
+                        </Link>
                       ))}
                     </div>
                   )}

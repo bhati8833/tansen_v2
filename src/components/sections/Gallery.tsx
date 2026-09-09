@@ -22,12 +22,12 @@ export function Gallery() {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="py-16" style={{ backgroundColor: '#FCF7F1' }}>
+    <section id="gallery" className="py-16 bg-band-warm">
       <div className="container-site">
         {/* Header */}
         <div className="text-center mb-12">
           <h2
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
             style={{ fontFamily: 'var(--font-poppins-var)', color: '#1f2937' }}
           >
             Moments that Inspire

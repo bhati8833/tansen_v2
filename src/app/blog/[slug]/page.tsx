@@ -37,7 +37,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
+    <div className="min-h-screen bg-white flex flex-col font-roboto">
       {/* Hero Header */}
       <PageHeader
         breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: post.category }, { label: post.title }]}
@@ -45,10 +45,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       />
 
       {/* Article Content */}
-      <section className="py-16 bg-white flex-grow">
+      <section className="py-16 bg-band-warm flex-grow">
         <div className="container-site max-w-4xl mx-auto">
           {/* Cover Image */}
-          <div className="relative h-80 md:h-[450px] w-full rounded-3xl overflow-hidden mb-12 shadow-lg">
+          <div className="relative h-80 md:h-[450px] w-full rounded-3xl overflow-hidden mb-12 shadow-card-soft">
             <Image
               src={post.coverImage}
               alt={post.title}

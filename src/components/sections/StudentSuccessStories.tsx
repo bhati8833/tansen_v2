@@ -22,7 +22,7 @@ export function StudentSuccessStories() {
   const t = studentTestimonials[current];
 
   return (
-    <section className="py-16" style={{ backgroundColor: '#FDF9F3' }}>
+    <section className="py-16 bg-band-cool">
       <div
         className="container-site"
         onMouseEnter={() => setIsStudentHovered(true)}
@@ -30,11 +30,11 @@ export function StudentSuccessStories() {
       >
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#E37216' }}>
+          <p className="text-sm md:text-base font-bold uppercase tracking-widest mb-2" style={{ color: '#E37216' }}>
             STUDENT SUCCESS STORIES
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
           >
             What Our Students Say
@@ -43,19 +43,19 @@ export function StudentSuccessStories() {
 
         {/* Testimonial Card — Centered */}
         <div className="max-w-2xl mx-auto relative">
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-orange-100/80 shadow-xs">
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 h-[360px] sm:h-[320px] md:h-[300px] flex flex-col">
+            <div className="flex items-center gap-4 md:gap-6 flex-1 min-h-0">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0 border-2 border-orange-100/80 shadow-sm">
                 <Image
                   src={t.avatar}
                   alt={t.name}
-                  width={56}
-                  height={56}
+                  width={96}
+                  height={96}
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div>
-                <p className="text-sm md:text-base text-gray-700 italic leading-relaxed font-serif">
+              <div className="min-h-0">
+                <p className="text-sm md:text-base text-gray-700 italic leading-relaxed font-serif line-clamp-6 md:line-clamp-4">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <p className="font-bold text-sm mt-3" style={{ color: '#0A101C' }}>
@@ -68,7 +68,7 @@ export function StudentSuccessStories() {
             </div>
 
             {/* Carousel Controls */}
-            <div className="flex items-center justify-between pt-2">
+            <div className="flex items-center justify-between pt-4 mt-auto">
               <div className="flex gap-1.5">
                 {studentTestimonials.map((_, i) => (
                   <button

@@ -43,7 +43,7 @@ export default function FAQPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
+    <div className="min-h-screen bg-white flex flex-col font-roboto text-gray-800">
       
       {/* 1. HERO BANNER */}
       <PageHeader
@@ -52,7 +52,7 @@ export default function FAQPage() {
       />
 
       {/* 2. SEARCH & CATEGORY FILTER BAR */}
-      <section className="py-6 bg-white border-b border-gray-200 sticky top-20 z-30 shadow-2xs">
+      <section className="py-6 bg-band-warm sticky top-20 z-30 shadow-2xs">
         <div className="container-site max-w-4xl mx-auto px-4 space-y-4">
           {/* Search Box */}
           <div className="relative">
@@ -94,7 +94,7 @@ export default function FAQPage() {
       </section>
 
       {/* 3. ACCORDION FAQS LIST */}
-      <section className="py-12 bg-gray-50 flex-grow">
+      <section className="py-12 bg-band-cool flex-grow">
         <div className="container-site max-w-4xl mx-auto px-4 space-y-4">
           
           <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
@@ -105,7 +105,7 @@ export default function FAQPage() {
           </div>
 
           {filteredFaqs.length === 0 ? (
-            <div className="text-center py-16 bg-white rounded-3xl border border-gray-200 shadow-2xs">
+            <div className="text-center py-16 bg-white rounded-3xl border border-gray-200 shadow-card-soft">
               <HelpCircle className="w-12 h-12 text-gray-300 mx-auto mb-3" />
               <h3 className="text-lg font-bold text-gray-800 font-poppins mb-1">No matching questions found</h3>
               <p className="text-gray-500 text-sm max-w-md mx-auto mb-6">
@@ -125,7 +125,7 @@ export default function FAQPage() {
                 <div
                   key={faq.id}
                   className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
-                    isOpen ? 'border-[#E37216] shadow-md' : 'border-gray-200 shadow-2xs hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] shadow-card-soft' : 'border-gray-200 shadow-card-soft hover:border-orange-200'
                   }`}
                 >
                   <button
@@ -168,7 +168,7 @@ export default function FAQPage() {
       </section>
 
       {/* 4. STILL HAVE QUESTIONS & DIRECT CONTACT BANNER */}
-      <section className="py-16 bg-white border-t border-gray-200">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-5xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -187,7 +187,7 @@ export default function FAQPage() {
             
             {/* Phone Card */}
             <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-card-soft">
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Call Us</h3>
@@ -202,7 +202,7 @@ export default function FAQPage() {
 
             {/* Email Card */}
             <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-card-soft">
                 <Mail className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Email Us</h3>
@@ -216,7 +216,7 @@ export default function FAQPage() {
 
             {/* Address Card */}
             <div className="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-4 shadow-card-soft">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-gray-900 font-poppins text-base mb-1">Visit Us</h3>
@@ -228,16 +228,18 @@ export default function FAQPage() {
           </div>
 
           {/* Book Your Free Demo Class Box */}
-          <div className="bg-[#0A101C] text-white rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:16px_16px]" />
+          <div className="bg-transparent text-gray-900 rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden">
+            {/* Pattern */}
+            <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:16px_16px]" />
+            
             <div className="relative z-10 max-w-2xl mx-auto">
-              <div className="w-10 h-10 rounded-full bg-[#E37216]/20 border border-[#E37216]/40 text-[#E37216] flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#E37216]/10 border border-[#E37216]/20 text-[#E37216] flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold font-poppins text-white mb-3">
+              <h3 className="text-2xl sm:text-3xl font-bold font-poppins mb-4">
                 {faqFooterContact.ctaTitle}
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base mb-8">
+              <p className="text-gray-600 mb-8 max-w-lg mx-auto text-sm sm:text-base">
                 {faqFooterContact.ctaSubtitle}
               </p>
 

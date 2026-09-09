@@ -39,14 +39,14 @@ export default function GalleryPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
+    <div className="min-h-screen bg-white flex flex-col font-roboto">
       <PageHeader
         breadcrumbs={[{ label: 'Gallery' }]}
         title="Gallery"
       />
 
       {/* Category Tabs */}
-      <section className="py-6 bg-white border-b border-gray-200 sticky top-20 z-30 shadow-sm">
+      <section className="py-6 bg-band-warm sticky top-20 z-30 shadow-sm">
         <div className="container-site flex items-center justify-start gap-2 overflow-x-auto scrollbar-none py-1">
           {categories.map((cat) => (
             <button
@@ -65,14 +65,14 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 bg-gray-50 flex-grow">
+      <section className="py-16 bg-band-cool flex-grow">
         <div className="container-site">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setActiveModalItem(item)}
-                className="group relative h-72 rounded-2xl overflow-hidden bg-gray-200 cursor-pointer border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group relative h-72 rounded-2xl overflow-hidden bg-gray-200 cursor-pointer border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300"
               >
                 <Image
                   src={item.image}
@@ -86,7 +86,7 @@ export default function GalleryPage() {
                   <Maximize2 className="w-4 h-4" />
                 </div>
 
-                <div className="absolute bottom-0 inset-x-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform text-center flex flex-col items-center">
                   <span className="text-xs font-bold text-[#C2410C] uppercase tracking-wider block mb-1">
                     {item.category}
                   </span>

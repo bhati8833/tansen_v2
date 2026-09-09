@@ -42,27 +42,22 @@ export function CoursesGrid() {
   }, [paused, scroll]);
 
   return (
-    <section id="courses" className="py-16 bg-white border-b border-gray-100">
+    <section id="courses" className="py-16 bg-band-warm">
       <div className="container-site">
-        {/* Section Header — Left aligned title, Right aligned Slider Arrows */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: '#E37216' }}>
-              OUR COURSES
-            </p>
-            <h2
-              className="text-3xl md:text-4xl font-bold"
-              style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
-            >
-              Eight Disciplines. Certified Curriculum.
-            </h2>
-            <p className="text-sm text-gray-600 mt-2 font-medium">
-              Explore our structured programs in music, dance, instruments, and fine arts.
-            </p>
-          </div>
+        {/* Section Header — Centered */}
+        <div className="text-center mb-10">
+          <p className="text-sm md:text-base font-bold uppercase tracking-widest mb-2" style={{ color: '#E37216' }}>
+            OUR COURSES
+          </p>
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl font-bold"
+            style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
+          >
+            Eight Disciplines. Certified Curriculum.
+          </h2>
 
           {/* Slider Controls — Uniform Arrow Styling */}
-          <div className="flex items-center gap-2 self-start md:self-auto">
+          <div className="flex items-center justify-center gap-2 mt-6">
             <button
               type="button"
               aria-label="Previous courses"

@@ -11,15 +11,15 @@ const accreditations = [
 
 export function Accreditation() {
   return (
-    <section id="accreditation" className="py-16 bg-white border-t border-gray-100">
+    <section id="accreditation" className="py-16 bg-band-cool">
       <div className="container-site">
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#E37216' }}>
+          <p className="text-sm md:text-base font-bold uppercase tracking-widest mb-2" style={{ color: '#E37216' }}>
             Tansen Sangeet Mahavidyalaya
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
           >
             Accreditation &amp; Affiliations
@@ -31,7 +31,7 @@ export function Accreditation() {
           {accreditations.map((item, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-5 border-2 border-orange-100 flex items-center justify-center aspect-square shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-xl p-5 border-2 border-orange-100 flex items-center justify-center aspect-square shadow-card-soft hover:shadow-card-lift transition-shadow"
             >
               <div className="relative w-full h-full">
                 <Image

@@ -36,18 +36,18 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section id="about" className="relative py-20 overflow-hidden" style={{ backgroundColor: '#FDF9F3' }}>
+    <section id="about" className="relative py-20 bg-band-cool overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:16px_16px]" />
 
       <div className="container-site relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#E37216' }}>
+          <p className="text-sm md:text-base font-bold uppercase tracking-widest mb-2" style={{ color: '#E37216' }}>
             WHY CHOOSE US
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-poppins-var)', color: '#0A101C' }}
           >
             Excellence in Every Note
@@ -61,7 +61,7 @@ export function WhyChooseUs() {
             return (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-5 flex flex-col items-center text-center border border-gray-100 hover:border-orange-200/80 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-2xl p-5 flex flex-col items-center text-center border border-gray-100 hover:border-orange-200/80 shadow-card-soft hover:shadow-card-lift transition-all duration-300 hover:-translate-y-1"
               >
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center mb-3"

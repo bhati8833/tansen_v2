@@ -33,7 +33,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
+    <div className="min-h-screen bg-sky-50 flex flex-col font-roboto text-gray-800">
       
       {/* 1. HERO HEADER */}
       <PageHeader
@@ -42,7 +42,7 @@ export default function AboutPage() {
       />
 
       {/* 2. INTRODUCTION & APPROACH */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
@@ -77,7 +77,7 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-5 relative">
-              <div className="relative h-[360px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="relative h-[360px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-card-soft border-4 border-white">
                 <Image
                   src="/assets/courses/vocal-cover.webp"
                   alt="Tansen Sangeet Mahavidyalaya Music Practice"
@@ -97,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. OUR LEGACY */}
-      <section className="py-16 bg-[#FCF7F1]">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -111,7 +111,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-orange-100 shadow-sm space-y-8">
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-orange-100 shadow-card-soft space-y-8">
             <div className="space-y-4 text-gray-700 leading-relaxed text-base sm:text-lg">
               {aboutData.legacy.paragraphs.map((p, idx) => (
                 <p key={idx}>{p}</p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {aboutData.legacy.founders.map((name, idx) => (
-                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-orange-200 text-gray-800 text-sm font-semibold rounded-lg shadow-2xs">
+                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-orange-200 text-gray-800 text-sm font-semibold rounded-lg shadow-card-soft">
                       {name}
                     </span>
                   ))}
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {aboutData.legacy.team.map((name, idx) => (
-                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-orange-200 text-gray-800 text-sm font-semibold rounded-lg shadow-2xs">
+                    <span key={idx} className="px-3.5 py-1.5 bg-white border border-orange-200 text-gray-800 text-sm font-semibold rounded-lg shadow-card-soft">
                       {name}
                     </span>
                   ))}
@@ -154,21 +154,21 @@ export default function AboutPage() {
       </section>
 
       {/* 4. VISION & MISSION */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Vision Card */}
-            <div className="bg-gradient-to-br from-[#0A101C] to-[#162136] text-white p-8 sm:p-10 rounded-3xl shadow-lg relative overflow-hidden flex flex-col justify-between">
+            <div className="bg-gradient-to-br from-[#0A101C] to-[#162136] text-white p-8 sm:p-10 rounded-3xl shadow-card-soft relative overflow-hidden flex flex-col justify-between">
               <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#E37216]/10 rounded-full blur-2xl" />
-              <div>
+              <div className="text-center flex flex-col items-center">
                 <div className="w-12 h-12 rounded-2xl bg-[#E37216]/20 border border-[#E37216]/40 flex items-center justify-center text-[#E37216] mb-6">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white mb-6">
                   {aboutData.vision.title}
                 </h2>
-                <div className="space-y-4 text-gray-300 leading-relaxed text-base">
+                <div className="space-y-4 text-gray-300 leading-relaxed text-base text-left">
                   {aboutData.vision.paragraphs.map((p, idx) => (
                     <p key={idx}>{p}</p>
                   ))}
@@ -182,8 +182,8 @@ export default function AboutPage() {
             </div>
 
             {/* Mission Card */}
-            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col justify-between">
-              <div>
+            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-card-soft flex flex-col justify-between">
+              <div className="text-center flex flex-col items-center">
                 <div className="w-12 h-12 rounded-2xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-6">
                   <Target className="w-6 h-6" />
                 </div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                   {aboutData.mission.subtitle}
                 </p>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3 text-left w-full">
                   {aboutData.mission.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm sm:text-base">
                       <CheckCircle2 className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
@@ -210,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. LEARN. PRACTICE. PERFORM. */}
-      <section className="py-16 bg-gray-50 border-y border-gray-200/60">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -247,7 +247,7 @@ export default function AboutPage() {
             ].map((item, idx) => {
               const IconComp = item.icon;
               return (
-                <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative group">
+                <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 hover:-translate-y-1 relative group text-center flex flex-col items-center">
                   <div className="text-4xl font-extrabold text-orange-200/70 font-poppins absolute top-6 right-6 group-hover:text-[#E37216]/30 transition-colors">
                     {item.step}
                   </div>
@@ -265,7 +265,7 @@ export default function AboutPage() {
             })}
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-gray-100 text-center max-w-3xl mx-auto shadow-2xs">
+          <div className="bg-white p-6 rounded-2xl border border-gray-100 text-center max-w-3xl mx-auto shadow-card-soft">
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               {aboutData.philosophy.paragraphs[2]}
             </p>
@@ -274,7 +274,7 @@ export default function AboutPage() {
       </section>
 
       {/* 6. OUR COURSES */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -298,7 +298,7 @@ export default function AboutPage() {
               const IconComp = iconMap[cat.category] || Music;
 
               return (
-                <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-orange-200 transition-colors">
+                <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-card-soft hover:border-orange-200 transition-colors">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center">
                       <IconComp className="w-5 h-5" />
@@ -329,7 +329,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. A LEARNING ENVIRONMENT FOR EVERY AGE */}
-      <section className="py-16 bg-[#FCF7F1]">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -344,7 +344,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-card-soft flex flex-col justify-between text-center items-center">
               <div>
                 <div className="inline-block px-3 py-1 bg-orange-100 text-[#C2410C] text-xs font-bold rounded-full mb-4">
                   Ages 3+ to Young Learners
@@ -363,7 +363,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-card-soft flex flex-col justify-between text-center items-center">
               <div>
                 <div className="inline-block px-3 py-1 bg-orange-100 text-[#C2410C] text-xs font-bold rounded-full mb-4">
                   Teens, Adults & Seniors
@@ -386,7 +386,7 @@ export default function AboutPage() {
       </section>
 
       {/* 8. STUDENT-FOCUSED LEARNING (METHODOLOGY STAGES) */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -426,7 +426,7 @@ export default function AboutPage() {
       </section>
 
       {/* 9. TRADITION & MODERNITY */}
-      <section className="py-16 bg-gray-50 border-t border-gray-200/60">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -444,7 +444,7 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs">
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-card-soft text-center flex flex-col items-center">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-3">
                   <Music className="w-5 h-5" />
                 </div>
@@ -454,7 +454,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs">
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-card-soft text-center flex flex-col items-center">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#E37216] flex items-center justify-center mb-3">
                   <Sparkles className="w-5 h-5" />
                 </div>
@@ -469,14 +469,14 @@ export default function AboutPage() {
       </section>
 
       {/* 10. PERFORMANCE & RECOGNIZED CERTIFICATIONS */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Performance Card */}
-            <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between">
+            <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between text-center items-center">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-card-soft mx-auto">
                   <Flame className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
@@ -491,9 +491,9 @@ export default function AboutPage() {
             </div>
 
             {/* Certifications Card */}
-            <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between">
+            <div className="p-8 bg-orange-50/50 rounded-3xl border border-orange-100 flex flex-col justify-between text-center items-center">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-white text-[#E37216] flex items-center justify-center mb-6 shadow-card-soft mx-auto">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold font-serif text-gray-900 mb-4">
@@ -523,7 +523,7 @@ export default function AboutPage() {
       </section>
 
       {/* 11. WHY CHOOSE US? */}
-      <section className="py-16 bg-[#FCF7F1]">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -538,10 +538,10 @@ export default function AboutPage() {
             {aboutData.whyChooseUs.map((item, idx) => (
               <div 
                 key={idx} 
-                className="bg-white p-6 rounded-2xl border border-orange-100 shadow-2xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl border border-orange-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between text-center items-center"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-4 mx-auto">
                     <Star className="w-5 h-5" />
                   </div>
                   <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">
@@ -558,7 +558,7 @@ export default function AboutPage() {
       </section>
 
       {/* 12. OUR COMMITMENT */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-4xl mx-auto px-4 text-center">
           <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
             Our Promise To Every Student
@@ -582,15 +582,15 @@ export default function AboutPage() {
       </section>
 
       {/* 13. CALL TO ACTION & CONTACT DETAILS */}
-      <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
+      <section className="py-16 bg-band-cool text-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
         
         <div className="container-site max-w-5xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
               {aboutData.contactInfo.title}
             </h2>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
               {aboutData.contactInfo.subtitle}
             </p>
             <p className="text-[#E37216] text-lg font-semibold font-poppins mb-8">
@@ -607,18 +607,18 @@ export default function AboutPage() {
           </div>
 
           {/* Branch Contact Details Card */}
-          <div className="mt-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-10 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold font-poppins text-[#E37216] mb-6 text-center border-b border-white/10 pb-4">
+          <div className="mt-12 bg-white/50 border border-orange-100 backdrop-blur-md shadow-card-soft rounded-3xl p-8 sm:p-10 max-w-3xl mx-auto">
+            <h3 className="text-xl font-bold font-poppins text-[#E37216] mb-6 text-center border-b border-orange-100 pb-4">
               {aboutData.contactInfo.branchName}
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-700">
               {/* Address */}
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="font-bold text-white mb-1">Address</div>
-                  <p className="text-gray-300 text-xs leading-relaxed">
+                  <div className="font-bold text-gray-900 mb-1">Address</div>
+                  <p className="text-gray-600 text-xs leading-relaxed">
                     {aboutData.contactInfo.address}
                   </p>
                 </div>
@@ -628,10 +628,10 @@ export default function AboutPage() {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="font-bold text-white mb-1">Call Us</div>
+                  <div className="font-bold text-gray-900 mb-1">Call Us</div>
                   <div className="space-y-1">
                     {aboutData.contactInfo.phones.map((ph, idx) => (
-                      <a key={idx} href={`tel:${ph}`} className="block text-gray-300 hover:text-[#E37216] text-xs transition-colors">
+                      <a key={idx} href={`tel:${ph}`} className="block text-gray-600 hover:text-[#E37216] text-xs transition-colors">
                         {ph}
                       </a>
                     ))}
@@ -643,10 +643,10 @@ export default function AboutPage() {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[#E37216] flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="font-bold text-white mb-1">Email Us</div>
+                  <div className="font-bold text-gray-900 mb-1">Email Us</div>
                   <a 
                     href={`mailto:${aboutData.contactInfo.email}`} 
-                    className="text-gray-300 hover:text-[#E37216] text-xs transition-colors break-all"
+                    className="text-gray-600 hover:text-[#E37216] text-xs transition-colors break-all"
                   >
                     {aboutData.contactInfo.email}
                   </a>

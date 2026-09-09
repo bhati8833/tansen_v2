@@ -38,18 +38,10 @@ export function Footer() {
                 <Image
                   src="/assets/logos/tansen-logo.jpeg"
                   alt="Tansen Sangeet Mahavidyalaya Logo"
-                  width={180}
-                  height={65}
-                  className="h-14 w-auto object-contain rounded"
+                  width={280}
+                  height={100}
+                  className="h-24 w-auto object-contain rounded"
                 />
-                <div>
-                  <h3 className="font-bold font-poppins text-lg text-white leading-tight">
-                    {footer.brandName}
-                  </h3>
-                  <span className="text-xs font-semibold text-[#E37216] tracking-wider uppercase block">
-                    {footer.brandTagline}
-                  </span>
-                </div>
               </div>
             </Link>
 
@@ -57,23 +49,15 @@ export function Footer() {
               {footer.brandDescription}
             </p>
 
-            <div>
-              <Link
-                href="/courses"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E37216] hover:text-[#fdba74] transition-colors group"
-              >
-                <span>Explore Our Courses</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+
 
             {/* Social Media Section */}
             {footer.socialLinks && footer.socialLinks.length > 0 && (
-              <div className="pt-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3 font-poppins">
+              <div className="pt-2 w-max">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#E37216] block mb-3 font-poppins text-center">
                   Follow Tansen
                 </span>
-                <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex items-center gap-3 flex-wrap justify-center">
                   {footer.socialLinks.map((social) => {
                     const IconComponent = getSocialIcon(social.icon);
                     return (

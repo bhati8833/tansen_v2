@@ -196,7 +196,7 @@ export function ContactClient(_props: ContactClientProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800 pb-20 md:pb-0">
+    <div className="min-h-screen bg-white flex flex-col font-roboto text-gray-800 pb-20 md:pb-0">
       
       {/* 1. BREADCRUMB & 2. HERO SECTION */}
       <PageHeader
@@ -205,9 +205,9 @@ export function ContactClient(_props: ContactClientProps) {
       />
 
       {/* 3. CONTACT INTRODUCTION */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-band-warm">
         <div className="container-site max-w-5xl">
-          <div className="bg-orange-50/60 rounded-3xl p-6 sm:p-10 border border-orange-100/80 shadow-2xs">
+          <div className="bg-orange-50/60 rounded-3xl p-6 sm:p-10 border border-orange-100/80 shadow-card-soft text-center">
             <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
               Welcome to Tansen Sangeet Mahavidyalaya
             </span>
@@ -230,20 +230,20 @@ export function ContactClient(_props: ContactClientProps) {
       </section>
 
       {/* 4. CONTACT INFORMATION & 6. ENQUIRY FORM (DESKTOP TWO-COLUMN LAYOUT) */}
-      <section className="py-16 bg-gray-50 flex-grow" id="contact-main">
+      <section className="py-16 bg-band-cool flex-grow" id="contact-main">
         <div className="container-site">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             
-            {/* LEFT COLUMN: Contact Details & Quick Contact Cards (Lg: col-span-5) */}
-            <div className="lg:col-span-5 space-y-10">
+            {/* LEFT COLUMN: Contact Details */}
+            <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-gray-200 shadow-card-soft h-full flex flex-col">
               
               {/* Section Header */}
-              <div>
+              <div className="mb-6 pb-6 border-b border-gray-100 text-center">
                 <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
                   Direct Reach
                 </span>
-                <h2 className="text-3xl font-bold font-poppins text-gray-900 mb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold font-poppins text-gray-900 mb-2">
                   Connect With Tansen
                 </h2>
                 <p className="text-sm text-gray-600">
@@ -252,24 +252,25 @@ export function ContactClient(_props: ContactClientProps) {
               </div>
 
               {/* Contact Information Cards */}
-              <div className="space-y-4">
+              <div className="space-y-4 flex-grow">
                 
                 {/* 1. Call Us Card */}
-                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
+                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-card-soft hover:shadow-card-lift transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
                       <h3 className="font-bold text-gray-900 font-poppins text-lg">Call Us</h3>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         Speak directly with our team for course, admission, batch, and schedule enquiries.
                       </p>
-                      <div className="pt-1 flex flex-col gap-1 text-sm font-semibold text-gray-900">
-                        <a href="tel:9818083588" className="hover:text-[#E37216] transition-colors flex items-center gap-2">
+                      <div className="pt-1 flex flex-row flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-gray-900">
+                        <a href="tel:9818083588" className="hover:text-[#E37216] transition-colors flex items-center gap-1.5">
                           <span>9818083588</span>
                         </a>
-                        <a href="tel:9871833588" className="hover:text-[#E37216] transition-colors flex items-center gap-2">
+                        <span className="text-gray-300">|</span>
+                        <a href="tel:9871833588" className="hover:text-[#E37216] transition-colors flex items-center gap-1.5">
                           <span>9871833588</span>
                         </a>
                       </div>
@@ -287,14 +288,14 @@ export function ContactClient(_props: ContactClientProps) {
                 </div>
 
                 {/* 2. Email Us Card */}
-                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
+                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-card-soft hover:shadow-card-lift transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
                       <h3 className="font-bold text-gray-900 font-poppins text-lg">Email Us</h3>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         Send us your enquiry and our team can provide information about courses, admissions, batches, and other details.
                       </p>
                       <a
@@ -317,17 +318,17 @@ export function ContactClient(_props: ContactClientProps) {
                 </div>
 
                 {/* 3. Visit Us Card */}
-                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
+                <div className="p-6 bg-white rounded-2xl border border-gray-200 shadow-card-soft hover:shadow-card-lift transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div className="space-y-2 flex-grow">
                       <h3 className="font-bold text-gray-900 font-poppins text-lg">Visit Us</h3>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 leading-relaxed">
                         Come and connect with us at our academy.
                       </p>
-                      <p className="text-xs font-medium text-gray-800 leading-relaxed bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                      <p className="text-sm font-medium text-gray-800 leading-relaxed bg-gray-50 p-2.5 rounded-lg border border-gray-100">
                         NS-16, Block-C, Sushant Lok-1, Sector-43, Gurugram, Haryana - 122002
                       </p>
                       <div className="pt-2">
@@ -347,101 +348,15 @@ export function ContactClient(_props: ContactClientProps) {
 
               </div>
 
-              {/* 5. QUICK CONTACT CARDS */}
-              <div className="pt-4 space-y-4">
-                <div>
-                  <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-1">
-                    Quick Options
-                  </span>
-                  <h3 className="text-xl font-bold font-poppins text-gray-900">
-                    How Can We Help You?
-                  </h3>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  
-                  {/* Card 1: Course Enquiry */}
-                  <button
-                    type="button"
-                    onClick={() => handleQuickEnquire('Course Information')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                      <Music className="w-4 h-4" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">🎵 Course Enquiry</h4>
-                    <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                      Want to know more about a particular music, dance, or creative arts course?
-                    </p>
-                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
-                      Enquire About Courses →
-                    </span>
-                  </button>
-
-                  {/* Card 2: Admission Enquiry */}
-                  <button
-                    type="button"
-                    onClick={() => handleQuickEnquire('Admission')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                      <GraduationCap className="w-4 h-4" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">🎓 Admission Enquiry</h4>
-                    <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                      Looking to join Tansen Sangeet Mahavidyalaya?
-                    </p>
-                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
-                      Ask About Admission →
-                    </span>
-                  </button>
-
-                  {/* Card 3: Batch & Timing */}
-                  <button
-                    type="button"
-                    onClick={() => handleQuickEnquire('Batch & Timings')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#E37216] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                      <Calendar className="w-4 h-4" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">📅 Batch &amp; Timing</h4>
-                    <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                      Want to know available batch days and class timings?
-                    </p>
-                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
-                      Check Available Batches →
-                    </span>
-                  </button>
-
-                  {/* Card 4: Free Demo Class */}
-                  <button
-                    type="button"
-                    onClick={() => handleQuickEnquire('Free Demo Class')}
-                    className="p-4 bg-white rounded-xl border border-gray-200 text-left hover:border-[#E37216] hover:shadow-md transition-all group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                      <Gift className="w-4 h-4" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">🎁 Free Demo Class</h4>
-                    <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                      Experience the learning environment before enrolling.
-                    </p>
-                    <span className="text-xs font-bold text-[#E37216] group-hover:underline inline-flex items-center gap-1">
-                      Book Free Demo →
-                    </span>
-                  </button>
-
-                </div>
-              </div>
 
             </div>
 
-            {/* RIGHT COLUMN: Contact / Enquiry Form (Lg: col-span-7) */}
-            <div className="lg:col-span-7" id="enquiry-form">
-              <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-gray-200 shadow-xl relative">
+            {/* RIGHT COLUMN: Contact / Enquiry Form */}
+            <div id="enquiry-form" className="h-full">
+              <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-gray-200 shadow-card-soft relative h-full flex flex-col">
                 
-                <div className="mb-6 pb-6 border-b border-gray-100">
+                <div className="mb-6 pb-6 border-b border-gray-100 text-center">
                   <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-1">
                     Online Form
                   </span>
@@ -454,7 +369,7 @@ export function ContactClient(_props: ContactClientProps) {
                 </div>
 
                 {submitted ? (
-                  <div className="p-8 sm:p-12 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-center shadow-2xs">
+                  <div className="p-8 sm:p-12 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-center shadow-card-soft">
                     <CheckCircle2 className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
                     <h4 className="font-bold text-gray-900 font-poppins text-xl sm:text-2xl mb-3">
                       Enquiry Received!
@@ -594,29 +509,7 @@ export function ContactClient(_props: ContactClientProps) {
                       </div>
                     </div>
 
-                    {/* Row 4: Preferred Contact Method */}
-                    <div>
-                      <label className="block text-xs font-bold text-gray-800 mb-2">
-                        Preferred Contact Method
-                      </label>
-                      <div className="flex flex-wrap gap-3">
-                        {(['Phone Call', 'WhatsApp', 'Email'] as const).map((method) => (
-                          <button
-                            type="button"
-                            key={method}
-                            onClick={() => setPreferredContact(method)}
-                            className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 border transition-all ${
-                              preferredContact === method
-                                ? 'bg-[#E37216] text-white border-[#E37216] shadow-2xs'
-                                : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
-                            }`}
-                          >
-                            <span className={`w-2 h-2 rounded-full ${preferredContact === method ? 'bg-white' : 'bg-gray-400'}`} />
-                            <span>{method}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+
 
                     {/* Row 5: Message */}
                     <div>
@@ -676,88 +569,10 @@ export function ContactClient(_props: ContactClientProps) {
         </div>
       </section>
 
-      {/* 7. FREE DEMO CTA */}
-      <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
-          <div className="w-12 h-12 rounded-full bg-[#E37216]/20 border border-[#E37216]/40 text-[#E37216] flex items-center justify-center mx-auto mb-4">
-            <Gift className="w-6 h-6" />
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-bold font-poppins text-white mb-4">
-            Experience the Class Before You Enrol
-          </h2>
-          <div className="space-y-3 text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-            <p>Not sure which course is right for you?</p>
-            <p>
-              Book a free demo class and get an opportunity to experience the learning environment and understand how the classes work.
-            </p>
-            <p className="text-white font-medium">
-              Whether you&apos;re interested in music, dance, or creative arts, our team can help you take the right first step.
-            </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-            <button
-              onClick={() => handleQuickEnquire('Free Demo Class')}
-              className="w-full sm:w-auto px-8 py-4 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-base transition-all shadow-xl hover:shadow-orange-500/20 active:scale-95 flex items-center justify-center gap-2"
-            >
-              <Gift className="w-5 h-5" />
-              <span>Book Free Demo</span>
-            </button>
-          </div>
-          <p className="text-xs text-gray-400 font-medium">
-            No complicated process. Just choose your course and send your enquiry.
-          </p>
-        </div>
-      </section>
-
-      {/* 8. COURSES YOU CAN ENQUIRE ABOUT */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="container-site">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
-              Programs Offered
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-gray-900 mb-3">
-              Explore Our Courses
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              You can enquire about any of our specialized music, dance, and creative arts programs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coursesList.map((c, i) => (
-              <div
-                key={i}
-                className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-[#E37216] hover:shadow-lg transition-all flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="text-3xl mb-3" aria-hidden="true">{c.icon}</div>
-                  <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2 group-hover:text-[#E37216] transition-colors">
-                    {c.title}
-                  </h3>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-6">
-                    {c.description}
-                  </p>
-                </div>
-                <div>
-                  <Link
-                    href={c.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E37216] group-hover:underline"
-                  >
-                    <span>Explore Course</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 9. LOCATION SECTION */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-band-warm">
         <div className="container-site">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
@@ -772,7 +587,7 @@ export function ContactClient(_props: ContactClientProps) {
           </div>
 
           {/* Map & Location Box */}
-          <div className="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
+          <div className="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-card-soft border border-gray-200">
             <div className="w-full h-80 sm:h-96 relative">
               <iframe
                 title="Tansen Sushant Lok Location Map"
@@ -809,9 +624,9 @@ export function ContactClient(_props: ContactClientProps) {
       </section>
 
       {/* 10. OPENING / AVAILABILITY INFORMATION */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-4xl">
-          <div className="bg-orange-50/50 rounded-3xl p-8 sm:p-10 border border-orange-200/70 shadow-2xs">
+          <div className="bg-orange-50/50 rounded-3xl p-8 sm:p-10 border border-orange-200/70 shadow-card-soft">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-xl bg-[#E37216] text-white flex items-center justify-center">
                 <Clock className="w-5 h-5" />
@@ -838,7 +653,7 @@ export function ContactClient(_props: ContactClientProps) {
                   'Course fees',
                   'Demo class availability',
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-orange-100">
+                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-orange-100 shadow-card-soft">
                     <Check className="w-4 h-4 text-[#E37216] flex-shrink-0" />
                     <span className="text-sm font-semibold text-gray-800">{item}</span>
                   </div>
@@ -867,7 +682,7 @@ export function ContactClient(_props: ContactClientProps) {
       </section>
 
       {/* 11. WHY CONTACT TANSEN? */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-band-warm">
         <div className="container-site">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
@@ -884,7 +699,7 @@ export function ContactClient(_props: ContactClientProps) {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#E37216] shadow-2xs hover:shadow-md transition-all text-center flex flex-col items-center"
+                  className="bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#E37216] shadow-card-soft hover:shadow-card-lift transition-all text-center flex flex-col items-center"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-orange-100/70 text-[#E37216] flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6" />
@@ -903,7 +718,7 @@ export function ContactClient(_props: ContactClientProps) {
       </section>
 
       {/* 12. FAQ SECTION */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-4xl">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-bold text-xs uppercase tracking-widest block mb-2">
@@ -921,7 +736,7 @@ export function ContactClient(_props: ContactClientProps) {
                 <div
                   key={idx}
                   className={`rounded-2xl border transition-all ${
-                    isOpen ? 'border-[#E37216] bg-orange-50/20 shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] bg-orange-50/20 shadow-card-soft' : 'border-gray-200 bg-white hover:border-orange-200'
                   }`}
                 >
                   <button
@@ -949,35 +764,7 @@ export function ContactClient(_props: ContactClientProps) {
         </div>
       </section>
 
-      {/* 13. FINAL CTA */}
-      <section className="py-16 bg-[#0A101C] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#E37216_1px,transparent_1px)] [background-size:20px_20px]" />
-        <div className="container-site relative z-10 text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold font-poppins text-white mb-4">
-            Ready to Take the First Step?
-          </h2>
-          <p className="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed">
-            Have a question, looking for the right course, or ready to book your free demo? Get in touch with Tansen Sangeet Mahavidyalaya today.
-          </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={() => handleQuickEnquire('Free Demo Class')}
-              className="px-8 py-4 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-sm transition-all shadow-xl hover:shadow-orange-500/20 active:scale-95 flex items-center gap-2"
-            >
-              <Gift className="w-4 h-4" />
-              <span>Book Free Demo</span>
-            </button>
-            <a
-              href="tel:9818083588"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-sm border border-white/20 transition-all active:scale-95 flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4 text-[#E37216]" />
-              <span>Call Now</span>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* MOBILE STICKY BOTTOM ACTION BAR */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 p-2.5 md:hidden shadow-2xl flex items-center justify-around gap-2">

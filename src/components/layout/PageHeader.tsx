@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { ChevronRight, Guitar, Mic, Drum, Music, Piano, Headphones } from 'lucide-react';
 
@@ -13,7 +14,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ breadcrumbs, title }: PageHeaderProps) {
   return (
-    <section className="relative bg-white overflow-hidden py-14 md:py-20 lg:py-24 border-b border-orange-100">
+    <section className="relative bg-band-warm overflow-hidden py-14 md:py-20 lg:py-24 border-b border-orange-100">
       {/* Soft white-to-orange gradient flowing from the left */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -55,20 +56,23 @@ export function PageHeader({ breadcrumbs, title }: PageHeaderProps) {
 
       {/* Content */}
       <div className="container-site relative z-10">
-        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#C2410C] mb-3">
-          <Link href="/" className="hover:underline text-[#C2410C]">Home</Link>
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs sm:text-sm font-semibold text-[#C2410C] mb-6">
+          <Link href="/" className="hover:underline text-[#C2410C] shrink-0">Home</Link>
           {breadcrumbs.map((item, i) => (
-            <span key={i} className="flex items-center gap-2">
-              <ChevronRight className="w-3.5 h-3.5 text-orange-400" />
-              {item.href ? (
-                <Link href={item.href} className="hover:underline text-[#C2410C]">{item.label}</Link>
-              ) : (
-                <span className="text-[#9A3412]">{item.label}</span>
-              )}
-            </span>
+            <Fragment key={i}>
+              {i === 2 && <div className="basis-full h-0" />}
+              <span className="flex items-center gap-2">
+                <ChevronRight className="w-3.5 h-3.5 text-orange-400 shrink-0" />
+                {item.href ? (
+                  <Link href={item.href} className="hover:underline text-[#C2410C]">{item.label}</Link>
+                ) : (
+                  <span className="text-[#9A3412] line-clamp-2">{item.label}</span>
+                )}
+              </span>
+            </Fragment>
           ))}
         </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-poppins text-[#1C1917] tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-poppins text-[#1C1917] tracking-tight text-center max-w-4xl mx-auto">
           {title}
         </h1>
       </div>

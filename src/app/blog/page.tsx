@@ -25,14 +25,14 @@ export default function BlogPage() {
   const featuredPost = blogPosts[0];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto">
+    <div className="min-h-screen bg-white flex flex-col font-roboto">
       <PageHeader
         breadcrumbs={[{ label: 'Blog' }]}
         title="Blog"
       />
 
       {/* Featured Article */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-band-warm">
         <div className="container-site">
           <div className="bg-gradient-to-r from-orange-50/50 to-orange-50/50 rounded-3xl p-6 md:p-8 border border-orange-100 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden bg-gray-200">
@@ -43,7 +43,7 @@ export default function BlogPage() {
                 className="object-cover"
               />
             </div>
-            <div>
+            <div className="text-center flex flex-col items-center">
               <span className="bg-[#E37216] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
                 Featured Article
               </span>
@@ -53,7 +53,7 @@ export default function BlogPage() {
               <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
                 {featuredPost.excerpt}
               </p>
-              <div className="flex items-center gap-4 text-xs text-gray-500 mb-6">
+              <div className="flex items-center justify-center gap-4 text-xs text-gray-500 mb-6 w-full">
                 <div className="flex items-center gap-1.5">
                   <User className="w-4 h-4 text-[#E37216]" />
                   <span>{featuredPost.author}</span>
@@ -76,7 +76,7 @@ export default function BlogPage() {
       </section>
 
       {/* Filter & Blog Grid */}
-      <section className="py-16 bg-gray-50 flex-grow">
+      <section className="py-16 bg-band-cool flex-grow">
         <div className="container-site">
           {/* Search & Tag filter */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
@@ -114,7 +114,7 @@ export default function BlogPage() {
             {filteredPosts.map((post: BlogPost) => (
               <div
                 key={post.id}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 flex flex-col group"
               >
                 <div className="relative h-48 w-full overflow-hidden bg-gray-100">
                   <Image
@@ -128,8 +128,8 @@ export default function BlogPage() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
+                <div className="p-6 flex flex-col flex-grow text-center items-center">
+                  <div className="flex items-center justify-center gap-3 text-xs text-gray-500 mb-2 w-full">
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>{post.readTime}</span>

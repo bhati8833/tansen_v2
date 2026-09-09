@@ -23,7 +23,7 @@ export default function CoursesPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
+    <div className="min-h-screen bg-white flex flex-col font-roboto text-gray-800">
       {/* Hero Banner */}
       <PageHeader
         breadcrumbs={[{ label: 'Courses' }]}
@@ -31,7 +31,7 @@ export default function CoursesPage() {
       />
 
       {/* Search & Filter Bar */}
-      <section className="py-8 bg-white border-b border-gray-200 sticky top-20 z-30 shadow-sm">
+      <section className="py-8 bg-band-warm sticky top-20 z-30 shadow-sm">
         <div className="container-site flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Filter Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
@@ -66,10 +66,10 @@ export default function CoursesPage() {
       </section>
 
       {/* Courses Grid */}
-      <section className="py-16 bg-gray-50 flex-grow">
+      <section className="py-16 bg-band-cool flex-grow">
         <div className="container-site">
           {filteredCourses.length === 0 ? (
-            <div className="text-center py-16 bg-white rounded-2xl border border-gray-200 max-w-lg mx-auto">
+            <div className="text-center py-16 bg-white rounded-2xl border border-gray-200 shadow-card-soft max-w-lg mx-auto">
               <p className="text-gray-500 font-medium mb-4">No courses match your search criteria.</p>
               <button
                 onClick={() => {
@@ -86,7 +86,7 @@ export default function CoursesPage() {
               {filteredCourses.map((course: Course) => (
                 <div
                   key={course.id}
-                  className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 flex flex-col group"
                 >
                   <div className="relative h-56 w-full overflow-hidden bg-gray-100">
                     <Image
@@ -100,7 +100,7 @@ export default function CoursesPage() {
                     </div>
                   </div>
 
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-6 flex flex-col flex-grow text-center items-center">
                     <h3 className="text-xl font-bold font-poppins text-gray-900 group-hover:text-[#E37216] transition-colors mb-2">
                       {course.title}
                     </h3>
@@ -108,7 +108,7 @@ export default function CoursesPage() {
                       {course.description}
                     </p>
 
-                    <div className="space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-500 mb-6">
+                    <div className="space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-500 mb-6 w-full flex flex-col items-center">
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-[#E37216]" />
                         <span>Duration: {course.duration}</span>
@@ -135,11 +135,11 @@ export default function CoursesPage() {
       </section>
 
       {/* Inquiry CTA */}
-      <section className="py-12 bg-white border-t border-gray-200">
-        <div className="container-site flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-[#0A101C] to-slate-900 text-white p-8 md:p-12 rounded-3xl">
+      <section className="py-12 bg-band-warm">
+        <div className="container-site flex flex-col items-center justify-center gap-6 p-8 md:p-12 rounded-3xl text-center">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold font-poppins mb-2">Not Sure Which Course to Pick?</h3>
-            <p className="text-gray-300 text-sm md:text-base">Speak with our counselor for personalized guidance or schedule a free demo session.</p>
+            <h3 className="text-2xl md:text-3xl font-bold font-poppins mb-2 text-gray-900">Not Sure Which Course to Pick?</h3>
+            <p className="text-gray-600 text-sm md:text-base">Speak with our counselor for personalized guidance or schedule a free demo session.</p>
           </div>
           <Link
             href="/contact"

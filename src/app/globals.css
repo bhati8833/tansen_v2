@@ -46,6 +46,14 @@
   /* Custom Max Widths */
   --container-8xl: 88rem;
   --container-9xl: 96rem;
+
+  /* Light 3D Card Shadows */
+  --shadow-card-soft: 0 10px 30px -10px rgb(0 0 0 / 0.12);
+  --shadow-card-lift: 0 18px 40px -14px rgb(0 0 0 / 0.2);
+
+  /* Band Colors (alternating section backgrounds) */
+  --color-band-warm: #FFF6EC;
+  --color-band-cool: #F0F9FF;
 }
 
 /* Backwards-compatible aliases so existing inline fontFamily: var(...)

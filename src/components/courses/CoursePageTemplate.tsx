@@ -56,7 +56,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
+    <div className="min-h-screen bg-white flex flex-col font-roboto text-gray-800">
       
       {/* 1. BREADCRUMB & 2. HERO HEADER */}
       <PageHeader
@@ -69,7 +69,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       />
 
       {/* 2. COURSE OVERVIEW (HERO BODY) */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Text Content */}
@@ -146,7 +146,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 3. COURSE INTRODUCTION */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -180,7 +180,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               <div className="pt-2 flex items-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-sm transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#E37216] hover:bg-[#c96213] text-white font-bold rounded-full text-sm transition-colors shadow-card-soft"
                 >
                   <span>Book Free Demo</span>
                   <ArrowRight className="w-4 h-4" />
@@ -193,9 +193,9 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 4. WHAT IS [COURSE]? */}
-      <section className="py-12 bg-orange-50/40 border-b border-gray-100">
+      <section className="py-12 bg-band-warm">
         <div className="container-site max-w-5xl mx-auto px-4">
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-orange-100 shadow-2xs flex flex-col md:flex-row items-start gap-6">
+          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-orange-100 shadow-card-soft flex flex-col md:flex-row items-start gap-6">
             <div className="w-14 h-14 rounded-2xl bg-[#E37216]/10 text-[#E37216] flex items-center justify-center flex-shrink-0">
               <HelpCircle className="w-7 h-7" />
             </div>
@@ -214,7 +214,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 5. WHAT WILL YOU LEARN? (LEARNING MODULES GRID) */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -235,7 +235,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
               return (
                 <div 
                   key={idx} 
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-2xs hover:border-orange-200 transition-all group"
+                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-card-soft hover:border-orange-200 transition-all group text-center flex flex-col items-center"
                 >
                   <div className="w-11 h-11 rounded-xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-4 group-hover:bg-[#E37216] group-hover:text-white transition-colors">
                     <IconComp className="w-5 h-5" />
@@ -254,7 +254,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 6. COURSE HIGHLIGHTS */}
-      <section className="py-16 bg-white border-y border-gray-100">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-5xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -277,7 +277,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 7. WHO CAN JOIN? */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -291,7 +291,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           {/* 4 Consistent Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.audienceCards.map((aud, idx) => (
-              <div key={idx} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-2xs hover:border-orange-200 transition-colors">
+              <div key={idx} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-card-soft hover:border-orange-200 transition-colors text-center flex flex-col items-center">
                 <div className="w-10 h-10 rounded-xl bg-[#E37216]/10 text-[#C2410C] flex items-center justify-center mb-4 font-bold font-poppins text-sm">
                   0{idx + 1}
                 </div>
@@ -304,7 +304,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 8. WHY CHOOSE TANSEN? */}
-      <section className="py-16 bg-[#FCF7F1]">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -317,7 +317,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.whyChooseFeatures.map((feat, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-orange-100 shadow-2xs">
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-orange-100 shadow-card-soft text-center flex flex-col items-center">
                 <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">{feat.title}</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">{feat.description}</p>
               </div>
@@ -327,7 +327,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 9. LEARNING JOURNEY */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-band-cool">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -341,7 +341,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           {/* Desktop Horizontal / Mobile Vertical Process */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {data.learningJourney.map((s, idx) => (
-              <div key={idx} className="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+              <div key={idx} className="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 flex flex-col justify-between text-center items-center">
                 <div>
                   <span className="text-xs font-extrabold text-[#C2410C] uppercase tracking-wider block mb-2">
                     Step {s.step}
@@ -360,14 +360,14 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       </section>
 
       {/* 10. COURSE SCHEDULE & 11. CERTIFICATION */}
-      <section className="py-16 bg-gray-50 border-b border-gray-100">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Schedule Box */}
-            <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-2xs flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6">
+            <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-card-soft flex flex-col justify-between text-center items-center">
+              <div className="w-full">
+                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6 mx-auto">
                   <Calendar className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
@@ -400,9 +400,9 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
             {/* Certification Box */}
             {data.certification && (
-              <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-2xs flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6">
+              <div className="p-8 bg-white rounded-3xl border border-gray-200 shadow-card-soft flex flex-col justify-between text-center items-center">
+                <div className="w-full">
+                  <div className="w-12 h-12 rounded-2xl bg-orange-50 text-[#E37216] flex items-center justify-center mb-6 mx-auto">
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
@@ -434,7 +434,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
       {/* 12. GALLERY */}
       {data.galleryImages && data.galleryImages.length > 0 && (
-        <section className="py-16 bg-white border-b border-gray-100">
+        <section className="py-16 bg-band-cool">
           <div className="container-site max-w-6xl mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -448,7 +448,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             {/* Desktop 4-col, Mobile 2-col */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {data.galleryImages.map((img, idx) => (
-                <div key={idx} className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-gray-100 shadow-2xs group">
+                <div key={idx} className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-gray-100 shadow-card-soft group">
                   <Image
                     src={img}
                     alt={`${data.title} gallery image ${idx + 1}`}
@@ -463,7 +463,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
       )}
 
       {/* 13. FAQ SECTION */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-band-warm">
         <div className="container-site max-w-4xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-[#C2410C] font-semibold text-xs uppercase tracking-widest block mb-2">
@@ -481,7 +481,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
                 <div
                   key={idx}
                   className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                    isOpen ? 'border-[#E37216] bg-white shadow-sm' : 'border-gray-200 bg-white hover:border-orange-200'
+                    isOpen ? 'border-[#E37216] bg-white shadow-card-soft' : 'border-gray-200 bg-white hover:border-orange-200'
                   }`}
                 >
                   <button

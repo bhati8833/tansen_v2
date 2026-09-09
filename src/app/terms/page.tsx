@@ -108,7 +108,7 @@ export default function TermsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <div className="min-h-screen bg-gray-50 flex flex-col font-roboto text-gray-800">
+      <div className="min-h-screen bg-white flex flex-col font-roboto text-gray-800">
         
         <PageHeader
           breadcrumbs={[{ label: 'Terms of Service' }]}
@@ -116,7 +116,7 @@ export default function TermsPage() {
         />
 
         {/* PREAMBLE NOTICE */}
-        <section className="py-8 bg-orange-50/70 border-b border-orange-100">
+        <section className="py-8 bg-band-warm">
           <div className="container-site max-w-5xl">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-[#E37216] text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
@@ -135,7 +135,7 @@ export default function TermsPage() {
         </section>
 
         {/* MAIN CONTENT AREA: TWO-COLUMN LAYOUT WITH QUICK INDEX */}
-        <section className="py-14 bg-white flex-grow">
+        <section className="py-14 bg-band-cool flex-grow">
           <div className="container-site max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               
@@ -570,7 +570,7 @@ export default function TermsPage() {
                     If you have questions regarding these Terms of Service, website use, courses, admissions, or related matters, you can contact us:
                   </p>
 
-                  <div className="space-y-3 bg-white p-5 rounded-2xl border border-orange-100 text-sm">
+                  <div className="space-y-3 bg-white p-5 rounded-2xl border border-orange-100 shadow-card-soft text-sm">
                     <p className="font-bold text-gray-900 font-poppins text-base">
                       Tansen Sangeet Mahavidyalaya
                     </p>
@@ -644,7 +644,7 @@ export default function TermsPage() {
                       Tansen Sangeet Mahavidyalaya
                     </p>
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-                      Music • Dance • Performing Arts
+                      ...A Complete Music & Dance School
                     </p>
                   </div>
                 </article>
