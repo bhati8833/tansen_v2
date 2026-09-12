@@ -13,7 +13,7 @@ export function FloatingAction() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="relative group flex items-center gap-2 text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-xl shadow-emerald-600/30 hover:shadow-emerald-600/50 transition-all duration-300 hover:scale-105 active:scale-95"
+        className="relative group flex items-center gap-2 text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-xl shadow-emerald-600/30 hover:shadow-emerald-600/50 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
         style={{ backgroundColor: '#25D366' }}
       >
         {/* Animated Green Pulse Ripple Ring */}

@@ -77,7 +77,7 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-5 relative">
-              <div className="relative h-[360px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-card-soft border-4 border-white">
+              <div className="relative h-[260px] sm:h-[340px] lg:h-[420px] w-full rounded-2xl overflow-hidden shadow-card-soft border-4 border-white">
                 <Image
                   src="/assets/courses/vocal-cover.webp"
                   alt="Tansen Sangeet Mahavidyalaya Music Practice"

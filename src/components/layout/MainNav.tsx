@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { siteContent } from '@/data/site-content';
 
@@ -32,6 +33,12 @@ export function MainNav() {
   }, [isOpen]);
 
   const menuItems = siteContent.navigation;
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname === href || pathname.startsWith(href + '/');
+  };
 
   return (
     <nav
@@ -66,8 +73,12 @@ export function MainNav() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-gray-800 hover:text-[#C2410C] transition-colors whitespace-nowrap"
-                    style={{ fontFamily: 'var(--font-poppins-var)' }}
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-semibold whitespace-nowrap transition-colors border-b-[3px] ${
+                      isActive(item.href)
+                        ? 'text-[#C2410C] border-[#E37216]'
+                        : 'text-gray-800 hover:text-[#C2410C] border-transparent hover:border-[#FDBA74]'
+                    }`}
+                    style={{ fontFamily: 'var(--font-poppins-var)', marginBottom: '-1px' }}
                   >
                     {item.label}
                     {hasCategories && (
@@ -106,7 +117,11 @@ export function MainNav() {
                         <Link
                           href="/courses"
                           onClick={() => setActiveDropdown(null)}
-                          className="font-bold text-[#E37216] hover:underline flex items-center gap-1"
+                          className={`font-bold hover:underline flex items-center gap-1 ${
+                            pathname.startsWith('/courses')
+                              ? 'text-[#C2410C]'
+                              : 'text-[#E37216]'
+                          }`}
                         >
                           <span>View All Courses</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -143,7 +158,11 @@ export function MainNav() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="block py-3 text-gray-800 font-bold hover:text-[#C2410C] transition-colors text-sm"
+                      className={`block py-3 font-bold transition-colors text-sm border-b-[3px] ${
+                        isActive(item.href)
+                          ? 'text-[#C2410C] border-[#E37216]'
+                          : 'text-gray-800 hover:text-[#C2410C] border-transparent'
+                      }`}
                       onClick={() => !hasCategories && setIsOpen(false)}
                     >
                       {item.label}
@@ -168,7 +187,11 @@ export function MainNav() {
                     <div className="pl-3 pb-3 space-y-0.5 bg-gray-50/70 rounded-xl my-2 p-3 border border-gray-100">
                       <Link
                         href="/courses"
-                        className="block py-2 pl-2 text-sm font-bold text-[#E37216] uppercase tracking-wider transition-colors"
+                        className={`block py-2 pl-2 text-sm font-bold uppercase tracking-wider transition-colors ${
+                          pathname.startsWith('/courses')
+                            ? 'text-[#C2410C]'
+                            : 'text-[#E37216]'
+                        }`}
                         onClick={() => setIsOpen(false)}
                       >
                         View All Courses

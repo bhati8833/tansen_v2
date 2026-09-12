@@ -121,7 +121,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
 
             {/* Visual */}
             <div className="lg:col-span-5">
-              <div className="relative h-[320px] sm:h-[400px] w-full rounded-3xl overflow-hidden shadow-xl border-4 border-gray-100">
+              <div className="relative h-[240px] sm:h-[320px] lg:h-[400px] w-full rounded-3xl overflow-hidden shadow-xl border-4 border-gray-100">
                 <Image
                   src={data.heroImage}
                   alt={data.locationTitle}
@@ -152,7 +152,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             
             {/* Left Image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+              <div className="relative h-[220px] sm:h-[280px] lg:h-[340px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <Image
                   src={data.introImage}
                   alt={data.introTitle}
@@ -229,7 +229,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           </div>
 
           {/* Grid: Desktop 3 cols, Tablet 2 cols, Mobile 1 col */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {data.learningModules.map((mod, idx) => {
               const IconComp = iconMap[mod.iconName] || Sparkles;
               return (
@@ -289,7 +289,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
           </div>
 
           {/* 4 Consistent Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {data.audienceCards.map((aud, idx) => (
               <div key={idx} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-card-soft hover:border-orange-200 transition-colors text-center flex flex-col items-center">
                 <div className="w-10 h-10 rounded-xl bg-[#E37216]/10 text-[#C2410C] flex items-center justify-center mb-4 font-bold font-poppins text-sm">
@@ -315,7 +315,7 @@ export function CoursePageTemplate({ data }: CoursePageTemplateProps) {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {data.whyChooseFeatures.map((feat, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-orange-100 shadow-card-soft text-center flex flex-col items-center">
                 <h3 className="font-bold text-gray-900 font-poppins text-lg mb-2">{feat.title}</h3>

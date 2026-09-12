@@ -43,7 +43,7 @@ export function StudentSuccessStories() {
 
         {/* Testimonial Card — Centered */}
         <div className="max-w-2xl mx-auto relative">
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 h-[360px] sm:h-[320px] md:h-[300px] flex flex-col">
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-card-soft hover:shadow-card-lift transition-all duration-300 min-h-[280px] sm:min-h-[260px] md:min-h-[240px] flex flex-col">
             <div className="flex items-center gap-4 md:gap-6 flex-1 min-h-0">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0 border-2 border-orange-100/80 shadow-sm">
                 <Image

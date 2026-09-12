@@ -47,12 +47,12 @@ export default function GalleryPage() {
 
       {/* Category Tabs */}
       <section className="py-6 bg-band-warm sticky top-20 z-30 shadow-sm">
-        <div className="container-site flex items-center justify-start gap-2 overflow-x-auto scrollbar-none py-1">
+        <div className="container-site flex items-center justify-center gap-2 overflow-x-auto scrollbar-none py-1 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
                 selectedCategory === cat
                   ? 'bg-[#E37216] text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

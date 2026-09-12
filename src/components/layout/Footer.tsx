@@ -26,13 +26,13 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#0A101C] text-white pt-12 border-t border-[#E37216]/20" aria-label="Global Footer">
+    <footer className="relative bg-[#0A101C] text-white pt-10 sm:pt-12 border-t border-[#E37216]/20" aria-label="Global Footer">
       {/* 2. MAIN FOOTER NAVIGATION GRID */}
-      <div className="container-site pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+      <div className="container-site pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* COLUMN 1 — BRAND (30-35% / lg:col-span-4) */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-4 space-y-4 sm:space-y-5">
             <Link href="/" className="inline-block group focus:outline-none focus:ring-2 focus:ring-[#E37216] rounded-lg">
               <div className="flex items-center gap-3">
                 <Image
@@ -196,7 +196,7 @@ export function Footer() {
       </div>
 
       {/* 3. FOOTER BOTTOM / LEGAL & COPYRIGHT */}
-      <div className="border-t border-gray-900 bg-[#060A12] py-6">
+      <div className="border-t border-gray-900 bg-[#060A12] py-5 sm:py-6">
         <div className="container-site">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <div className="space-y-1">

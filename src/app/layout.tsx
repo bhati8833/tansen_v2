@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingAction } from '@/components/common/FloatingAction';
+import { PageTagline } from '@/components/common/PageTagline';
 import './globals.css';
 
 const dmSans = localFont({
@@ -83,6 +84,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="min-h-screen">{children}</main>
+        <PageTagline />
         <Footer />
         <FloatingAction />
       </body>

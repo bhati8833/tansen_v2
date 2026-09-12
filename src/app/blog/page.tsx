@@ -80,13 +80,13 @@ export default function BlogPage() {
         <div className="container-site">
           {/* Search & Tag filter */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
-            <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+            <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none flex-wrap">
               <Tag className="w-4 h-4 text-[#E37216] hidden sm:block flex-shrink-0" />
               {tags.map((t) => (
                 <button
                   key={t}
                   onClick={() => setSelectedTag(t)}
-                  className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+                  className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                     selectedTag === t
                       ? 'bg-[#E37216] text-white shadow'
                       : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'

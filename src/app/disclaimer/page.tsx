@@ -138,7 +138,7 @@ export default function DisclaimerPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               
               {/* SIDEBAR QUICK INDEX */}
-              <div className="lg:col-span-4 bg-gray-50 p-6 rounded-2xl border border-gray-200 sticky top-24 space-y-4 max-h-[80vh] overflow-y-auto hidden lg:block">
+              <div className="lg:col-span-4 bg-gray-50 p-6 rounded-2xl border border-gray-200 sticky top-24 space-y-4 max-h-[80vh] overflow-y-auto hidden md:block">
                 <div className="flex items-center gap-2 pb-3 border-b border-gray-200">
                   <BookOpen className="w-4 h-4 text-[#E37216]" />
                   <h3 className="font-bold text-gray-900 font-poppins text-xs uppercase tracking-wider">
